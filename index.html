@@ -1,0 +1,1599 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce</title>
+    <link rel="stylesheet" href="output.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- cdn-link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- STYLE -->
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .outline-text {
+            color: transparent;
+            -webkit-text-stroke: 1px #484848;
+            /* Stroke width and color */
+        }
+
+        /* SWIPER */
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .swiper {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .swiper-slide-active {
+            width: 300px !important;
+            height: 500px !important;
+            transition: .5s !important;
+            opacity: 1 !important;
+        }
+
+        .swiper-slide-active .sale-box {
+            transition: .5s;
+            opacity: 1;
+        }
+
+        .swiper-pagination-clickable .swiper-pagination-bullet {
+            cursor: pointer;
+        }
+
+        .swiper-pagination-bullet {
+            background: black;
+        }
+
+        .swiper-pagination {
+            text-align: center !important;
+            transition: .3s;
+            transform: translate3d(0, 0, 0);
+            z-index: 10;
+            margin-top: 25px;
+        }
+
+        .swiper-horizontal>.swiper-pagination-bullets,
+        .swiper-pagination-bullets.swiper-pagination-horizontal,
+        .swiper-pagination-custom,
+        .swiper-pagination-fraction {
+            bottom: var(--swiper-pagination-bottom, 0);
+            top: var(--swiper-pagination-top, auto);
+            left: 7px;
+            width: 100%;
+        }
+
+        /* SLANTED */
+        .slanted {
+            clip-path: polygon(10% 1%, 100% 0%, 100% 100%, 0% 100%);
+        }
+
+        /* TESTI MONILS */
+
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <div class="container">
+        <header class='flex py-4 font-Poppins min-h-[80px] tracking-wide relative z-50'>
+            <div class='flex flex-wrap items-center gap-5 w-full'>
+                <a href="javascript:void(0)" class="text-[45px] font-Volk text-primary">FASCO</a>
+
+                <div id="collapseMenu"
+                    class='max-lg:hidden lg:!flex lg:ml-auto max-lg:before:fixed max-lg:before:bg-black max-lg:before:opacity-50 max-lg:before:inset-0 max-lg:before:z-50'>
+                    <button id="toggleClose" class='lg:hidden fixed top-2 right-4 z-[100] rounded-full bg-white p-3'>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 fill-black" viewBox="0 0 320.591 320.591">
+                            <path
+                                d="M30.391 318.583a30.37 30.37 0 0 1-21.56-7.288c-11.774-11.844-11.774-30.973 0-42.817L266.643 10.665c12.246-11.459 31.462-10.822 42.921 1.424 10.362 11.074 10.966 28.095 1.414 39.875L51.647 311.295a30.366 30.366 0 0 1-21.256 7.288z"
+                                data-original="#000000"></path>
+                            <path
+                                d="M287.9 318.583a30.37 30.37 0 0 1-21.257-8.806L8.83 51.963C-2.078 39.225-.595 20.055 12.143 9.146c11.369-9.736 28.136-9.736 39.504 0l259.331 257.813c12.243 11.462 12.876 30.679 1.414 42.922-.456.487-.927.958-1.414 1.414a30.368 30.368 0 0 1-23.078 7.288z"
+                                data-original="#000000"></path>
+                        </svg>
+                    </button>
+
+                    <ul
+                        class='lg:flex gap-4 max-lg:space-y-3 max-lg:fixed max-lg:bg-white max-lg:w-1/2 max-lg:min-w-[300px] max-lg:top-0 max-lg:left-0 max-lg:p-6 max-lg:h-full max-lg:shadow-md max-lg:overflow-auto z-50'>
+                        <li class='mb-6 hidden max-lg:block'>
+                        </li>
+                        <li class='max-lg:border-b max-lg:py-3 px-3'>
+                            <a href='javascript:void(0)'
+                                class='hover:text-black text-primary text-[16px] font-Poppins ease-in duration-300'>Home</a>
+                        </li>
+                        <li class='max-lg:border-b max-lg:py-3 px-3'><a href='javascript:void(0)'
+                                class='hover:text-black text-primary text-[16px] font-Poppins ease-in duration-300'>Deals</a>
+                        </li>
+                        <li class='max-lg:border-b max-lg:py-3 px-3'><a href='javascript:void(0)'
+                                class='hover:text-black text-primary text-[16px] font-Poppins ease-in duration-300'>New
+                                Arrivals</a>
+                        </li>
+                        <li class='max-lg:border-b max-lg:py-3 px-3'><a href='javascript:void(0)'
+                                class='hover:text-black text-primary text-[16px] font-Poppins ease-in duration-300'>Packages</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class='flex items-center max-lg:ml-auto space-x-6'>
+                    <button
+                        class='px-8 py-3 text-[15px] rounded-[10px] text-primary border-1 font-Poppins hover:bg-black transition-all ease-in-out duration-300 bg-transparent hover:text-white'>Sign
+                        in</button>
+                    <button
+                        class='px-8 py-3 text-[15px] rounded-[10px] text-white transition-all ease-in-out duration-300 bg-black hover:bg-primary shadow-2xl'>Sign
+                        up</button>
+
+                    <button id="toggleOpen" class='lg:hidden'>
+                        <svg class="w-7 h-7" fill="#333" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section>
+        <div class="container flex justify-between  mt-16">
+
+            <!-- left side image -->
+            <div class="flex justify-center items-end bg-hero-bg w-[330px] rounded-[10px]">
+                <img src="images/hero-1.png" class="w-[392px] h-auto">
+            </div>
+            <!-- CENTER -->
+
+            <div>
+                <div class="bg-hero-bg rounded-[10px]">
+                    <img src="images/hero-3.png" alt="">
+                </div>
+                <!-- TEXT -->
+                <div>
+                    <h1 class="font-Poppins font-[500] text-[90px] text-primary">ULTIMATE</h1>
+                    <h2 class="font-Poppins text-[180px] font-bold outline-text leading-[0.8]">SALE</h2>
+                </div>
+                <div class="text-center mt-4">
+                    <p class="font-Poppins text-[18px] text-primary tracking-wide">NEW COLLECTION</p>
+                    <button
+                        class='mt-3 px-10  py-3 text-[15px] rounded-[10px] text-white transition-all ease-in-out duration-300 bg-black hover:bg-primary shadow-2xl font-Poppins'>SHOP
+                        NOW</button>
+                </div>
+                <div class="mt-5">
+                    <img src="images/hero-4.png" alt="">
+                </div>
+            </div>
+
+            <!-- right side -->
+            <div class="flex justify-center items-end bg-hero-bg w-[330px] rounded-[10px]">
+                <img src="images/hero-2.png" class="w-[220px]">
+            </div>
+        </div>
+
+
+        <!-- Scroll Up Arrow Button (Bottom Left) -->
+        <div>
+            <button id="scrollUp"
+                class="fixed bottom-8 right-4 p-1 bg-white text-black rounded-full border border-black shadow-lg hover:bg-black hover:text-white transition duration-300">
+                <!-- FontAwesome up arrow icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+                </svg>
+            </button>
+
+            <button id="scrollUp"
+                class="fixed bottom-8 right-16 p-1 bg-black text-white rounded-[10px] border border-black shadow-lg hover:bg-white hover:text-black transition duration-300">
+                <!-- Shopping Cart Icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M3 3h2l1 5h13l1.34-5H5.24M7 13h12M7 13L5 6m0 0l1.24 5m0 0h12.52M7 16a2 2 0 11-4 0 2 2 0 014 0m10 0a2 2 0 11-4 0 2 2 0 014 0" />
+                </svg>
+            </button>
+        </div>
+    </section>
+
+    <!-- LOGO SECTION -->
+
+    <section class="py-14 shadow-custom">
+        <div class="container flex justify-between  items-center">
+            <img src="images/chanel.png">
+            <img src="images/louis-viton.png">
+            <img src="images/parada.png">
+            <img src="images/calvin kelin.png">
+            <img src="images/denim.png">
+        </div>
+    </section>
+
+    <!-- DEAL OF THE MONTH -->
+
+    <section class="mt-20 py-20 bg-custom-gradient">
+        <div class="pl-28 flex justify-center">
+            <div class="mr-10">
+                <h1 class="font-Volk text-primary text-[45px]">Deals Of The Month</h1>
+                <p class="w-[440px] font-Poppins text-primary my-7">Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit.
+                    Scelerisque
+                    duis ultrices sollicitudin aliquam sem. Scelerisque duis ultrices sollicitudin</p>
+                <button
+                    class='mt-3 px-10  py-3 text-[15px] rounded-[10px] text-white transition-all ease-in-out duration-300 bg-black hover:bg-primary shadow-2xl font-Poppins'>Buy
+                    Now</button>
+
+
+                <!-- COUNTDOWN -->
+                <P class="mt-8 font-Poppins font-[500] text-[28px] text-primary">Hurry, Before It’s Too Late!</P>
+
+                <div class="mt-4 font-Volk flex gap-7  items-center px-0">
+                    <div
+                        class="w-[76px] h-[76px] text-primary bg-white rounded-[10px] items-center flex flex-wrap justify-center flex-col drop-shadow-lg">
+                        <p class="text-[30px]">02</p>
+                    </div>
+
+                    <div
+                        class="w-[76px] h-[76px] text-primary bg-white rounded-[10px] items-center flex justify-center flex-col drop-shadow-lg">
+                        <p class="text-[30px]">06</p>
+                    </div>
+                    <div
+                        class="w-[76px] h-[76px] text-primary bg-white rounded-[10px] items-center flex justify-center flex-col drop-shadow-lg">
+                        <p class="text-[30px]">05</p>
+                    </div>
+                    <div
+                        class="w-[76px] h-[76px] text-primary bg-white rounded-[10px] items-center flex justify-center flex-col drop-shadow-lg">
+                        <p class="text-[30px]">30</p>
+                    </div>
+                </div>
+                <div class="mt-4 items-center text-primary flex gap-7 px-0">
+                    <div class="w-[76px] h-[20px] items-center flex justify-center">
+                        <p class="text-[19px] font-Poppins">Days</p>
+                    </div>
+                    <div class="w-[76px] h-[20px] items-center flex justify-center">
+                        <p class="text-[19px] font-Poppins">Hr</p>
+                    </div>
+                    <div class="w-[76px] h-[20px] items-center flex justify-center">
+                        <p class="text-[19px] font-Poppins">Mins</p>
+                    </div>
+                    <div class="w-[76px] h-[20px] items-center flex justify-center">
+                        <p class="text-[19px] font-Poppins">Sec</p>
+                    </div>
+                </div>
+
+                <div class="flex justify-end space-x-4 w-[108%]">
+                    <!-- Left arrow button -->
+                    <button id="prevBtn"
+                        class="slider-btn flex items-center text-center justify-center w-10 h-10 rounded-full bg-white shadow-lg">
+                        <span class="text-slider text-2xl">&lt;</span>
+                    </button>
+                    <!-- Right arrow button -->
+                    <button id="nextBtn"
+                        class="slider-btn flex items-center text-center justify-center w-10 h-10 rounded-full bg-white shadow-lg">
+                        <span class="text-black text-2xl">&gt;</span>
+                    </button>
+                </div>
+
+
+
+            </div>
+            <!-- Swiper -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide relative  !w-[300px] !h-[450px]
+                    ">
+                        <img src="images/swiper-1.png" alt="">
+                        <div
+                            class="sale-box opacity-0 w-48 h-28 flex justify-center items-start flex-col text-justify bg-white absolute bottom-7 left-6 p-5">
+                            <h1 class="text-primary font-Poppins">01 - Spring Sale</h1>
+                            <p class="font-Poppins text-primary text-[25px]">30% OFF</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide  !w-[300px] !h-[450px]
+                    ">
+                        <img src="images/swiper-2.png" alt="">
+                        <div
+                            class="sale-box opacity-0 w-48 h-28 flex justify-center items-start flex-col text-justify bg-white absolute bottom-7 left-6 p-5">
+                            <h1 class="text-primary font-Poppins">01 - Spring Sale</h1>
+                            <p class="font-Poppins text-primary text-[25px]">30% OFF</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide  !w-[300px] !h-[450px]
+                    ">
+                        <img src="images/swiper-3.jpeg" alt="">
+                        <div
+                            class="sale-box opacity-0 w-48 h-28 flex justify-center items-start flex-col text-justify bg-white absolute bottom-7 left-6 p-5">
+                            <h1 class="text-primary font-Poppins">01 - Spring Sale</h1>
+                            <p class="font-Poppins text-primary text-[25px]">30% OFF</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide  !w-[300px] !h-[450px]">
+                        <img src="images/swiper-1.png" alt="">
+                        <div
+                            class="sale-box opacity-0 w-48 h-28 flex justify-center items-start flex-col text-justify bg-white absolute bottom-7 left-6 p-5">
+                            <h1 class="text-primary font-Poppins">01 - Spring Sale</h1>
+                            <p class="font-Poppins text-primary text-[25px]">30% OFF</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide  !w-[300px] !h-[450px]">
+                        <img src="images/swiper-2.png" alt="">
+                        <div
+                            class="sale-box opacity-0 w-48 h-28 flex justify-center items-start flex-col text-justify bg-white absolute bottom-7 left-6 p-5">
+                            <h1 class="text-primary font-Poppins">01 - Spring Sale</h1>
+                            <p class="font-Poppins text-primary text-[25px]">30% OFF</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- TABS SECTION -->
+    <section class="py-20">
+        <div class="container text-center font-Volk">
+            <div>
+                <h1 class="text-primary text-[46px]">New Arrivals</h1>
+                <p class="w-[614px] mx-auto font-Poppins text-tabs">Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Scelerisque duis ultrices sollicitudin aliquam sem. Scelerisque duis ultrices
+                    sollicitudin </p>
+            </div>
+
+            <!-- Tab Container -->
+            <div class="font-Poppins p-4 mt-8">
+                <ul class="flex justify-evenly space-x-4">
+                    <li id="homeTab"
+                        class="tab text-tabs bg-black   text-center text-sm py-3 px-6 rounded-[10px] cursor-pointer shadow-tab hover:ease-in-out duration-300">
+                        Men’s Fashion</li>
+                    <li id="settingTab"
+                        class="tab text-tabs  bg-tabs-bg text-center text-sm py-3 px-6 rounded-[10px] cursor-pointer shadow-tab hover:ease-in-out duration-300">
+                        Women’s Fashion</li>
+                    <li id="profileTab"
+                        class="tab text-tabs  bg-tabs-bg text-center text-sm py-3 px-6 rounded-[10px] cursor-pointer shadow-tab hover:ease-in-out duration-300">
+                        Women Accessories</li>
+                    <li id="womenTab"
+                        class="tab text-tabs bg-tabs-bg text-center text-sm py-3 px-6 rounded-[10px] cursor-pointer shadow-tab hover:ease-in-out duration-300">
+                        Men Accessories</li>
+                    <li id="menTab"
+                        class="tab text-tabs bg-tabs-bg text-center text-sm py-3 px-6 rounded-[10px] cursor-pointer shadow-tab hover:ease-in-out duration-300">
+                        Discount Deals</li>
+                </ul>
+            </div>
+            <!-- MEN FASHION -->
+            <div id="homeContent" class="tab-content block mt-8">
+                <div class="flex justify-between">
+                    <!-- cards section -->
+                    <div class="bg-white rounded-[10px] shadow-card p-4 max-w-[355px]">
+                        <img src="images/card-1.png" alt="Shiny Dress" class="w-full rounded-lg">
+                        <div class="mt-4">
+                            <div class="font-Poppins flex justify-between items-center">
+                                <h2 class="text-[20px] font-[500] text-primary">Shiny Dress</h2>
+                                <div class="text-star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <p class="text-tabs text-start text-sm">Al Karam</p>
+                            <div class="flex items-center mt-7">
+                                <div class="text-primary text-sm font-[500]">
+                                    <h1>(4.1k) Customer Reviews</h1>
+                                </div>
+                            </div>
+                            <div class="flex justify-between mt-8">
+                                <div>
+                                    <h1 class="text-2xl text-primary font-Poppins">$95.50</h1>
+                                </div>
+                                <div>
+                                    <h1 class="text-sold text-sm">Almost Sold Out</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- cards section -->
+                    <div class="bg-white rounded-[10px] shadow-card p-4 max-w-sm">
+                        <img src="images/card-2.png" alt="Shiny Dress" class="w-full rounded-lg">
+                        <div class="mt-4">
+                            <div class="font-Poppins flex justify-between items-center">
+                                <h2 class="text-[20px] font-[500] text-primary">Long Dress</h2>
+                                <div class="text-star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <p class="text-tabs text-start text-sm">Al Karam</p>
+                            <div class="flex items-center mt-7">
+                                <div class="text-primary text-sm font-[500]">
+                                    <h1>(4.1k) Customer Reviews</h1>
+                                </div>
+                            </div>
+                            <div class="flex justify-between mt-8">
+                                <div>
+                                    <h1 class="text-2xl text-primary font-Poppins">$95.50</h1>
+                                </div>
+                                <div>
+                                    <h1 class="text-sold text-sm">Almost Sold Out</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- cards section -->
+                    <div class="bg-white rounded-[10px] shadow-card p-4 max-w-[355px]">
+                        <img src="images/card-3.png" alt="Shiny Dress" class="w-full rounded-lg">
+                        <div class="mt-4">
+                            <div class="font-Poppins flex justify-between items-center">
+                                <h2 class="text-[20px] font-[500] text-primary">Full Sweater</h2>
+                                <div class="text-star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <p class="text-tabs text-start text-sm">Al Karam</p>
+                            <div class="flex items-center mt-7">
+                                <div class="text-primary text-sm font-[500]">
+                                    <h1>(4.1k) Customer Reviews</h1>
+                                </div>
+                            </div>
+                            <div class="flex justify-between mt-8">
+                                <div>
+                                    <h1 class="text-2xl text-primary font-Poppins">$95.50</h1>
+                                </div>
+                                <div>
+                                    <h1 class="text-sold text-sm">Almost Sold Out</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-between mt-16">
+                    <!-- cards section -->
+                    <div class="bg-white rounded-[10px] shadow-card p-4 max-w-[355px]">
+                        <img src="images/card-4.png" alt="Shiny Dress" class="w-full rounded-lg">
+                        <div class="mt-4">
+                            <div class="font-Poppins flex justify-between items-center">
+                                <h2 class="text-[20px] font-[500] text-primary">White Dress</h2>
+                                <div class="text-star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <p class="text-tabs text-start text-sm">Al Karam</p>
+                            <div class="flex items-center mt-7">
+                                <div class="text-primary text-sm font-[500]">
+                                    <h1>(4.1k) Customer Reviews</h1>
+                                </div>
+                            </div>
+                            <div class="flex justify-between mt-8">
+                                <div>
+                                    <h1 class="text-2xl text-primary font-Poppins">$95.50</h1>
+                                </div>
+                                <div>
+                                    <h1 class="text-sold text-sm">Almost Sold Out</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- cards section -->
+                    <div class="bg-white rounded-[10px] shadow-card p-4 max-w-sm">
+                        <img src="images/card-5.png" alt="Shiny Dress" class="w-full rounded-lg">
+                        <div class="mt-4">
+                            <div class="font-Poppins flex justify-between items-center">
+                                <h2 class="text-[20px] font-[500] text-primary">Colorful Dress</h2>
+                                <div class="text-star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <p class="text-tabs text-start text-sm">Al Karam</p>
+                            <div class="flex items-center mt-7">
+                                <div class="text-primary text-sm font-[500]">
+                                    <h1>(4.1k) Customer Reviews</h1>
+                                </div>
+                            </div>
+                            <div class="flex justify-between mt-8">
+                                <div>
+                                    <h1 class="text-2xl text-primary font-Poppins">$95.50</h1>
+                                </div>
+                                <div>
+                                    <h1 class="text-sold text-sm">Almost Sold Out</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- cards section -->
+                    <div class="bg-white rounded-[10px] shadow-card p-4 max-w-[355px]">
+                        <img src="images/card-6.png" alt="Shiny Dress" class="w-full rounded-lg">
+                        <div class="mt-4">
+                            <div class="font-Poppins flex justify-between items-center">
+                                <h2 class="text-[20px] font-[500] text-primary">White Sweater</h2>
+                                <div class="text-star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <p class="text-tabs text-start text-sm">Al Karam</p>
+                            <div class="flex items-center mt-7">
+                                <div class="text-primary text-sm font-[500]">
+                                    <h1>(4.1k) Customer Reviews</h1>
+                                </div>
+                            </div>
+                            <div class="flex justify-between mt-8">
+                                <div>
+                                    <h1 class="text-2xl text-primary font-Poppins">$95.50</h1>
+                                </div>
+                                <div>
+                                    <h1 class="text-sold text-sm">Almost Sold Out</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- WOMEN FASHION -->
+            <div id="settingContent" class="tab-content hidden mt-8">
+                <div class="flex justify-between">
+                    <!-- cards section -->
+                    <div class="bg-white rounded-[10px] shadow-card p-4 max-w-[355px]">
+                        <img src="images/card-1.png" alt="Shiny Dress" class="w-full rounded-lg">
+                        <div class="mt-4">
+                            <div class="font-Poppins flex justify-between items-center">
+                                <h2 class="text-[20px] font-[500] text-primary">Shiny Dress</h2>
+                                <div class="text-star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <p class="text-tabs text-start text-sm">Al Karam</p>
+                            <div class="flex items-center mt-7">
+                                <div class="text-primary text-sm font-[500]">
+                                    <h1>(4.1k) Customer Reviews</h1>
+                                </div>
+                            </div>
+                            <div class="flex justify-between mt-8">
+                                <div>
+                                    <h1 class="text-2xl text-primary font-Poppins">$95.50</h1>
+                                </div>
+                                <div>
+                                    <h1 class="text-sold text-sm">Almost Sold Out</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- cards section -->
+                    <div class="bg-white rounded-[10px] shadow-card p-4 max-w-sm">
+                        <img src="images/card-2.png" alt="Shiny Dress" class="w-full rounded-lg">
+                        <div class="mt-4">
+                            <div class="font-Poppins flex justify-between items-center">
+                                <h2 class="text-[20px] font-[500] text-primary">Long Dress</h2>
+                                <div class="text-star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <p class="text-tabs text-start text-sm">Al Karam</p>
+                            <div class="flex items-center mt-7">
+                                <div class="text-primary text-sm font-[500]">
+                                    <h1>(4.1k) Customer Reviews</h1>
+                                </div>
+                            </div>
+                            <div class="flex justify-between mt-8">
+                                <div>
+                                    <h1 class="text-2xl text-primary font-Poppins">$95.50</h1>
+                                </div>
+                                <div>
+                                    <h1 class="text-sold text-sm">Almost Sold Out</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- cards section -->
+                    <div class="bg-white rounded-[10px] shadow-card p-4 max-w-[355px]">
+                        <img src="images/card-3.png" alt="Shiny Dress" class="w-full rounded-lg">
+                        <div class="mt-4">
+                            <div class="font-Poppins flex justify-between items-center">
+                                <h2 class="text-[20px] font-[500] text-primary">Full Sweater</h2>
+                                <div class="text-star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <p class="text-tabs text-start text-sm">Al Karam</p>
+                            <div class="flex items-center mt-7">
+                                <div class="text-primary text-sm font-[500]">
+                                    <h1>(4.1k) Customer Reviews</h1>
+                                </div>
+                            </div>
+                            <div class="flex justify-between mt-8">
+                                <div>
+                                    <h1 class="text-2xl text-primary font-Poppins">$95.50</h1>
+                                </div>
+                                <div>
+                                    <h1 class="text-sold text-sm">Almost Sold Out</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-between mt-16">
+                    <!-- cards section -->
+                    <div class="bg-white rounded-[10px] shadow-card p-4 max-w-[355px]">
+                        <img src="images/card-4.png" alt="Shiny Dress" class="w-full rounded-lg">
+                        <div class="mt-4">
+                            <div class="font-Poppins flex justify-between items-center">
+                                <h2 class="text-[20px] font-[500] text-primary">White Dress</h2>
+                                <div class="text-star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <p class="text-tabs text-start text-sm">Al Karam</p>
+                            <div class="flex items-center mt-7">
+                                <div class="text-primary text-sm font-[500]">
+                                    <h1>(4.1k) Customer Reviews</h1>
+                                </div>
+                            </div>
+                            <div class="flex justify-between mt-8">
+                                <div>
+                                    <h1 class="text-2xl text-primary font-Poppins">$95.50</h1>
+                                </div>
+                                <div>
+                                    <h1 class="text-sold text-sm">Almost Sold Out</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- cards section -->
+                    <div class="bg-white rounded-[10px] shadow-card p-4 max-w-sm">
+                        <img src="images/card-5.png" alt="Shiny Dress" class="w-full rounded-lg">
+                        <div class="mt-4">
+                            <div class="font-Poppins flex justify-between items-center">
+                                <h2 class="text-[20px] font-[500] text-primary">Colorful Dress</h2>
+                                <div class="text-star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <p class="text-tabs text-start text-sm">Al Karam</p>
+                            <div class="flex items-center mt-7">
+                                <div class="text-primary text-sm font-[500]">
+                                    <h1>(4.1k) Customer Reviews</h1>
+                                </div>
+                            </div>
+                            <div class="flex justify-between mt-8">
+                                <div>
+                                    <h1 class="text-2xl text-primary font-Poppins">$95.50</h1>
+                                </div>
+                                <div>
+                                    <h1 class="text-sold text-sm">Almost Sold Out</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- cards section -->
+                    <div class="bg-white rounded-[10px] shadow-card p-4 max-w-[355px]">
+                        <img src="images/card-6.png" alt="Shiny Dress" class="w-full rounded-lg">
+                        <div class="mt-4">
+                            <div class="font-Poppins flex justify-between items-center">
+                                <h2 class="text-[20px] font-[500] text-primary">White Sweater</h2>
+                                <div class="text-star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <p class="text-tabs text-start text-sm">Al Karam</p>
+                            <div class="flex items-center mt-7">
+                                <div class="text-primary text-sm font-[500]">
+                                    <h1>(4.1k) Customer Reviews</h1>
+                                </div>
+                            </div>
+                            <div class="flex justify-between mt-8">
+                                <div>
+                                    <h1 class="text-2xl text-primary font-Poppins">$95.50</h1>
+                                </div>
+                                <div>
+                                    <h1 class="text-sold text-sm">Almost Sold Out</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- MEN ASSECCORIES -->
+            <div id="profileContent" class="tab-content hidden mt-8">
+                <div class="flex justify-between">
+                    <!-- cards section -->
+                    <div class="bg-white rounded-[10px] shadow-card p-4 max-w-[355px]">
+                        <img src="images/card-1.png" alt="Shiny Dress" class="w-full rounded-lg">
+                        <div class="mt-4">
+                            <div class="font-Poppins flex justify-between items-center">
+                                <h2 class="text-[20px] font-[500] text-primary">Shiny Dress</h2>
+                                <div class="text-star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <p class="text-tabs text-start text-sm">Al Karam</p>
+                            <div class="flex items-center mt-7">
+                                <div class="text-primary text-sm font-[500]">
+                                    <h1>(4.1k) Customer Reviews</h1>
+                                </div>
+                            </div>
+                            <div class="flex justify-between mt-8">
+                                <div>
+                                    <h1 class="text-2xl text-primary font-Poppins">$95.50</h1>
+                                </div>
+                                <div>
+                                    <h1 class="text-sold text-sm">Almost Sold Out</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- cards section -->
+                    <div class="bg-white rounded-[10px] shadow-card p-4 max-w-sm">
+                        <img src="images/card-2.png" alt="Shiny Dress" class="w-full rounded-lg">
+                        <div class="mt-4">
+                            <div class="font-Poppins flex justify-between items-center">
+                                <h2 class="text-[20px] font-[500] text-primary">Long Dress</h2>
+                                <div class="text-star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <p class="text-tabs text-start text-sm">Al Karam</p>
+                            <div class="flex items-center mt-7">
+                                <div class="text-primary text-sm font-[500]">
+                                    <h1>(4.1k) Customer Reviews</h1>
+                                </div>
+                            </div>
+                            <div class="flex justify-between mt-8">
+                                <div>
+                                    <h1 class="text-2xl text-primary font-Poppins">$95.50</h1>
+                                </div>
+                                <div>
+                                    <h1 class="text-sold text-sm">Almost Sold Out</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- cards section -->
+                    <div class="bg-white rounded-[10px] shadow-card p-4 max-w-[355px]">
+                        <img src="images/card-3.png" alt="Shiny Dress" class="w-full rounded-lg">
+                        <div class="mt-4">
+                            <div class="font-Poppins flex justify-between items-center">
+                                <h2 class="text-[20px] font-[500] text-primary">Full Sweater</h2>
+                                <div class="text-star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <p class="text-tabs text-start text-sm">Al Karam</p>
+                            <div class="flex items-center mt-7">
+                                <div class="text-primary text-sm font-[500]">
+                                    <h1>(4.1k) Customer Reviews</h1>
+                                </div>
+                            </div>
+                            <div class="flex justify-between mt-8">
+                                <div>
+                                    <h1 class="text-2xl text-primary font-Poppins">$95.50</h1>
+                                </div>
+                                <div>
+                                    <h1 class="text-sold text-sm">Almost Sold Out</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-between mt-16">
+                    <!-- cards section -->
+                    <div class="bg-white rounded-[10px] shadow-card p-4 max-w-[355px]">
+                        <img src="images/card-4.png" alt="Shiny Dress" class="w-full rounded-lg">
+                        <div class="mt-4">
+                            <div class="font-Poppins flex justify-between items-center">
+                                <h2 class="text-[20px] font-[500] text-primary">White Dress</h2>
+                                <div class="text-star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <p class="text-tabs text-start text-sm">Al Karam</p>
+                            <div class="flex items-center mt-7">
+                                <div class="text-primary text-sm font-[500]">
+                                    <h1>(4.1k) Customer Reviews</h1>
+                                </div>
+                            </div>
+                            <div class="flex justify-between mt-8">
+                                <div>
+                                    <h1 class="text-2xl text-primary font-Poppins">$95.50</h1>
+                                </div>
+                                <div>
+                                    <h1 class="text-sold text-sm">Almost Sold Out</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- cards section -->
+                    <div class="bg-white rounded-[10px] shadow-card p-4 max-w-sm">
+                        <img src="images/card-5.png" alt="Shiny Dress" class="w-full rounded-lg">
+                        <div class="mt-4">
+                            <div class="font-Poppins flex justify-between items-center">
+                                <h2 class="text-[20px] font-[500] text-primary">Colorful Dress</h2>
+                                <div class="text-star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <p class="text-tabs text-start text-sm">Al Karam</p>
+                            <div class="flex items-center mt-7">
+                                <div class="text-primary text-sm font-[500]">
+                                    <h1>(4.1k) Customer Reviews</h1>
+                                </div>
+                            </div>
+                            <div class="flex justify-between mt-8">
+                                <div>
+                                    <h1 class="text-2xl text-primary font-Poppins">$95.50</h1>
+                                </div>
+                                <div>
+                                    <h1 class="text-sold text-sm">Almost Sold Out</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- cards section -->
+                    <div class="bg-white rounded-[10px] shadow-card p-4 max-w-[355px]">
+                        <img src="images/card-6.png" alt="Shiny Dress" class="w-full rounded-lg">
+                        <div class="mt-4">
+                            <div class="font-Poppins flex justify-between items-center">
+                                <h2 class="text-[20px] font-[500] text-primary">White Sweater</h2>
+                                <div class="text-star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <p class="text-tabs text-start text-sm">Al Karam</p>
+                            <div class="flex items-center mt-7">
+                                <div class="text-primary text-sm font-[500]">
+                                    <h1>(4.1k) Customer Reviews</h1>
+                                </div>
+                            </div>
+                            <div class="flex justify-between mt-8">
+                                <div>
+                                    <h1 class="text-2xl text-primary font-Poppins">$95.50</h1>
+                                </div>
+                                <div>
+                                    <h1 class="text-sold text-sm">Almost Sold Out</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- MEN ACCESSORIES -->
+            <div id="womenContent" class="tab-content hidden mt-8">
+                <div class="flex justify-between">
+                    <!-- cards section -->
+                    <div class="bg-white rounded-[10px] shadow-card p-4 max-w-[355px]">
+                        <img src="images/card-1.png" alt="Shiny Dress" class="w-full rounded-lg">
+                        <div class="mt-4">
+                            <div class="font-Poppins flex justify-between items-center">
+                                <h2 class="text-[20px] font-[500] text-primary">Shiny Dress</h2>
+                                <div class="text-star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <p class="text-tabs text-start text-sm">Al Karam</p>
+                            <div class="flex items-center mt-7">
+                                <div class="text-primary text-sm font-[500]">
+                                    <h1>(4.1k) Customer Reviews</h1>
+                                </div>
+                            </div>
+                            <div class="flex justify-between mt-8">
+                                <div>
+                                    <h1 class="text-2xl text-primary font-Poppins">$95.50</h1>
+                                </div>
+                                <div>
+                                    <h1 class="text-sold text-sm">Almost Sold Out</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- cards section -->
+                    <div class="bg-white rounded-[10px] shadow-card p-4 max-w-sm">
+                        <img src="images/card-2.png" alt="Shiny Dress" class="w-full rounded-lg">
+                        <div class="mt-4">
+                            <div class="font-Poppins flex justify-between items-center">
+                                <h2 class="text-[20px] font-[500] text-primary">Long Dress</h2>
+                                <div class="text-star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <p class="text-tabs text-start text-sm">Al Karam</p>
+                            <div class="flex items-center mt-7">
+                                <div class="text-primary text-sm font-[500]">
+                                    <h1>(4.1k) Customer Reviews</h1>
+                                </div>
+                            </div>
+                            <div class="flex justify-between mt-8">
+                                <div>
+                                    <h1 class="text-2xl text-primary font-Poppins">$95.50</h1>
+                                </div>
+                                <div>
+                                    <h1 class="text-sold text-sm">Almost Sold Out</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- cards section -->
+                    <div class="bg-white rounded-[10px] shadow-card p-4 max-w-[355px]">
+                        <img src="images/card-3.png" alt="Shiny Dress" class="w-full rounded-lg">
+                        <div class="mt-4">
+                            <div class="font-Poppins flex justify-between items-center">
+                                <h2 class="text-[20px] font-[500] text-primary">Full Sweater</h2>
+                                <div class="text-star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <p class="text-tabs text-start text-sm">Al Karam</p>
+                            <div class="flex items-center mt-7">
+                                <div class="text-primary text-sm font-[500]">
+                                    <h1>(4.1k) Customer Reviews</h1>
+                                </div>
+                            </div>
+                            <div class="flex justify-between mt-8">
+                                <div>
+                                    <h1 class="text-2xl text-primary font-Poppins">$95.50</h1>
+                                </div>
+                                <div>
+                                    <h1 class="text-sold text-sm">Almost Sold Out</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-between mt-16">
+                    <!-- cards section -->
+                    <div class="bg-white rounded-[10px] shadow-card p-4 max-w-[355px]">
+                        <img src="images/card-4.png" alt="Shiny Dress" class="w-full rounded-lg">
+                        <div class="mt-4">
+                            <div class="font-Poppins flex justify-between items-center">
+                                <h2 class="text-[20px] font-[500] text-primary">White Dress</h2>
+                                <div class="text-star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <p class="text-tabs text-start text-sm">Al Karam</p>
+                            <div class="flex items-center mt-7">
+                                <div class="text-primary text-sm font-[500]">
+                                    <h1>(4.1k) Customer Reviews</h1>
+                                </div>
+                            </div>
+                            <div class="flex justify-between mt-8">
+                                <div>
+                                    <h1 class="text-2xl text-primary font-Poppins">$95.50</h1>
+                                </div>
+                                <div>
+                                    <h1 class="text-sold text-sm">Almost Sold Out</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- cards section -->
+                    <div class="bg-white rounded-[10px] shadow-card p-4 max-w-sm">
+                        <img src="images/card-5.png" alt="Shiny Dress" class="w-full rounded-lg">
+                        <div class="mt-4">
+                            <div class="font-Poppins flex justify-between items-center">
+                                <h2 class="text-[20px] font-[500] text-primary">Colorful Dress</h2>
+                                <div class="text-star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <p class="text-tabs text-start text-sm">Al Karam</p>
+                            <div class="flex items-center mt-7">
+                                <div class="text-primary text-sm font-[500]">
+                                    <h1>(4.1k) Customer Reviews</h1>
+                                </div>
+                            </div>
+                            <div class="flex justify-between mt-8">
+                                <div>
+                                    <h1 class="text-2xl text-primary font-Poppins">$95.50</h1>
+                                </div>
+                                <div>
+                                    <h1 class="text-sold text-sm">Almost Sold Out</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- cards section -->
+                    <div class="bg-white rounded-[10px] shadow-card p-4 max-w-[355px]">
+                        <img src="images/card-6.png" alt="Shiny Dress" class="w-full rounded-lg">
+                        <div class="mt-4">
+                            <div class="font-Poppins flex justify-between items-center">
+                                <h2 class="text-[20px] font-[500] text-primary">White Sweater</h2>
+                                <div class="text-star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <p class="text-tabs text-start text-sm">Al Karam</p>
+                            <div class="flex items-center mt-7">
+                                <div class="text-primary text-sm font-[500]">
+                                    <h1>(4.1k) Customer Reviews</h1>
+                                </div>
+                            </div>
+                            <div class="flex justify-between mt-8">
+                                <div>
+                                    <h1 class="text-2xl text-primary font-Poppins">$95.50</h1>
+                                </div>
+                                <div>
+                                    <h1 class="text-sold text-sm">Almost Sold Out</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- DISCOUNT -->
+            <div id="menContent" class="tab-content hidden mt-8">
+                <div class="flex justify-between">
+                    <!-- cards section -->
+                    <div class="bg-white rounded-[10px] shadow-card p-4 max-w-[355px]">
+                        <img src="images/card-1.png" alt="Shiny Dress" class="w-full rounded-lg">
+                        <div class="mt-4">
+                            <div class="font-Poppins flex justify-between items-center">
+                                <h2 class="text-[20px] font-[500] text-primary">Shiny Dress</h2>
+                                <div class="text-star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <p class="text-tabs text-start text-sm">Al Karam</p>
+                            <div class="flex items-center mt-7">
+                                <div class="text-primary text-sm font-[500]">
+                                    <h1>(4.1k) Customer Reviews</h1>
+                                </div>
+                            </div>
+                            <div class="flex justify-between mt-8">
+                                <div>
+                                    <h1 class="text-2xl text-primary font-Poppins">$95.50</h1>
+                                </div>
+                                <div>
+                                    <h1 class="text-sold text-sm">Almost Sold Out</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- cards section -->
+                    <div class="bg-white rounded-[10px] shadow-card p-4 max-w-sm">
+                        <img src="images/card-2.png" alt="Shiny Dress" class="w-full rounded-lg">
+                        <div class="mt-4">
+                            <div class="font-Poppins flex justify-between items-center">
+                                <h2 class="text-[20px] font-[500] text-primary">Long Dress</h2>
+                                <div class="text-star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <p class="text-tabs text-start text-sm">Al Karam</p>
+                            <div class="flex items-center mt-7">
+                                <div class="text-primary text-sm font-[500]">
+                                    <h1>(4.1k) Customer Reviews</h1>
+                                </div>
+                            </div>
+                            <div class="flex justify-between mt-8">
+                                <div>
+                                    <h1 class="text-2xl text-primary font-Poppins">$95.50</h1>
+                                </div>
+                                <div>
+                                    <h1 class="text-sold text-sm">Almost Sold Out</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- cards section -->
+                    <div class="bg-white rounded-[10px] shadow-card p-4 max-w-[355px]">
+                        <img src="images/card-3.png" alt="Shiny Dress" class="w-full rounded-lg">
+                        <div class="mt-4">
+                            <div class="font-Poppins flex justify-between items-center">
+                                <h2 class="text-[20px] font-[500] text-primary">Full Sweater</h2>
+                                <div class="text-star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <p class="text-tabs text-start text-sm">Al Karam</p>
+                            <div class="flex items-center mt-7">
+                                <div class="text-primary text-sm font-[500]">
+                                    <h1>(4.1k) Customer Reviews</h1>
+                                </div>
+                            </div>
+                            <div class="flex justify-between mt-8">
+                                <div>
+                                    <h1 class="text-2xl text-primary font-Poppins">$95.50</h1>
+                                </div>
+                                <div>
+                                    <h1 class="text-sold text-sm">Almost Sold Out</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-between mt-16">
+                    <!-- cards section -->
+                    <div class="bg-white rounded-[10px] shadow-card p-4 max-w-[355px]">
+                        <img src="images/card-4.png" alt="Shiny Dress" class="w-full rounded-lg">
+                        <div class="mt-4">
+                            <div class="font-Poppins flex justify-between items-center">
+                                <h2 class="text-[20px] font-[500] text-primary">White Dress</h2>
+                                <div class="text-star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <p class="text-tabs text-start text-sm">Al Karam</p>
+                            <div class="flex items-center mt-7">
+                                <div class="text-primary text-sm font-[500]">
+                                    <h1>(4.1k) Customer Reviews</h1>
+                                </div>
+                            </div>
+                            <div class="flex justify-between mt-8">
+                                <div>
+                                    <h1 class="text-2xl text-primary font-Poppins">$95.50</h1>
+                                </div>
+                                <div>
+                                    <h1 class="text-sold text-sm">Almost Sold Out</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- cards section -->
+                    <div class="bg-white rounded-[10px] shadow-card p-4 max-w-sm">
+                        <img src="images/card-5.png" alt="Shiny Dress" class="w-full rounded-lg">
+                        <div class="mt-4">
+                            <div class="font-Poppins flex justify-between items-center">
+                                <h2 class="text-[20px] font-[500] text-primary">Colorful Dress</h2>
+                                <div class="text-star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <p class="text-tabs text-start text-sm">Al Karam</p>
+                            <div class="flex items-center mt-7">
+                                <div class="text-primary text-sm font-[500]">
+                                    <h1>(4.1k) Customer Reviews</h1>
+                                </div>
+                            </div>
+                            <div class="flex justify-between mt-8">
+                                <div>
+                                    <h1 class="text-2xl text-primary font-Poppins">$95.50</h1>
+                                </div>
+                                <div>
+                                    <h1 class="text-sold text-sm">Almost Sold Out</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- cards section -->
+                    <div class="bg-white rounded-[10px] shadow-card p-4 max-w-[355px]">
+                        <img src="images/card-6.png" alt="Shiny Dress" class="w-full rounded-lg">
+                        <div class="mt-4">
+                            <div class="font-Poppins flex justify-between items-center">
+                                <h2 class="text-[20px] font-[500] text-primary">White Sweater</h2>
+                                <div class="text-star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <p class="text-tabs text-start text-sm">Al Karam</p>
+                            <div class="flex items-center mt-7">
+                                <div class="text-primary text-sm font-[500]">
+                                    <h1>(4.1k) Customer Reviews</h1>
+                                </div>
+                            </div>
+                            <div class="flex justify-between mt-8">
+                                <div>
+                                    <h1 class="text-2xl text-primary font-Poppins">$95.50</h1>
+                                </div>
+                                <div>
+                                    <h1 class="text-sold text-sm">Almost Sold Out</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button
+                class='mt-10 px-10  py-3 text-[15px] rounded-[10px] text-white transition-all ease-in-out duration-300 bg-black hover:bg-primary shadow-2xl font-Poppins'>View
+                More</button>
+        </div>
+    </section>
+
+    <!-- PEAKY BLINDER -->
+
+    <div class="flex items-center justify-center">
+        <div class="flex w-full bg-peaky-bg">
+            <!-- Left Side: Image with Labels -->
+            <div class="relative w-1/2 flex  items-start justify-center">
+                <div class="">
+                    <!-- image -->
+                    <img src="images/peaky.png" alt="Peaky Blinders Outfit"
+                        class="w-full h-[525px] object-cover rounded-lg">
+                </div>
+            </div>
+
+            <!-- Right Side: Product Details -->
+            <div class="border-2 border-black origin-center rotate-[7deg] relative left-[33px] "></div>
+            <div class="w-1/2 pr-20 pl-28 pt-16 bg-peaky font-Poppins clip slanted">
+                <p class="text-sm text-women-gray">Women Collection</p>
+                <h2 class="text-[45px] font-Volk text-primary mt-5 mb-4">Peaky Blinders</h2>
+                <h3 class="text-sm text-black underline underline-offset-1 mb-2">DESCRIPTION</h3>
+                <p class="text-women-gray mt-5 mb-6">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque duis ultrices sollicitudin
+                    aliquam sem.
+                    Scelerisque duis ultrices sollicitudin. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Scelerisque duis.
+                </p>
+                <div class="flex items-center mb-3">
+                    <span class="text-women-gray mr-2">Size:</span>
+                    <span class="px-4 py-1 bg-black text-white rounded-[10px]">M</span>
+                </div>
+                <p class="text-[28px] font-[500] text-black mb-4">$100.00</p>
+                <button
+                    class='px-16  py-3 text-[15px] rounded-[10px] text-white transition-all ease-in-out duration-300 bg-black hover:bg-primary shadow-2xl font-Poppins'>Buy
+                    Now</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- LOGO SECTION -->
+
+    <section class="py-14 shadow-custom">
+        <div class="container flex justify-between items-center font-Poppins">
+            <div class="flex justify-center items-end gap-3">
+                <img src="images/vecctor.png" alt="">
+                <div>
+                    <p class="font-[500] text-primary">High Quality</p>
+                    <h1 class="text-[15px] text-primary">crafted from top materials</h1>
+                </div>
+            </div>
+            <div class="flex justify-center items-end gap-3">
+                <img src="images/vector-2.png" alt="">
+                <div>
+                    <p class="font-[500] text-primary">Warrany Protection</p>
+                    <h1 class="text-[15px] text-primary">Over 2 years</h1>
+                </div>
+            </div>
+            <div class="flex justify-center items-end gap-3">
+                <img src="images/vector-3.png" alt="">
+                <div>
+                    <p class="font-[500] text-primary">Free Shipping</p>
+                    <h1 class="text-[15px] text-primary">Order over 150 $</h1>
+                </div>
+            </div>
+            <div class="flex justify-center items-end gap-3">
+                <img src="images/vector-4.png" alt="">
+                <div>
+                    <p class="font-[500] text-primary">24 / 7 Support</p>
+                    <h1 class="text-[15px] text-primary">Dedicated support</h1>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOLLOW US ON INSTAGRAM -->
+    <section class="py-14 shadow-custom">
+        <div class="container text-center font-Volk">
+            <div>
+                <h1 class="text-primary text-[46px]">Follow Us On Instagram</h1>
+                <p class="w-[614px] mx-auto font-Poppins text-tabs">Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Scelerisque duis ultrices sollicitudin aliquam sem. Scelerisque duis ultrices
+                    sollicitudin </p>
+            </div>
+        </div>
+        <!-- images  -->
+        <div class="flex items-center mt-12">
+            <div class="w-1/6">
+                <img src="images/image (1).png" class="w-full">
+            </div>
+            <div class="w-1/6">
+                <img src="images/image (2).png" class="w-full">
+            </div>
+            <div class="w-1/6">
+                <img src="images/image (3).png" class="w-full">
+            </div>
+            <div class="w-1/6">
+                <img src="images/image (4).png" class="w-full">
+            </div>
+            <div class="w-1/6">
+                <img src="images/image (5).png" class="w-full">
+            </div>
+            <div class="w-1/6">
+                <img src="images/image (6).png" class="w-full">
+            </div>
+            <div class="w-1/6">
+                <img src="images/image (7).png" class="w-full">
+            </div>
+
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="py-14 bg-tabs-bg">
+        <div class="container text-center">
+            <div>
+                <h1 class="text-primary text-[46px]">This Is What Our Customers Say</h1>
+                <p class="mx-auto mt-3 font-Poppins text-tabs">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Scelerisque duis </p>
+            </div>
+
+            <!-- Swiper -->
+            <div class="swiper secondSwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div
+                            class="flex gap-10 w-[645px] px-7 py-10 bg-white rounded-[10px] items-center justify-center">
+                            <div>
+                                <img src="images/test.png" class="!w-[350px] !h-[175px]">
+                            </div>
+                            <div class="text-start">
+                                <p class="font-Poppins text-primary text-[15px]">"You won't regret it. I would like to
+                                    personally thank you for your outstanding product. Absolutely wonderful!"</p>
+                                <div class="text-star mt-5 text-[13px]">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <div class="w-40 h-[1px] bg-primary mt-4"></div>
+
+                                <div>
+                                    <h1 class="font-Volk mt-3 text-primary text-lg">James K.</h1>
+                                    <p class="font-Poppins text-primary text-sm">Traveler</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">Slide 2</div>
+                    <div class="swiper-slide">Slide 3</div>
+                    <div class="swiper-slide">Slide 4</div>
+                    <div class="swiper-slide">Slide 5</div>
+                    <div class="swiper-slide">Slide 6</div>
+                    <div class="swiper-slide">Slide 7</div>
+                    <div class="swiper-slide">Slide 8</div>
+                    <div class="swiper-slide">Slide 9</div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+
+
+
+        </div>
+    </section>
+
+
+    <!-- NEWSSETTLER SECTION -->
+    <section class="py-14">
+        <div class="container flex justify-between items-center">
+            <!-- left image -->
+            <div>
+                <img src="images/women.png" class="w-[300px] h-auto">
+            </div>
+            <!-- center text -->
+            <div class="flex flex-col items-center justify-center w-[580px]">
+                <h2 class="text-[40px] font-Volk text-primary">Subscribe To Our Newsletter</h2>
+                <p class="mt-2 text-center text-tabs">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque duis ultrices sollicitudin
+                    aliquam sem. Scelerisque duis ultrices sollicitudin.
+                </p>
+
+                <div class="mt-6 flex flex-col items-center w-full">
+                    <input type="email" placeholder="michael@ymail.com"
+                        class="w-full px-8 py-4 shadow-tab bg-transparent text-tabs font-Poppins placeholder-tabs outline-none focus:ring-2 focus:ring-primary focus:border-transparent" />
+                    <button
+                        class='px-10 mt-10 shadow-tab  py-4 text-[15px] rounded-[10px] text-white transition-all ease-in-out duration-300 bg-black hover:bg-primary font-Poppins'>Subscribe
+                        Now</button>
+                </div>
+            </div>
+
+            <!-- right side image -->
+            <div>
+                <img src="images/men.png" class="w-[300px] h-auto">
+            </div>
+        </div>
+    </section>
+    <hr class="text-footer-border">
+
+    <!-- FOOTER  -->
+    <!-- Footer Section -->
+    <footer class=" text-primary py-8 font-Poppins">
+        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
+
+            <!-- Left Section: Logo or Company Name -->
+            <div class="text-[30px] text-primary font-Volk">
+                FASCO
+            </div>
+
+            <!-- Center Section: Navigation Links -->
+            <div class="flex space-x-8 mt-4 md:mt-0">
+                <a href="#" class="hover:text-black transition">Support Center</a>
+                <a href="#" class="hover:text-black transition">Invoicing</a>
+                <a href="#" class="hover:text-black transition">Contract</a>
+                <a href="#" class="hover:text-black transition">Careers</a>
+                <a href="#" class="hover:text-black transition">Blog</a>
+                <a href="#" class="hover:text-black transition">FAQs</a>
+            </div>
+
+            
+        </div>
+        <!-- Right Section: Copyright -->
+        <div class="text-center mt-12 text-sm">
+            Copyright © 2022 Xpro. All Rights Reserved.
+        </div>
+
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Swiper JS -->
+    <script src=" https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
