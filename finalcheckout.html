@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="output.css">
+    <!-- cdn-link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Check Out</title>
+</head>
+
+<body>
+
+
+    <!-- NAVBAR -->
+    <div class="container">
+        <header class='flex py-4 font-Poppins min-h-[80px] tracking-wide relative z-50'>
+            <div class='flex flex-wrap items-center justify-between gap-4 w-full'>
+                <a href="javascript:void(0)" class="text-[45px] font-Volk text-primary">FASCO</a>
+
+                <div id="collapseMenu"
+                    class='max-lg:hidden lg:!block max-lg:before:fixed max-lg:before:bg-black max-lg:before:opacity-50 max-lg:before:inset-0 max-lg:before:z-50'>
+                    <button id="toggleClose" class='lg:hidden fixed top-2 right-4 z-[100] rounded-full bg-white p-3'>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 fill-black" viewBox="0 0 320.591 320.591">
+                            <path
+                                d="M30.391 318.583a30.37 30.37 0 0 1-21.56-7.288c-11.774-11.844-11.774-30.973 0-42.817L266.643 10.665c12.246-11.459 31.462-10.822 42.921 1.424 10.362 11.074 10.966 28.095 1.414 39.875L51.647 311.295a30.366 30.366 0 0 1-21.256 7.288z"
+                                data-original="#000000"></path>
+                            <path
+                                d="M287.9 318.583a30.37 30.37 0 0 1-21.257-8.806L8.83 51.963C-2.078 39.225-.595 20.055 12.143 9.146c11.369-9.736 28.136-9.736 39.504 0l259.331 257.813c12.243 11.462 12.876 30.679 1.414 42.922-.456.487-.927.958-1.414 1.414a30.368 30.368 0 0 1-23.078 7.288z"
+                                data-original="#000000"></path>
+                        </svg>
+                    </button>
+
+                    <ul
+                        class='lg:flex gap-x-5 max-lg:space-y-3 max-lg:fixed max-lg:bg-white max-lg:w-1/2 max-lg:min-w-[300px] max-lg:top-0 max-lg:left-0 max-lg:p-6 max-lg:h-full max-lg:shadow-md max-lg:overflow-auto z-50'>
+                        <li class='mb-6 hidden max-lg:block'>
+                            <a href="javascript:void(0)" class="text-[45px] font-Volk text-primary">FASCO</a>
+                        </li>
+                        <li class='max-lg:border-b max-lg:py-3 px-3'>
+                            <a href='index.html'
+                                class='relative after:block after:w-full after:h-0.5 after:bg-primary after:mt-1 after:scale-x-0 hover:after:scale-x-100 transition-transform duration-300 text-primary text-[16px] font-Poppins'>Home</a>
+                        </li>
+                        <li class='max-lg:border-b max-lg:py-3 px-3'><a href='javascript:void(0)'
+                                class='relative after:block after:w-full after:h-0.5 after:bg-primary after:mt-1 after:scale-x-0 hover:after:scale-x-100 transition-transform duration-300 text-primary text-[16px] font-Poppins'>Shop</a>
+                        </li>
+                        <li class='max-lg:border-b max-lg:py-3 px-3'><a href='products.html'
+                                class='relative after:block after:w-full after:h-0.5 after:bg-primary after:mt-1 after:scale-x-0 hover:after:scale-x-100  transition-transform duration-300 text-primary text-[16px] font-Poppins'>Products</a>
+                        </li>
+                        <!-- Dropdown Container -->
+                        <li class="relative px-3  border-b lg:border-0 max-lg:border-b max-lg:py-3">
+                            <!-- Trigger Button -->
+                            <button onclick="toggleDropdown()"
+                                class="flex gap-1 items-center relative after:block after:w-full after:h-0.5 after:bg-gray-300 after:mt-1 after:scale-x-0 hover:after:scale-x-100 transition-transform duration-300 text-primary text-[16px] font-Poppins">
+                                Pages
+                                <i class="fa-solid fa-caret-down"></i>
+                            </button>
+
+                            <!-- Dropdown Menu -->
+                            <ul id="dropdownMenu"
+                                class="absolute left-0 hidden mt-2 bg-white text-primary shadow-lg rounded w-40 z-10">
+                                <li class="px-4 py-2 hover:bg-gray-100"><a href="#">Sub Page 1</a></li>
+                                <li class="px-4 py-2 hover:bg-gray-100"><a href="#">Sub Page 2</a></li>
+                                <li class="px-4 py-2 hover:bg-gray-100"><a href="#">Sub Page 3</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class='flex gap-1 text-primary items-center max-lg:ml-auto space-x-5'>
+                    <i class="fa-solid fa-magnifying-glass cursor-pointer hover:text-black"></i>
+                    <i class="fa-regular fa-user cursor-pointer hover:text-black"></i>
+                    <i class="fa-regular fa-star cursor-pointer hover:text-black"></i>
+                    <span class="relative">
+                        <i class="fa-solid fa-bag-shopping cursor-pointer hover:text-black"></i>
+                        <span
+                            class="absolute bottom-[10px] left-auto -ml-1 top-0 rounded-full bg-red-500 px-1 py-0 text-xs text-white">1</span>
+                    </span>
+
+
+
+                    <button id="toggleOpen" class='lg:hidden !ml-7'>
+                        <svg class="w-7 h-7" fill="#000" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </header>
+    </div>
+    <h1 class="font-Volk text-[40px] text-center py-10">FASCO Demo Checkout</h1>
+    <hr class="bg-check-border">
+    <!-- FORM -->
+     <section>
+    <div class="container">
+        <div class="">
+            <div class="flex">
+                <!-- Left Section: Form -->
+                <div class="w-1/2 p-8 pl-0">
+                    <!-- Contact Section -->
+                    <div class="flex justify-between items-center font-Volk">
+                        <h2 class="text-3xl mb-4 text-primary">Contact</h2>
+                        <a href="#" class="text-blue-500 text-sm ml-4 font-Poppins"><span class="text-black">Have an
+                                account? </span>Create Account</a>
+                    </div>
+                    <div class="flex items-center justify-between mb-4 font-Poppins">
+                        <input type="email" placeholder="Email Address"
+                            class="w-full placeholder:text-tabs border border-primary py-4 px-4">
+                    </div>
+
+                    <!-- Delivery Section -->
+                    <h2 class="text-3xl font-Volk mb-4 text-primary">Delivery</h2>
+                    <div class="grid grid-cols-2 gap-4 font-Poppins">
+                        <select class="border col-span-2 border-primary py-4 px-4  text-tabs">
+                            <option>Country / Region</option>
+                            <option>USA</option>
+                            <option>Canada</option>
+                        </select>
+                        <input type="text" placeholder="First Name"
+                            class="placeholder:text-tabs border border-primary py-4 px-4">
+                        <input type="text" placeholder="Last Name"
+                            class="placeholder:text-tabs border border-primary py-4 px-4">
+                        <input type="text" placeholder="Address"
+                            class="col-span-2 border border-primary py-4 px-4  placeholder:text-tabs">
+                        <input type="text" placeholder="City"
+                            class="border placeholder:text-tabs border-primary py-4 px-4">
+                        <input type="text" placeholder="Postal Code"
+                            class="border placeholder:text-tabs border-primary py-4 px-4">
+                    </div>
+                    <label class="flex items-center mt-4 font-Poppins">
+                        <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600 ring-2 ring-black ring-inset">
+                        <span class="ml-2 text-tabs">Save This Info For Future</span>
+                    </label>
+
+                    <!-- Payment Section -->
+                    <h2 class="text-3xl font-Volk mb-4 mt-10 text-primary">Payment</h2>
+                    <div class="relative w-full mb-4">
+                        <span class="absolute inset-y-0 right-[1.25rem] flex items-center">
+                            <!-- MasterCard SVG Icon -->
+                            <svg class="w-6 h-6" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="15" cy="24" r="9" fill="#EA001B" />
+                                <circle cx="33" cy="24" r="9" fill="#FFA200" />
+                                <path d="M20.5,24c0-2.6,1.1-5,3-6.6c-1.6-1.5-3.8-2.4-6.2-2.4c-5,0-9,4-9,9s4,9,9,9c2.3,0,4.5-0.9,6.2-2.4
+                                    C21.6,29,20.5,26.6,20.5,24z" fill="#FF5E00" />
+                            </svg>
+                        </span>
+                        <select class="border border-primary text-tabs px-4 py-4 w-full font-Poppins">
+                            <option>Credit Card</option>
+                        </select>
+                    </div>
+
+                    <div class="bg-input-bg p-[14px]">
+                        <div class="grid grid-cols-2 gap-4 font-Poppins">
+                            <div class="relative col-span-2">
+                                <span class="absolute inset-y-0 right-3 flex items-center">
+                                    <!-- Lock SVG Icon -->
+                                    <svg class="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M12 2a5 5 0 00-5 5v3H5a1 1 0 00-1 1v10a1 1 0 001 1h14a1 1 0 001-1V11a1 1 0 00-1-1h-2V7a5 5 0 00-5-5zm-3 5a3 3 0 016 0v3H9V7zm-3 5h12v8H6v-8zm6 1a2 2 0 100 4 2 2 0 000-4z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </span>
+                                <input type="text" placeholder="Card Number"
+                                    class="border border-primary placeholder:text-tabs px-4 py-4 w-full rounded-md">
+                            </div>
+                            <input type="text" placeholder="Expiration Date"
+                                class="border placeholder:text-tabs border-primary px-4 py-4">
+                            <input type="text" placeholder="Security Code"
+                                class="border placeholder:text-tabs border-primary px-4 py-4">
+                            <input type="text" placeholder="Card Holder Name"
+                                class="border placeholder:text-tabs border-primary px-4 py-4  col-span-2">
+                        </div>
+                        <label class="flex items-center mt-4">
+                            <input type="checkbox"
+                                class="form-checkbox h-5 w-5 text-blue-600 ring-2 ring-black ring-inset">
+                            <span class="ml-2 text-tabs font-Poppins">Save This Info For Future</span>
+                        </label>
+                    </div>
+
+                    <button class="w-full bg-black text-white rounded-[10px] px-4 py-5 mt-8 shadow-tab">Pay Now</button>
+                    <div class="font-Poppins text-primary mt-10 text-center">Copyright © 2022 FASCO . All Rights
+                        Reseved.</div>
+                </div>
+
+                <!-- Right Section: Order Summary -->
+                <div class="w-50% bg-input-bg h-[675px] p-8 rounded-r-lg">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <div class="relative">
+                            <img src="images/check-out img.png" alt="Product image" class="w-32 h-32">
+                            <span
+                                class="flex justify-center items-center absolute top-[-9px] right-[-9px] bg-red-600 w-5 h-5 rounded-full text-white">1</span>
+                        </div>
+
+                        <div>
+                            <h3 class="text-black font-Volk">Mini Dress With Ruffled Straps</h3>
+                            <p class="text-primary font-Poppins">Red</p>
+                        </div>
+                        <p class="font-Poppins mt-9">$100.00</p>
+                    </div>
+
+                    <div class="flex justify-between gap-3 items-center">
+                        <input type="text" placeholder="Discount code"
+                            class="w-full outline-0 border-primary placeholder:text-tabs px-4 py-4 mb-4 font-Poppins">
+                        <button class="bg-black text-white px-12 py-4 rounded-md mb-4 hover:bg-primary">Apply</button>
+                    </div>
+
+                    <div class="flex justify-between mb-2 font-Poppins text-primary">
+                        <span>Subtotal</span>
+                        <span>$100.00</span>
+                    </div>
+                    <div class="flex justify-between mb-2 font-Poppins text-primary">
+                        <span>Shipping</span>
+                        <span>$40.00</span>
+                    </div>
+                    <div class="flex justify-between font-Poppins text-primary">
+                        <span>Total</span>
+                        <span class="text-black">$140.00</span>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+</section>
+    <hr class="text-check-border">
+
+      <!-- NEWSSETTLER SECTION -->
+      <section class="py-14">
+        <div class="container flex justify-between items-center">
+            <!-- left image -->
+            <div>
+                <img src="images/women.png" class="w-[300px] h-auto">
+            </div>
+            <!-- center text -->
+            <div class="flex flex-col items-center justify-center w-[580px]">
+                <h2 class="text-[40px] font-Volk text-primary">Subscribe To Our Newsletter</h2>
+                <p class="mt-2 text-center text-tabs">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque duis ultrices sollicitudin
+                    aliquam sem. Scelerisque duis ultrices sollicitudin.
+                </p>
+
+                <div class="mt-6 flex flex-col items-center w-full">
+                    <input type="email" placeholder="michael@ymail.com"
+                        class="w-full px-8 py-4 shadow-tab bg-transparent text-tabs font-Poppins placeholder-tabs outline-none focus:ring-2 focus:ring-primary focus:border-transparent" />
+                    <button
+                        class='px-10 mt-10 shadow-tab  py-4 text-[15px] rounded-[10px] text-white transition-all ease-in-out duration-300 bg-black hover:bg-primary font-Poppins'>Subscribe
+                        Now</button>
+                </div>
+            </div>
+
+            <!-- right side image -->
+            <div>
+                <img src="images/men.png" class="w-[300px] h-auto">
+            </div>
+        </div>
+    </section>
+    <hr class="text-footer-border">
+    <!-- Footer Section -->
+    <footer class=" text-primary py-8 font-Poppins">
+        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
+
+            <!-- Left Section: Logo or Company Name -->
+            <div class="text-[30px] text-primary font-Volk">
+                FASCO
+            </div>
+
+            <!-- Center Section: Navigation Links -->
+            <div class="flex space-x-8 mt-4 md:mt-0">
+                <a href="index.html" class="hover:text-black transition">Home</a>
+                <a href="#" class="hover:text-black transition">Shop</a>
+                <a href="#" class="hover:text-black transition">Products</a>
+                <!-- Dropdown Container -->
+                <li class="list-none relative px-3  border-b lg:border-0 max-lg:border-b max-lg:py-3">
+                    <!-- Trigger Button -->
+                    <button onclick="toggleDropdown()"
+                        class="flex gap-1 items-center relative after:block after:w-full after:h-0.5 after:bg-gray-300 after:mt-1 after:scale-x-0 hover:after:scale-x-100 transition-transform duration-300 text-primary text-[16px] font-Poppins">
+                        Pages
+                        <i class="fa-solid fa-caret-down"></i>
+                    </button>
+
+                    <!-- Dropdown Menu -->
+                    <ul id="dropdownMenu"
+                        class="absolute left-0 hidden mt-2 bg-white text-primary shadow-lg rounded w-40 z-10">
+                        <li class="px-4 py-2 hover:bg-gray-100"><a href="#">Sub Page 1</a></li>
+                        <li class="px-4 py-2 hover:bg-gray-100"><a href="#">Sub Page 2</a></li>
+                        <li class="px-4 py-2 hover:bg-gray-100"><a href="#">Sub Page 3</a></li>
+                    </ul>
+                </li>
+            </div>
+
+
+        </div>
+        <!-- Right Section: Copyright -->
+        <div class="text-center mt-12 text-sm">
+            Copyright © 2024 Abdullah. All Rights Reserved.
+        </div>
+
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

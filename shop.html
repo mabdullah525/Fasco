@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="output.css">
+    <!-- cdn-link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Shop</title>
+    <style>
+        /* SLANTED */
+        .slanted {
+            clip-path: polygon(10% 1%, 100% 0%, 100% 100%, 0% 100%);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <div class="container">
+        <header class='flex py-4 font-Poppins min-h-[80px] tracking-wide relative z-50'>
+            <div class='flex flex-wrap items-center justify-between gap-4 w-full'>
+                <a href="javascript:void(0)" class="text-[45px] font-Volk text-primary">FASCO</a>
+
+                <div id="collapseMenu"
+                    class='max-lg:hidden lg:!block max-lg:before:fixed max-lg:before:bg-black max-lg:before:opacity-50 max-lg:before:inset-0 max-lg:before:z-50'>
+                    <button id="toggleClose" class='lg:hidden fixed top-2 right-4 z-[100] rounded-full bg-white p-3'>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 fill-black" viewBox="0 0 320.591 320.591">
+                            <path
+                                d="M30.391 318.583a30.37 30.37 0 0 1-21.56-7.288c-11.774-11.844-11.774-30.973 0-42.817L266.643 10.665c12.246-11.459 31.462-10.822 42.921 1.424 10.362 11.074 10.966 28.095 1.414 39.875L51.647 311.295a30.366 30.366 0 0 1-21.256 7.288z"
+                                data-original="#000000"></path>
+                            <path
+                                d="M287.9 318.583a30.37 30.37 0 0 1-21.257-8.806L8.83 51.963C-2.078 39.225-.595 20.055 12.143 9.146c11.369-9.736 28.136-9.736 39.504 0l259.331 257.813c12.243 11.462 12.876 30.679 1.414 42.922-.456.487-.927.958-1.414 1.414a30.368 30.368 0 0 1-23.078 7.288z"
+                                data-original="#000000"></path>
+                        </svg>
+                    </button>
+
+                    <ul
+                        class='lg:flex gap-x-5 max-lg:space-y-3 max-lg:fixed max-lg:bg-white max-lg:w-1/2 max-lg:min-w-[300px] max-lg:top-0 max-lg:left-0 max-lg:p-6 max-lg:h-full max-lg:shadow-md max-lg:overflow-auto z-50'>
+                        <li class='mb-6 hidden max-lg:block'>
+                            <a href="javascript:void(0)" class="text-[45px] font-Volk text-primary">FASCO</a>
+                        </li>
+                        <li class='max-lg:border-b max-lg:py-3 px-3'>
+                            <a href='index.html'
+                                class='relative after:block after:w-full after:h-0.5 after:bg-primary after:mt-1 after:scale-x-0 hover:after:scale-x-100 transition-transform duration-300 text-primary text-[16px] font-Poppins'>Home</a>
+                        </li>
+                        <li class='max-lg:border-b max-lg:py-3 px-3'><a href='javascript:void(0)'
+                                class='relative after:block after:w-full after:h-0.5 after:bg-primary after:mt-1 after:scale-x-0 hover:after:scale-x-100 transition-transform duration-300 text-primary text-[16px] font-Poppins'>Shop</a>
+                        </li>
+                        <li class='max-lg:border-b max-lg:py-3 px-3'><a href='products.html'
+                                class='relative after:block after:w-full after:h-0.5 after:bg-primary after:mt-1 after:scale-x-0 hover:after:scale-x-100  transition-transform duration-300 text-primary text-[16px] font-Poppins'>Products</a>
+                        </li>
+                        <!-- Dropdown Container -->
+                        <li class="relative px-3  border-b lg:border-0 max-lg:border-b max-lg:py-3">
+                            <!-- Trigger Button -->
+                            <button onclick="toggleDropdown()"
+                                class="flex gap-1 items-center relative after:block after:w-full after:h-0.5 after:bg-gray-300 after:mt-1 after:scale-x-0 hover:after:scale-x-100 transition-transform duration-300 text-primary text-[16px] font-Poppins">
+                                Pages
+                                <i class="fa-solid fa-caret-down"></i>
+                            </button>
+
+                            <!-- Dropdown Menu -->
+                            <ul id="dropdownMenu"
+                                class="absolute left-0 hidden mt-2 bg-white text-primary shadow-lg rounded w-40 z-10">
+                                <li class="px-4 py-2 hover:bg-gray-100"><a href="#">Sub Page 1</a></li>
+                                <li class="px-4 py-2 hover:bg-gray-100"><a href="#">Sub Page 2</a></li>
+                                <li class="px-4 py-2 hover:bg-gray-100"><a href="#">Sub Page 3</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class='flex gap-1 text-primary items-center max-lg:ml-auto space-x-5'>
+                    <i class="fa-solid fa-magnifying-glass cursor-pointer hover:text-black"></i>
+                    <i class="fa-regular fa-user cursor-pointer hover:text-black"></i>
+                    <i class="fa-regular fa-star cursor-pointer hover:text-black"></i>
+                    <i class="fa-solid fa-bag-shopping cursor-pointer hover:text-black"></i>
+
+
+                    <button id="toggleOpen" class='lg:hidden !ml-7'>
+                        <svg class="w-7 h-7" fill="#000" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <!-- BREAD CURM -->
+    <section>
+        <div class="container mt-8">
+            <h1 class="text-[44px] font-Volk text-center">Fashion</h1>
+            <ul class="flex items-center justify-center font-[sans-serif] space-x-4 mt-4">
+                <li class="text-black text-[16px] cursor-pointer">
+                    Home
+                </li>
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="fill-black w-[10px] -rotate-90" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd"
+                            d="M11.99997 18.1669a2.38 2.38 0 0 1-1.68266-.69733l-9.52-9.52a2.38 2.38 0 1 1 3.36532-3.36532l7.83734 7.83734 7.83734-7.83734a2.38 2.38 0 1 1 3.36532 3.36532l-9.52 9.52a2.38 2.38 0 0 1-1.68266.69734z"
+                            clip-rule="evenodd" data-original="#000000"></path>
+                    </svg>
+                </li>
+                <li class="text-black text-[17px] cursor-pointer">
+                    Profile
+                </li>
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="fill-black w-[10px] -rotate-90" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd"
+                            d="M11.99997 18.1669a2.38 2.38 0 0 1-1.68266-.69733l-9.52-9.52a2.38 2.38 0 1 1 3.36532-3.36532l7.83734 7.83734 7.83734-7.83734a2.38 2.38 0 1 1 3.36532 3.36532l-9.52 9.52a2.38 2.38 0 0 1-1.68266.69734z"
+                            clip-rule="evenodd" data-original="#000000"></path>
+                    </svg>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- MAIN SECTION -->
+
+    <section class="py-10">
+        <div class="container flex">
+            <!-- filter -->
+            <div>
+                <div class="py-6 bg-white text-black space-y-8 w-64">
+                    <!-- Size Filter -->
+                    <h1 class="font-Volk text-3xl">Filters</h1>
+                    <div class="space-y-2">
+                        <h3 class="font-Volk text-lg">Size</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <button
+                                class="border-[2px] border-tabs text-tabs rounded-[5px] w-10 h-10 flex items-center justify-center text-sm font-medium">S</button>
+                            <button
+                                class="border-[2px] border-tabs text-tabs rounded-[5px] w-10 h-10 flex items-center justify-center text-sm font-medium">M</button>
+                            <button
+                                class="border-[2px] border-tabs text-tabs rounded-[5px] w-10 h-10 flex items-center justify-center text-sm font-medium">L</button>
+                            <button
+                                class="border-[2px] border-tabs text-tabs rounded-[5px] w-10 h-10 flex items-center justify-center text-sm font-medium">XL</button>
+                        </div>
+                    </div>
+
+                    <!-- Color Filter -->
+                    <div class="space-y-2">
+                        <h3 class="font-Volk text-lg">Colors</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <div class="w-8 h-8 shadow-color rounded-full bg-red-500"></div>
+                            <div class="w-8 h-8 shadow-color rounded-full bg-orange-500"></div>
+                            <div class="w-8 h-8 shadow-color rounded-full bg-yellow-500"></div>
+                            <div class="w-8 h-8 shadow-color rounded-full bg-green-500"></div>
+                            <div class="w-8 h-8 shadow-color rounded-full bg-blue-500"></div>
+                            <div class="w-8 h-8 shadow-color rounded-full bg-teal-500"></div>
+                            <div class="w-8 h-8 shadow-color rounded-full bg-purple-500"></div>
+                            <div class="w-8 h-8 shadow-color rounded-full bg-yellow-300"></div>
+                            <div class="w-8 h-8 shadow-color rounded-full bg-red-700"></div>
+                            <div class="w-8 h-8 shadow-color rounded-full bg-slate-600"></div>
+                            <div class="w-8 h-8 shadow-color rounded-full bg-blue-800"></div>
+                            <div class="w-8 h-8 shadow-color rounded-full bg-purple-950"></div>
+                            <!-- Additional colors -->
+                        </div>
+                    </div>
+
+                    <!-- Price Filter -->
+                    <div class="space-y-2">
+                        <h3 class="font-Volk  text-lg">Prices</h3>
+                        <ul class="space-y-1 text-tabs font-Poppins text-sm">
+                            <li><a href="#" class="hover:underline">$0-$50</a></li>
+                            <li><a href="#" class="hover:underline">$50-$100</a></li>
+                            <li><a href="#" class="hover:underline">$100-$150</a></li>
+                            <li><a href="#" class="hover:underline">$150-$200</a></li>
+                            <li><a href="#" class="hover:underline">$300-$400</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Brand Filter -->
+                    <details class="group">
+
+                        <summary
+                            class="flex items-center justify-between gap-2 font-Volk marker:content-none hover:cursor-pointer text-lg">
+
+                            <span class="flex gap-2">
+
+                                <span>
+                                    Brands
+                                </span>
+                            </span>
+                            <svg class="w-5 h-5 text-black transition group-open:rotate-90"
+                                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z">
+                                </path>
+                            </svg>
+                        </summary>
+
+                        <article class="pb-4 mt-3">
+                            <ul class="flex flex-wrap gap-2 text-tabs font-Poppins text-sm">
+                                <li><a href="#" class="hover:underline">Minimog</a></li>
+                                <li><a href="#" class="hover:underline">Retrolie</a></li>
+                                <li><a href="#" class="hover:underline">Brook</a></li>
+                                <li><a href="#" class="hover:underline">Learts</a></li>
+                                <li><a href="#" class="hover:underline">Vagabond</a></li>
+                                <li><a href="#" class="hover:underline">Abby</a></li>
+                            </ul>
+                        </article>
+
+                    </details>
+                    <!-- COLLECTION DETAIL -->
+                    <details class="group">
+
+                        <summary
+                            class="flex items-center justify-between gap-2 mt  font-Volk text-lg marker:content-none hover:cursor-pointer">
+
+                            <span class="flex gap-2">
+
+                                <span>
+                                    Collection
+                                </span>
+                            </span>
+                            <svg class="w-5 h-5 text-black transition group-open:rotate-90"
+                                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z">
+                                </path>
+                            </svg>
+                        </summary>
+
+                        <article class="pb-4 mt-3">
+                            <ul class=" gap-2 text-tabs font-Poppins text-sm">
+                                <li><a href="#" class="block  py-2 hover:bg-gray-100">All products</a></li>
+                                <li><a href="#" class="block  py-2 hover:bg-gray-100">Best sellers</a></li>
+                                <li><a href="#" class="block py-2 hover:bg-gray-100">New arrivals</a></li>
+                                <li><a href="#" class="block  py-2 hover:bg-gray-100">Accessories</a></li>
+                            </ul>
+                        </article>
+
+                    </details>
+                    <!-- Tag Filter -->
+                    <div class="space-y-2">
+                        <h3 class="font-Volk text-lg">Tags</h3>
+                        <ul class="flex flex-wrap gap-2 text-tabs font-Poppins text-sm">
+                            <li><a href="#" class="hover:underline">Fashion</a></li>
+                            <li><a href="#" class="hover:underline">Hats</a></li>
+                            <li><a href="#" class="hover:underline">Sandal</a></li>
+                            <li><a href="#" class="hover:underline">Belt</a></li>
+                            <li><a href="#" class="hover:underline">Bags</a></li>
+                            <li><a href="#" class="hover:underline">Snacker</a></li>
+                            <li><a href="#" class="hover:underline">Denim</a></li>
+                            <li><a href="#" class="hover:underline">Minimog</a></li>
+                            <li><a href="#" class="hover:underline">Vagabond</a></li>
+                            <li><a href="#" class="hover:underline">Sunglasses</a></li>
+                            <li><a href="#" class="hover:underline">Beachwear</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- IMAGES SECTION -->
+            <div class="w-full">
+                <!-- top menu -->
+                <div class="flex  justify-between items-center px-4">
+                    <div class="relative font-Volk w-max">
+                        <button type="button" id="dropdownToggle" class="py-6  text-black text-[17px] font-Volk">
+                            Best Selling
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-3 fill-black inline ml-3"
+                                viewBox="0 0 24 24">
+                                <path fill-rule="evenodd"
+                                    d="M11.99997 18.1669a2.38 2.38 0 0 1-1.68266-.69733l-9.52-9.52a2.38 2.38 0 1 1 3.36532-3.36532l7.83734 7.83734 7.83734-7.83734a2.38 2.38 0 1 1 3.36532 3.36532l-9.52 9.52a2.38 2.38 0 0 1-1.68266.69734z"
+                                    clip-rule="evenodd" data-original="#000000" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- LINES -->
+
+                    <div class="flex space-x-2 p-4">
+                        <!-- Button 1 -->
+                        <button class="flex justify-center flex-col items-center w-8 h-8 bg-lines-bar rounded-[3px]">
+                            <div class="w-4 h-[2px] bg-black mb-[3px]"></div>
+                            <div class="w-4 h-[2px] bg-black mb-[3px]"></div>
+                            <div class="w-4 h-[2px] bg-black"></div>
+                        </button>
+
+                        <!-- Button 2 -->
+                        <button class="flex justify-center items-center w-8 h-8 bg-lines-bar rounded-[3px]">
+                            <div class="w-[2px] h-4 bg-black mr-[2px]"></div>
+                            <div class="w-[2px] h-4 bg-black"></div>
+                        </button>
+
+                        <!-- Button 3 -->
+                        <button class="flex justify-center items-center w-8 h-8 bg-lines-bar rounded-[3px]">
+                            <div class="w-[2px] h-4 bg-black mr-[2px]"></div>
+                            <div class="w-[2px] h-4 bg-black mr-[2px]"></div>
+                            <div class="w-[2px] h-4 bg-black"></div>
+                        </button>
+
+                        <!-- Button 4 -->
+                        <button class="flex justify-center items-center w-8 h-8 bg-lines-bar rounded-[3px]">
+                            <div class="w-[2px] h-4 bg-black mr-[2px]"></div>
+                            <div class="w-[2px] h-4 bg-black mr-[2px]"></div>
+                            <div class="w-[2px] h-4 bg-black mr-[2px]"></div>
+                            <div class="w-[2px] h-4 bg-black"></div>
+                        </button>
+
+                        <!-- Button 5 -->
+                        <button class="flex justify-center items-center w-8 h-8 bg-lines-bar rounded-[3px]">
+                            <div class="w-[2px] h-4 bg-black mr-[1px]"></div>
+                            <div class="w-[2px] h-4 bg-black mr-[1px]"></div>
+                            <div class="w-[2px] h-4 bg-black mr-[1px]"></div>
+                            <div class="w-[2px] h-4 bg-black mr-[1px]"></div>
+                            <div class="w-[2px] h-4 bg-black"></div>
+                        </button>
+                    </div>
+
+
+
+                </div>
+
+                <!-- pegination -->
+                <div class="flex items-center justify-between px-4">
+                    <div>
+                        <img src="images/img-1.png" class="w-64 h-[360px] object-cover">
+                        <div class="font-Volk mt-4">
+                            <h1 class="text-lg">Rounded Red Hat</h1>
+                            <p class="font-Poppins mt-3">$8.00</p>
+                            <div class="flex gap-2 mt-3">
+                                <div class="flex justify-center items-center border border-black rounded-full w-7 h-7">
+                                    <div class="w-5 h-5 shadow-color rounded-full bg-yellow-300"></div>
+                                </div>
+                                <div class="w-7 h-7 shadow-color rounded-full bg-black"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <img src="images/img-2.png" class="w-64 h-[360px] object-cover">
+                        <div
+                            class="absolute top-[35%] left-1/2 -translate-x-1/2  flex justify-center items-center rounded-full w-12 h-12 bg-sold-out font-Poppins text-white text-[11px] font-[900]">
+                            Sold<br>Out</div>
+                        <div class="font-Volk mt-4">
+                            <h1 class="text-lg">Linen-blend Shirt</h1>
+                            <p class="font-Poppins mt-3">$17.00</p>
+                            <div class="flex gap-2 mt-3">
+                                <div class="flex justify-center items-center border border-black rounded-full w-7 h-7">
+                                    <div class="w-5 h-5 shadow-color rounded-full bg-gray-400"></div>
+                                </div>
+                                <div class="w-7 h-7 shadow-color rounded-full bg-pink-300"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="images/img-3.png" class="w-64 h-[360px] object-cover">
+                        <div class="font-Volk mt-4">
+                            <h1 class="text-lg">Long-sleeve Coat</h1>
+                            <p class="font-Poppins mt-3">$106.00</p>
+                            <div class="flex gap-2 mt-3">
+                                <div class="flex justify-center items-center border border-black rounded-full w-7 h-7">
+                                    <div class="w-5 h-5 shadow-color rounded-full bg-slate-400"></div>
+                                </div>
+                                <div class="w-7 h-7 shadow-color rounded-full bg-green-300"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- pegination 2 -->
+                <div class="flex items-center justify-between mt-10 px-4">
+                    <div>
+                        <img src="images/img-4.png" class="w-64 h-[360px] object-cover">
+                        <div class="font-Volk mt-4">
+                            <h1 class="text-lg">Boxy Denim Hat</h1>
+                            <p class="font-Poppins mt-3">$25.00</p>
+                            <div class="flex gap-2 mt-3">
+                                <div class="flex justify-center items-center border border-black rounded-full w-7 h-7">
+                                    <div class="w-5 h-5 shadow-color rounded-full bg-slate-800"></div>
+                                </div>
+                                <div class="w-7 h-7 shadow-color rounded-full bg-blue-950"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <img src="images/img-5.png" class="w-64 h-[360px] object-cover">
+                        <div class="font-Volk mt-4">
+                            <h1 class="text-lg">Linen Plain Top</h1>
+                            <p class="font-Poppins mt-3">$25.00</p>
+                            <div class="flex gap-2 mt-3">
+                                <div class="flex justify-center items-center border border-black rounded-full w-7 h-7">
+                                    <div class="w-5 h-5 shadow-color rounded-full bg-green-500"></div>
+                                </div>
+                                <div class="w-7 h-7 shadow-color rounded-full bg-blue-300"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="images/img-6.png" class="w-64 h-[360px] object-cover">
+                        <div class="font-Volk mt-4">
+                            <h1 class="text-lg">Oversized T-shirt</h1>
+                            <p class="font-Poppins mt-3">$11.00</p>
+                            <div class="flex gap-2 mt-3">
+                                <div class="flex justify-center items-center border border-black rounded-full w-7 h-7">
+                                    <div class="w-5 h-5 shadow-color rounded-full bg-yellow-900"></div>
+                                </div>
+                                <div class="w-7 h-7 shadow-color rounded-full bg-red-950"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- pegination 3 -->
+                <div class="flex items-center justify-between mt-10 px-4">
+                    <div>
+                        <img src="images/img-7.png" class="w-64 h-[360px] object-cover">
+                        <div class="font-Volk mt-4">
+                            <h1 class="text-lg">Polarised Sunglasses</h1>
+                            <p class="font-Poppins mt-3">$18.00</p>
+                            <div class="flex gap-2 mt-3">
+                                <div class="flex justify-center items-center border border-black rounded-full w-7 h-7">
+                                    <div class="w-5 h-5 shadow-color rounded-full bg-black"></div>
+                                </div>
+                                <div class="w-7 h-7 shadow-color rounded-full bg-purple-900"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <img src="images/img-8.png" class="w-64 h-[360px] object-cover">
+                        <div class="font-Volk mt-4">
+                            <h1 class="text-lg">Rockstar Jacket</h1>
+                            <p class="font-Poppins mt-3">$22.00</p>
+                            <div class="flex gap-2 mt-3">
+                                <div class="flex justify-center items-center border border-black rounded-full w-7 h-7">
+                                    <div class="w-5 h-5 shadow-color rounded-full bg-green-500"></div>
+                                </div>
+                                <div class="w-7 h-7 shadow-color rounded-full bg-blue-300"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="images/img-9.png" class="w-64 h-[360px] object-cover">
+                        <div class="font-Volk mt-4">
+                            <h1 class="text-lg">Dotted Black Dress</h1>
+                            <p class="font-Poppins mt-3">$31.00</p>
+                            <div class="flex gap-2 mt-3">
+                                <div class="flex justify-center items-center border border-black rounded-full w-7 h-7">
+                                    <div class="w-5 h-5 shadow-color rounded-full bg-yellow-900"></div>
+                                </div>
+                                <div class="w-7 h-7 shadow-color rounded-full bg-red-950"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- PAGINATION -->
+
+                <div class="flex justify-center mt-20 space-x-1 font-Poppins">
+                    <button
+                        class="min-w-9 rounded-full py-2 px-3.5 text-center text-[16px] transition-all text-black hover:text-black hover:bg-pagination focus:text-black focus:bg-pagination focus:border-slate-800 active:border-slate-800 active:text-black active:bg-pagination">
+                        1
+                    </button>
+                    <button
+                        class="min-w-9 rounded-full py-2 px-3.5 text-center text-[16px] transition-all text-black hover:text-black hover:bg-pagination focus:text-black focus:bg-pagination focus:border-slate-800 active:border-slate-800 active:text-black active:bg-pagination">
+                        2
+                    </button>
+                    <button
+                        class="min-w-9 rounded-full py-2 px-3.5 text-center text-[16px] transition-all text-black hover:text-black hover:bg-pagination focus:text-black focus:bg-pagination focus:border-slate-800 active:border-slate-800 active:text-black active:bg-pagination">
+                        3
+                    </button>
+                    <button>
+                        <i class="fa-solid fa-angles-right text-sm"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- PEAKY BLINDER -->
+    <div class="flex items-center justify-center">
+        <div class="flex w-full bg-peaky-bg">
+            <!-- Left Side: Image with Labels -->
+            <div class="relative w-1/2 flex  items-start justify-center">
+                <div class="">
+                    <!-- image -->
+                    <img src="images/peaky.png" alt="Peaky Blinders Outfit"
+                        class="w-full h-[525px] object-cover rounded-lg">
+                </div>
+            </div>
+
+            <!-- Right Side: Product Details -->
+            <div class="border-2 border-black origin-center rotate-[7deg] relative left-[33px] "></div>
+            <div class="w-1/2 pr-20 pl-28 pt-16 bg-peaky font-Poppins clip slanted">
+                <p class="text-sm text-women-gray">Women Collection</p>
+                <h2 class="text-[45px] font-Volk text-primary mt-5 mb-4">Peaky Blinders</h2>
+                <h3 class="text-sm text-black underline underline-offset-1 mb-2">DESCRIPTION</h3>
+                <p class="text-women-gray mt-5 mb-6">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque duis ultrices sollicitudin
+                    aliquam sem.
+                    Scelerisque duis ultrices sollicitudin. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Scelerisque duis.
+                </p>
+                <div class="flex items-center mb-3">
+                    <span class="text-women-gray mr-2">Size:</span>
+                    <span class="px-4 py-1 bg-black text-white rounded-[10px]">M</span>
+                </div>
+                <p class="text-[28px] font-[500] text-black mb-4">$100.00</p>
+                <button
+                    class='px-16  py-3 text-[15px] rounded-[10px] text-white transition-all ease-in-out duration-300 bg-black hover:bg-primary shadow-2xl font-Poppins'>Buy
+                    Now</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- LOGO SECTION -->
+
+    <section class="py-14 shadow-custom">
+        <div class="container flex justify-between items-center font-Poppins">
+            <div class="flex justify-center items-end gap-3">
+                <img src="images/vecctor.png" alt="">
+                <div>
+                    <p class="font-[500] text-primary">High Quality</p>
+                    <h1 class="text-[15px] text-primary">crafted from top materials</h1>
+                </div>
+            </div>
+            <div class="flex justify-center items-end gap-3">
+                <img src="images/vector-2.png" alt="">
+                <div>
+                    <p class="font-[500] text-primary">Warrany Protection</p>
+                    <h1 class="text-[15px] text-primary">Over 2 years</h1>
+                </div>
+            </div>
+            <div class="flex justify-center items-end gap-3">
+                <img src="images/vector-3.png" alt="">
+                <div>
+                    <p class="font-[500] text-primary">Free Shipping</p>
+                    <h1 class="text-[15px] text-primary">Order over 150 $</h1>
+                </div>
+            </div>
+            <div class="flex justify-center items-end gap-3">
+                <img src="images/vector-4.png" alt="">
+                <div>
+                    <p class="font-[500] text-primary">24 / 7 Support</p>
+                    <h1 class="text-[15px] text-primary">Dedicated support</h1>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOLLOW US ON INSTAGRAM -->
+    <section class="py-14 shadow-custom">
+        <div class="container text-center font-Volk">
+            <div>
+                <h1 class="text-primary text-[46px]">Follow Us On Instagram</h1>
+                <p class="w-[614px] mx-auto font-Poppins text-tabs">Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Scelerisque duis ultrices sollicitudin aliquam sem. Scelerisque duis ultrices
+                    sollicitudin </p>
+            </div>
+        </div>
+        <!-- images  -->
+        <div class="flex items-center mt-12">
+            <div class="w-1/6">
+                <img src="images/image (1).png" class="w-full">
+            </div>
+            <div class="w-1/6">
+                <img src="images/image (2).png" class="w-full">
+            </div>
+            <div class="w-1/6">
+                <img src="images/image (3).png" class="w-full">
+            </div>
+            <div class="w-1/6">
+                <img src="images/image (4).png" class="w-full">
+            </div>
+            <div class="w-1/6">
+                <img src="images/image (5).png" class="w-full">
+            </div>
+            <div class="w-1/6">
+                <img src="images/image (6).png" class="w-full">
+            </div>
+            <div class="w-1/6">
+                <img src="images/image (7).png" class="w-full">
+            </div>
+
+        </div>
+    </section>
+
+    <!-- NEWSSETTLER SECTION -->
+    <section class="py-14">
+        <div class="container flex justify-between items-center">
+            <!-- left image -->
+            <div>
+                <img src="images/women.png" class="w-[300px] h-auto">
+            </div>
+            <!-- center text -->
+            <div class="flex flex-col items-center justify-center w-[580px]">
+                <h2 class="text-[40px] font-Volk text-primary">Subscribe To Our Newsletter</h2>
+                <p class="mt-2 text-center text-tabs">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque duis ultrices sollicitudin
+                    aliquam sem. Scelerisque duis ultrices sollicitudin.
+                </p>
+
+                <div class="mt-6 flex flex-col items-center w-full">
+                    <input type="email" placeholder="michael@ymail.com"
+                        class="w-full px-8 py-4 shadow-tab bg-transparent text-tabs font-Poppins placeholder-tabs outline-none focus:ring-2 focus:ring-primary focus:border-transparent" />
+                    <button
+                        class='px-10 mt-10 shadow-tab  py-4 text-[15px] rounded-[10px] text-white transition-all ease-in-out duration-300 bg-black hover:bg-primary font-Poppins'>Subscribe
+                        Now</button>
+                </div>
+            </div>
+
+            <!-- right side image -->
+            <div>
+                <img src="images/men.png" class="w-[300px] h-auto">
+            </div>
+        </div>
+    </section>
+    <hr class="text-footer-border">
+    <!-- Footer Section -->
+    <footer class=" text-primary py-8 font-Poppins">
+        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
+
+            <!-- Left Section: Logo or Company Name -->
+            <div class="text-[30px] text-primary font-Volk">
+                FASCO
+            </div>
+
+            <!-- Center Section: Navigation Links -->
+            <div class="flex space-x-8 mt-4 md:mt-0">
+                <a href="index.html" class="hover:text-black transition">Home</a>
+                <a href="#" class="hover:text-black transition">Shop</a>
+                <a href="#" class="hover:text-black transition">Products</a>
+                <!-- Dropdown Container -->
+                <li class="list-none relative px-3  border-b lg:border-0 max-lg:border-b max-lg:py-3">
+                    <!-- Trigger Button -->
+                    <button onclick="toggleDropdown()"
+                        class="flex gap-1 items-center relative after:block after:w-full after:h-0.5 after:bg-gray-300 after:mt-1 after:scale-x-0 hover:after:scale-x-100 transition-transform duration-300 text-primary text-[16px] font-Poppins">
+                        Pages
+                        <i class="fa-solid fa-caret-down"></i>
+                    </button>
+
+                    <!-- Dropdown Menu -->
+                    <ul id="dropdownMenu"
+                        class="absolute left-0 hidden mt-2 bg-white text-primary shadow-lg rounded w-40 z-10">
+                        <li class="px-4 py-2 hover:bg-gray-100"><a href="#">Sub Page 1</a></li>
+                        <li class="px-4 py-2 hover:bg-gray-100"><a href="#">Sub Page 2</a></li>
+                        <li class="px-4 py-2 hover:bg-gray-100"><a href="#">Sub Page 3</a></li>
+                    </ul>
+                </li>
+            </div>
+
+
+        </div>
+        <!-- Right Section: Copyright -->
+        <div class="text-center mt-12 text-sm">
+            Copyright © 2024 Abdullah. All Rights Reserved.
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

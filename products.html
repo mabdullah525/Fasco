@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="output.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- cdn-link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Products</title>
+    <style>
+        /* SLANTED */
+        .slanted {
+            clip-path: polygon(10% 1%, 100% 0%, 100% 100%, 0% 100%);
+        }
+
+        /* SWIPER */
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .swiper {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .swiper-slide-active {
+            width: 300px !important;
+            height: 500px !important;
+            transition: .5s !important;
+            opacity: 1 !important;
+        }
+
+        .swiper-slide-active .sale-box {
+            transition: .5s;
+            opacity: 1;
+        }
+
+        .swiper-pagination-clickable .swiper-pagination-bullet {
+            cursor: pointer;
+        }
+
+        .swiper-pagination-bullet {
+            background: black;
+        }
+
+        .swiper-pagination {
+            text-align: center !important;
+            transition: .3s;
+            transform: translate3d(0, 0, 0);
+            z-index: 10;
+            margin-top: 25px;
+        }
+
+        .swiper-horizontal>.swiper-pagination-bullets,
+        .swiper-pagination-bullets.swiper-pagination-horizontal,
+        .swiper-pagination-custom,
+        .swiper-pagination-fraction {
+            bottom: var(--swiper-pagination-bottom, 0);
+            top: var(--swiper-pagination-top, auto);
+            left: 7px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <div class="container">
+        <header class='flex py-4 font-Poppins min-h-[80px] tracking-wide relative z-50'>
+            <div class='flex flex-wrap items-center justify-between gap-4 w-full'>
+                <a href="javascript:void(0)" class="text-[45px] font-Volk text-primary">FASCO</a>
+
+                <div id="collapseMenu"
+                    class='max-lg:hidden lg:!block max-lg:before:fixed max-lg:before:bg-black max-lg:before:opacity-50 max-lg:before:inset-0 max-lg:before:z-50'>
+                    <button id="toggleClose" class='lg:hidden fixed top-2 right-4 z-[100] rounded-full bg-white p-3'>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 fill-black" viewBox="0 0 320.591 320.591">
+                            <path
+                                d="M30.391 318.583a30.37 30.37 0 0 1-21.56-7.288c-11.774-11.844-11.774-30.973 0-42.817L266.643 10.665c12.246-11.459 31.462-10.822 42.921 1.424 10.362 11.074 10.966 28.095 1.414 39.875L51.647 311.295a30.366 30.366 0 0 1-21.256 7.288z"
+                                data-original="#000000"></path>
+                            <path
+                                d="M287.9 318.583a30.37 30.37 0 0 1-21.257-8.806L8.83 51.963C-2.078 39.225-.595 20.055 12.143 9.146c11.369-9.736 28.136-9.736 39.504 0l259.331 257.813c12.243 11.462 12.876 30.679 1.414 42.922-.456.487-.927.958-1.414 1.414a30.368 30.368 0 0 1-23.078 7.288z"
+                                data-original="#000000"></path>
+                        </svg>
+                    </button>
+
+                    <ul
+                        class='lg:flex gap-x-5 max-lg:space-y-3 max-lg:fixed max-lg:bg-white max-lg:w-1/2 max-lg:min-w-[300px] max-lg:top-0 max-lg:left-0 max-lg:p-6 max-lg:h-full max-lg:shadow-md max-lg:overflow-auto z-50'>
+                        <li class='mb-6 hidden max-lg:block'>
+                            <a href="javascript:void(0)" class="text-[45px] font-Volk text-primary">FASCO</a>
+                        </li>
+                        <li class='max-lg:border-b max-lg:py-3 px-3'>
+                            <a href='index.html'
+                                class='relative after:block after:w-full after:h-0.5 after:bg-primary after:mt-1 after:scale-x-0 hover:after:scale-x-100 transition-transform duration-300 text-primary text-[16px] font-Poppins'>Home</a>
+                        </li>
+                        <li class='max-lg:border-b max-lg:py-3 px-3'><a href='javascript:void(0)'
+                                class='relative after:block after:w-full after:h-0.5 after:bg-primary after:mt-1 after:scale-x-0 hover:after:scale-x-100 transition-transform duration-300 text-primary text-[16px] font-Poppins'>Shop</a>
+                        </li>
+                        <li class='max-lg:border-b max-lg:py-3 px-3'><a href='products.html'
+                                class='relative after:block after:w-full after:h-0.5 after:bg-primary after:mt-1 after:scale-x-0 hover:after:scale-x-100  transition-transform duration-300 text-primary text-[16px] font-Poppins'>Products</a>
+                        </li>
+                        <!-- Dropdown Container -->
+                        <li class="relative px-3  border-b lg:border-0 max-lg:border-b max-lg:py-3">
+                            <!-- Trigger Button -->
+                            <button onclick="toggleDropdown()"
+                                class="flex gap-1 items-center relative after:block after:w-full after:h-0.5 after:bg-gray-300 after:mt-1 after:scale-x-0 hover:after:scale-x-100 transition-transform duration-300 text-primary text-[16px] font-Poppins">
+                                Pages
+                                <i class="fa-solid fa-caret-down"></i>
+                            </button>
+
+                            <!-- Dropdown Menu -->
+                            <ul id="dropdownMenu"
+                                class="absolute left-0 hidden mt-2 bg-white text-primary shadow-lg rounded w-40 z-10">
+                                <li class="px-4 py-2 hover:bg-gray-100"><a href="#">Sub Page 1</a></li>
+                                <li class="px-4 py-2 hover:bg-gray-100"><a href="#">Sub Page 2</a></li>
+                                <li class="px-4 py-2 hover:bg-gray-100"><a href="#">Sub Page 3</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class='flex gap-1 text-primary items-center max-lg:ml-auto space-x-5'>
+                    <i class="fa-solid fa-magnifying-glass cursor-pointer hover:text-black"></i>
+                    <i class="fa-regular fa-user cursor-pointer hover:text-black"></i>
+                    <i class="fa-regular fa-star cursor-pointer hover:text-black"></i>
+                    <i class="fa-solid fa-bag-shopping cursor-pointer hover:text-black"></i>
+
+
+                    <button id="toggleOpen" class='lg:hidden !ml-7'>
+                        <svg class="w-7 h-7" fill="#000" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </header>
+    </div>
+    <!-- PRODUCT LIST -->
+    <div class="container mt-20">
+        <div class="font-Volk">
+            <div class="p-4">
+                <div class="grid items-start grid-cols-1 lg:grid-cols-2 gap-6 max-lg:gap-12">
+
+                    <div class="w-full  top-0 sm:flex gap-2">
+                        <div class="sm:space-y-3 w-16 max-sm:w-12 max-sm:flex max-sm:mb-4 max-sm:gap-4">
+                            <img src="images/product-1.png" alt="Product1" class="w-full cursor-pointer " />
+                            <img src="images/product-2.png" alt="Product2"
+                                class="w-full cursor-pointer outline outline-offset-2 outline-1" />
+                            <img src="images/product-3.png" alt="Product3" class="w-full cursor-pointer" />
+                            <img src="images/product-4.png" alt="Product4" class="w-full cursor-pointer" />
+                            <img src="images/product-5.png" alt="Product4" class="w-full cursor-pointer" />
+                            <img src="images/product-6.png" alt="Product4" class="w-full cursor-pointer" />
+                        </div>
+                        <img src="images/product-main.png" alt="Product" class="w-4/5  object-cover" />
+                    </div>
+
+                    <div>
+                        <h1 class="text-fasco mb-3">FASCO</h1>
+                        <div class="flex justify-between">
+                            <h2 class="text-4xl text-black">Denim Jacket</h2>
+                            <button
+                                class="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" class="w-5 h-5 text-black">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 17.27l5.18 3.73-1.64-7.03 5.46-4.73-7.19-.61L12 2 9.19 8.63l-7.19.61 5.46 4.73-1.64 7.03L12 17.27z" />
+                                </svg>
+                            </button>
+
+                        </div>
+
+                        <div class="flex space-x-2 mt-4">
+                            <svg class="w-4 fill-black" viewBox="0 0 14 13" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+                            </svg>
+                            <svg class="w-4 fill-black" viewBox="0 0 14 13" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+                            </svg>
+                            <svg class="w-4 fill-black" viewBox="0 0 14 13" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+                            </svg>
+                            <svg class="w-4 fill-black" viewBox="0 0 14 13" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+                            </svg>
+                            <svg class="w-4 fill-[#CED5D8]" viewBox="0 0 14 13" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+                            </svg>
+
+                            <p class="font-Poppins">(3)</p>
+
+                        </div>
+                        <div class="flex flex-wrap items-center gap-4 mt-4">
+                            <p class="text-black text-[24px]">$39.00</p>
+                            <p class="text-cut-word text-xl"><strike>$59.00</strike></p>
+                            <span
+                                class="flex justify-center items-center  bg-save text-white text-xs font-Poppins px-2 py-0.5 rounded-full">
+                                SAVE 33%
+                            </span>
+                            <p class="font-Poppins text-tabs"><i class="fa-solid fa-eye text-black"></i> 24 people are
+                                viewing this right now</p>
+
+                        </div>
+                        <div
+                            class="flex items-center justify-between mt-5 bg-hurry-up text-hurry font-semibold py-2 px-4 rounded-[4px] shadow-sm">
+                            <span class="mr-2">Hurry up! Sale ends in:</span>
+                            <div class="flex gap-2 space-x-2">
+                                <div class="flex items-center">
+                                    <span class="text-lg font-Poppins">00</span>
+                                </div>
+                                <span>:</span>
+                                <div class="flex items-center">
+                                    <span class="text-lg font-Poppins">05</span>
+                                </div>
+                                <span>:</span>
+                                <div class="flex items-center">
+                                    <span class="text-lg font-Poppins">59</span>
+                                </div>
+                                <span>:</span>
+                                <div class="flex items-center">
+                                    <span class="text-lg font-Poppins">47</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-5">
+                            <p class="text-fasco font-Poppins">Only 9 item(s) left in stock!</p>
+                            <div class="bg-bar-bg rounded-md w-full h-2 mt-3">
+                                <div class="w-[6%] h-full rounded-md bg-bar"></div>
+                            </div>
+                        </div>
+
+
+                        <div class="mt-8 font-Poppins">
+                            <h3 class="text-[16px] font-[700] font-Volk text-black">Size: M</h3>
+                            <div class="flex flex-wrap gap-4 mt-4">
+                                <button type="button"
+                                    class="w-10 h-10 border bg-black text-white font-semibold text-sm rounded-[5px] flex items-center justify-center shrink-0">M</button>
+                                <button type="button"
+                                    class="w-10 h-10 border hover:bg-black hover:text-white font-semibold text-sm rounded-[5px] flex items-center justify-center shrink-0">L</button>
+                                <button type="button"
+                                    class="w-10 h-10 border hover:bg-black hover:text-white font-semibold text-sm rounded-[5px] flex items-center justify-center shrink-0">XL</button>
+                                <button type="button"
+                                    class="w-10 h-10 border hover:bg-black hover:text-white font-semibold text-sm rounded-[5px] flex items-center justify-center shrink-0">XXL</button>
+                            </div>
+                        </div>
+
+                        <div class="mt-4">
+                            <p class="text-black font-Volk font-[700] text-[16px]">Color: <span
+                                    class="font-normal">Blue</span></p>
+                            <div class="flex gap-2 mt-3">
+                                <div class="flex justify-center items-center border border-black rounded-full w-7 h-7">
+                                    <div class="w-5 h-5 shadow-color rounded-full bg-blue-300"></div>
+                                </div>
+                                <div class="w-7 h-7 shadow-color rounded-full bg-black"></div>
+                                <div class="w-7 h-7 shadow-color rounded-full bg-pink-300"></div>
+                            </div>
+                        </div>
+                        <div class="mt-5">
+
+                            <h3 class="font-bold font-Volk text-black text-[16px]">Quantity</h3>
+                            <div class="flex items-center justify-between mt-5">
+                                <div class="flex divide-x border w-28 rounded overflow-hidden">
+                                    <button type="button" class="w-12 h-10 font-semibold">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-[.6rem] fill-current inline"
+                                            viewBox="0 0 124 124">
+                                            <path
+                                                d="M112 50H12C5.4 50 0 55.4 0 62s5.4 12 12 12h100c6.6 0 12-5.4 12-12s-5.4-12-12-12z"
+                                                data-original="#000000"></path>
+                                        </svg>
+                                    </button>
+                                    <button type="button"
+                                        class="bg-transparent w-12 h-10 font-semibold text-black text-lg">
+                                        1
+                                    </button>
+                                    <button type="button" class=" text-black w-12 h-10 font-semibold">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-[.6rem] fill-current inline"
+                                            viewBox="0 0 42 42">
+                                            <path
+                                                d="M37.059 16H26V4.941C26 2.224 23.718 0 21 0s-5 2.224-5 4.941V16H4.941C2.224 16 0 18.282 0 21s2.224 5 4.941 5H16v11.059C16 39.776 18.282 42 21 42s5-2.224 5-4.941V26h11.059C39.776 26 42 23.718 42 21s-2.224-5-4.941-5z"
+                                                data-original="#000000"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <button type="button"
+                                    class=" px-40 py-2 hover:bg-black hover:text-white text-black border-[1px] border-black text-[16px]  font-Volk rounded-md"><a href="addcart.html">Add
+                                        to cart</a></button>
+                            </div>
+                        </div>
+
+                        <div class="flex mt-10 gap-10 font-Poppins border-b-[1px] py-4">
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-code-compare"></i>
+                                <p>Compare</p>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i class="fa-regular fa-circle-question"></i>
+                                <p>Ask a question</p>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-share-nodes"></i>
+                                <p>Share</p>
+                            </div>
+                        </div>
+
+                        <div class="mt-6">
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-truck-fast"></i>
+                                <p class="font-Volk font-[700]">Estimated Delivery: <span
+                                        class="font-Poppins font-normal">Jul 30 - Aug 03</span></p>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-cart-flatbed"></i>
+                                <p class="font-Volk font-[700]">Free Shipping & Returns: <span
+                                        class="font-Poppins font-normal">On all orders over $75</span></p>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col items-center p-6 bg-peaky-bg rounded-[5px] mt-8">
+                            <div class="flex space-x-4 mb-4">
+                                <img src="images/visa-logo.jpg" alt="Visa" class="h-8">
+                                <img src="images/amex.png" alt="MasterCard" class="h-8">
+                                <img src="images/master-card.png" alt="Amex" class="h-8">
+                                <img src="images/masestro.webp" alt="Maestro" class="h-8">
+                                <img src="images/discover.png" alt="Discover" class="h-8">
+                                <img src="images/unionpay.png" alt="UnionPay" class="h-8">
+                            </div>
+                            <p class="text-center text-black font-Volk">Guarantee safe & secure checkout</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PEAKY BLINDER -->
+
+    <div class="flex items-center justify-center">
+        <div class="flex w-full bg-peaky-bg">
+            <!-- Left Side: Image with Labels -->
+            <div class="relative w-1/2 flex  items-start justify-center">
+                <div class="">
+                    <!-- image -->
+                    <img src="images/peaky.png" alt="Peaky Blinders Outfit"
+                        class="w-full h-[525px] object-cover rounded-lg">
+                </div>
+            </div>
+
+            <!-- Right Side: Product Details -->
+            <div class="border-2 border-black origin-center rotate-[7deg] relative left-[33px] "></div>
+            <div class="w-1/2 pr-20 pl-28 pt-16 bg-peaky font-Poppins clip slanted">
+                <p class="text-sm text-women-gray">Women Collection</p>
+                <h2 class="text-[45px] font-Volk text-primary mt-5 mb-4">Peaky Blinders</h2>
+                <h3 class="text-sm text-black underline underline-offset-1 mb-2">DESCRIPTION</h3>
+                <p class="text-women-gray mt-5 mb-6">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque duis ultrices sollicitudin
+                    aliquam sem.
+                    Scelerisque duis ultrices sollicitudin. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Scelerisque duis.
+                </p>
+                <div class="flex items-center mb-3">
+                    <span class="text-women-gray mr-2">Size:</span>
+                    <span class="px-4 py-1 bg-black text-white rounded-[10px]">M</span>
+                </div>
+                <p class="text-[28px] font-[500] text-black mb-4">$100.00</p>
+                <button
+                    class='px-16  py-3 text-[15px] rounded-[10px] text-white transition-all ease-in-out duration-300 bg-black hover:bg-primary shadow-2xl font-Poppins'>Buy
+                    Now</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- LOGO SECTION -->
+
+    <section class="py-14 shadow-custom">
+        <div class="container flex justify-between items-center font-Poppins">
+            <div class="flex justify-center items-end gap-3">
+                <img src="images/vecctor.png" alt="">
+                <div>
+                    <p class="font-[500] text-primary">High Quality</p>
+                    <h1 class="text-[15px] text-primary">crafted from top materials</h1>
+                </div>
+            </div>
+            <div class="flex justify-center items-end gap-3">
+                <img src="images/vector-2.png" alt="">
+                <div>
+                    <p class="font-[500] text-primary">Warrany Protection</p>
+                    <h1 class="text-[15px] text-primary">Over 2 years</h1>
+                </div>
+            </div>
+            <div class="flex justify-center items-end gap-3">
+                <img src="images/vector-3.png" alt="">
+                <div>
+                    <p class="font-[500] text-primary">Free Shipping</p>
+                    <h1 class="text-[15px] text-primary">Order over 150 $</h1>
+                </div>
+            </div>
+            <div class="flex justify-center items-end gap-3">
+                <img src="images/vector-4.png" alt="">
+                <div>
+                    <p class="font-[500] text-primary">24 / 7 Support</p>
+                    <h1 class="text-[15px] text-primary">Dedicated support</h1>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- DEAL OF THE MONTH -->
+
+    <section class="mt-20 py-20 bg-custom-gradient">
+        <div class="pl-28 flex justify-center">
+            <div class="mr-10">
+                <h1 class="font-Volk text-primary text-[45px]">Deals Of The Month</h1>
+                <p class="w-[440px] font-Poppins text-primary my-7">Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit.
+                    Scelerisque
+                    duis ultrices sollicitudin aliquam sem. Scelerisque duis ultrices sollicitudin</p>
+                <button
+                    class='mt-3 px-10  py-3 text-[15px] rounded-[10px] text-white transition-all ease-in-out duration-300 bg-black hover:bg-primary shadow-2xl font-Poppins'>Buy
+                    Now</button>
+
+
+                <!-- COUNTDOWN -->
+                <P class="mt-8 font-Poppins font-[500] text-[28px] text-primary">Hurry, Before It’s Too Late!</P>
+
+                <div class="mt-4 font-Volk flex gap-7  items-center px-0">
+                    <div
+                        class="w-[76px] h-[76px] text-primary bg-white rounded-[10px] items-center flex flex-wrap justify-center flex-col drop-shadow-lg">
+                        <p class="text-[30px]">02</p>
+                    </div>
+
+                    <div
+                        class="w-[76px] h-[76px] text-primary bg-white rounded-[10px] items-center flex justify-center flex-col drop-shadow-lg">
+                        <p class="text-[30px]">06</p>
+                    </div>
+                    <div
+                        class="w-[76px] h-[76px] text-primary bg-white rounded-[10px] items-center flex justify-center flex-col drop-shadow-lg">
+                        <p class="text-[30px]">05</p>
+                    </div>
+                    <div
+                        class="w-[76px] h-[76px] text-primary bg-white rounded-[10px] items-center flex justify-center flex-col drop-shadow-lg">
+                        <p class="text-[30px]">30</p>
+                    </div>
+                </div>
+                <div class="mt-4 items-center text-primary flex gap-7 px-0">
+                    <div class="w-[76px] h-[20px] items-center flex justify-center">
+                        <p class="text-[19px] font-Poppins">Days</p>
+                    </div>
+                    <div class="w-[76px] h-[20px] items-center flex justify-center">
+                        <p class="text-[19px] font-Poppins">Hr</p>
+                    </div>
+                    <div class="w-[76px] h-[20px] items-center flex justify-center">
+                        <p class="text-[19px] font-Poppins">Mins</p>
+                    </div>
+                    <div class="w-[76px] h-[20px] items-center flex justify-center">
+                        <p class="text-[19px] font-Poppins">Sec</p>
+                    </div>
+                </div>
+
+                <div class="flex justify-end space-x-4 w-[108%]">
+                    <!-- Left arrow button -->
+                    <button id="prevBtn"
+                        class="slider-btn flex items-center text-center justify-center w-10 h-10 rounded-full bg-white shadow-lg">
+                        <span class="text-slider text-2xl">&lt;</span>
+                    </button>
+                    <!-- Right arrow button -->
+                    <button id="nextBtn"
+                        class="slider-btn flex items-center text-center justify-center w-10 h-10 rounded-full bg-white shadow-lg">
+                        <span class="text-black text-2xl">&gt;</span>
+                    </button>
+                </div>
+
+
+
+            </div>
+            <!-- Swiper -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide relative  !w-[300px] !h-[450px]
+                    ">
+                        <img src="images/swiper-1.png" alt="">
+                        <div
+                            class="sale-box opacity-0 w-48 h-28 flex justify-center items-start flex-col text-justify bg-white absolute bottom-7 left-6 p-5">
+                            <h1 class="text-primary font-Poppins">01 - Spring Sale</h1>
+                            <p class="font-Poppins text-primary text-[25px]">30% OFF</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide  !w-[300px] !h-[450px]
+                    ">
+                        <img src="images/swiper-2.png" alt="">
+                        <div
+                            class="sale-box opacity-0 w-48 h-28 flex justify-center items-start flex-col text-justify bg-white absolute bottom-7 left-6 p-5">
+                            <h1 class="text-primary font-Poppins">01 - Spring Sale</h1>
+                            <p class="font-Poppins text-primary text-[25px]">30% OFF</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide  !w-[300px] !h-[450px]
+                    ">
+                        <img src="images/swiper-3.jpeg" alt="">
+                        <div
+                            class="sale-box opacity-0 w-48 h-28 flex justify-center items-start flex-col text-justify bg-white absolute bottom-7 left-6 p-5">
+                            <h1 class="text-primary font-Poppins">01 - Spring Sale</h1>
+                            <p class="font-Poppins text-primary text-[25px]">30% OFF</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide  !w-[300px] !h-[450px]">
+                        <img src="images/swiper-1.png" alt="">
+                        <div
+                            class="sale-box opacity-0 w-48 h-28 flex justify-center items-start flex-col text-justify bg-white absolute bottom-7 left-6 p-5">
+                            <h1 class="text-primary font-Poppins">01 - Spring Sale</h1>
+                            <p class="font-Poppins text-primary text-[25px]">30% OFF</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide  !w-[300px] !h-[450px]">
+                        <img src="images/swiper-2.png" alt="">
+                        <div
+                            class="sale-box opacity-0 w-48 h-28 flex justify-center items-start flex-col text-justify bg-white absolute bottom-7 left-6 p-5">
+                            <h1 class="text-primary font-Poppins">01 - Spring Sale</h1>
+                            <p class="font-Poppins text-primary text-[25px]">30% OFF</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+     <!-- NEWSSETTLER SECTION -->
+     <section class="py-14">
+        <div class="container flex justify-between items-center">
+            <!-- left image -->
+            <div>
+                <img src="images/women.png" class="w-[300px] h-auto">
+            </div>
+            <!-- center text -->
+            <div class="flex flex-col items-center justify-center w-[580px]">
+                <h2 class="text-[40px] font-Volk text-primary">Subscribe To Our Newsletter</h2>
+                <p class="mt-2 text-center text-tabs">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque duis ultrices sollicitudin
+                    aliquam sem. Scelerisque duis ultrices sollicitudin.
+                </p>
+
+                <div class="mt-6 flex flex-col items-center w-full">
+                    <input type="email" placeholder="michael@ymail.com"
+                        class="w-full px-8 py-4 shadow-tab bg-transparent text-tabs font-Poppins placeholder-tabs outline-none focus:ring-2 focus:ring-primary focus:border-transparent" />
+                    <button
+                        class='px-10 mt-10 shadow-tab  py-4 text-[15px] rounded-[10px] text-white transition-all ease-in-out duration-300 bg-black hover:bg-primary font-Poppins'>Subscribe
+                        Now</button>
+                </div>
+            </div>
+
+            <!-- right side image -->
+            <div>
+                <img src="images/men.png" class="w-[300px] h-auto">
+            </div>
+        </div>
+    </section>
+    <hr class="text-footer-border">
+    <!-- Footer Section -->
+    <footer class=" text-primary py-8 font-Poppins">
+        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
+
+            <!-- Left Section: Logo or Company Name -->
+            <div class="text-[30px] text-primary font-Volk">
+                FASCO
+            </div>
+
+            <!-- Center Section: Navigation Links -->
+            <div class="flex space-x-8 mt-4 md:mt-0">
+                <a href="index.html" class="hover:text-black transition">Home</a>
+                <a href="#" class="hover:text-black transition">Shop</a>
+                <a href="#" class="hover:text-black transition">Products</a>
+                <!-- Dropdown Container -->
+                <li class="list-none relative px-3  border-b lg:border-0 max-lg:border-b max-lg:py-3">
+                    <!-- Trigger Button -->
+                    <button onclick="toggleDropdown()"
+                        class="flex gap-1 items-center relative after:block after:w-full after:h-0.5 after:bg-gray-300 after:mt-1 after:scale-x-0 hover:after:scale-x-100 transition-transform duration-300 text-primary text-[16px] font-Poppins">
+                        Pages
+                        <i class="fa-solid fa-caret-down"></i>
+                    </button>
+
+                    <!-- Dropdown Menu -->
+                    <ul id="dropdownMenu"
+                        class="absolute left-0 hidden mt-2 bg-white text-primary shadow-lg rounded w-40 z-10">
+                        <li class="px-4 py-2 hover:bg-gray-100"><a href="#">Sub Page 1</a></li>
+                        <li class="px-4 py-2 hover:bg-gray-100"><a href="#">Sub Page 2</a></li>
+                        <li class="px-4 py-2 hover:bg-gray-100"><a href="#">Sub Page 3</a></li>
+                    </ul>
+                </li>
+            </div>
+
+
+        </div>
+        <!-- Right Section: Copyright -->
+        <div class="text-center mt-12 text-sm">
+            Copyright © 2024 Abdullah. All Rights Reserved.
+        </div>
+
+    </footer>
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Swiper JS -->
+
+    <script src=" https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="script.js"></script>
+    <!-- // SWIPER -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: '2.5',
+            spaceBetween: 10,
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
+
+</body>
+
+</html>

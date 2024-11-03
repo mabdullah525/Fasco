@@ -16,40 +16,7 @@ toggleClose.addEventListener('click', handleClick);
 
 // END NAVBAR
 
-// SCROLL BEHAVIOUR
 
-// Get the button
-const scrollButton = document.getElementById('scrollUp');
-
-// When the user scrolls down 200px from the top of the document, show the button
-window.onscroll = function () {
-  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-    scrollButton.classList.remove('hidden');
-  } else {
-    scrollButton.classList.add('hidden');
-  }
-};
-
-// When the user clicks on the button, scroll to the top of the document
-scrollButton.addEventListener('click', () => {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  });
-});
-
-
-// SWIPER
-
-var swiper = new Swiper(".mySwiper", {
-  slidesPerView: '2.5',
-  spaceBetween: 10,
-  loop: true,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-});
 
 // TABS
 document.addEventListener('DOMContentLoaded', function () {
@@ -82,16 +49,38 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-// TESTIMONIALS
-var swiper = new Swiper(".secondSwiper", {
-  slidesPerView: 3,
-  spaceBetween: 30,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
+// SHOP NAVBAR
+var toggleOpen = document.getElementById('toggleOpen');
+var toggleClose = document.getElementById('toggleClose');
+var collapseMenu = document.getElementById('collapseMenu');
+console.log('test ', toggleClose, toggleOpen, collapseMenu)
+
+function handleClick() {
+  if (collapseMenu.style.display === 'block') {
+    collapseMenu.style.display = 'none';
+  } else {
+    collapseMenu.style.display = 'block';
+  }
+}
+
+toggleOpen.addEventListener('click', handleClick);
+toggleClose.addEventListener('click', handleClick);
+
+// NAVBAR DROP DOWN MENU
+function toggleDropdown() {
+  const dropdown = document.getElementById('dropdownMenu');
+  dropdown.classList.toggle('hidden');
+}
+
+// Close dropdown if clicked outside
+window.addEventListener('click', function (event) {
+  const dropdown = document.getElementById('dropdownMenu');
+  if (!event.target.closest('button')) {
+    dropdown.classList.add('hidden');
+  }
 });
+
+
+
+
+

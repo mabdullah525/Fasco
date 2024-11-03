@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./index.html'],
+  content: ['./*.html'],
   theme: {
     container: {
       center: true,
@@ -15,6 +15,7 @@ module.exports = {
         'custom': '0px 20px 52.29px rgba(68, 68, 68, 0.04)', // Add custom shadow here
         'tab': '0px 20px 35px 0px rgba(0, 0, 0, 0.15)', 
         'card': '0px 40px 90px 0px rgba(0, 0, 0, 0.06)', 
+        'color': '0px 0px 0px 1px rgba(0, 0, 0, 0.1)', 
       },
       fontFamily: {
         'Volk': ['Volkhov'],
@@ -32,6 +33,22 @@ module.exports = {
         'peaky': '#DADADA',
         'women-gray': '#767676',
         'footer-border': '#DEDFE1',
+        'google-border': '#5B86E5',
+        'signin-or': '#838383',
+        'input': '#9D9D9D',
+        'lines-bar': '#F2F2F2',
+        'sold-out': '#B1B1B1',
+        'pagination': '#F3F3F3',
+        'fasco': '#666666',
+        'save': '#DA3F3F',
+        'cut-word': '#666666',
+        'hurry-up': '#FDEFEE',
+        'hurry': '#FF706B',
+        'bar': '#EF2D2D',
+        'input-bg': '#F5F5F5',
+        'bar-bg': '#DEDEDE',
+        'bg-overlay': 'rgba(120, 120, 120, 0.41)',
+        'check-border': 'rgba(0, 0, 0, 0.39)',
       },
     },
   },
