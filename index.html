@@ -52,14 +52,14 @@
             margin-right: auto;
         }
 
-        .swiper-slide-active {
+        .deal .swiper-slide-active {
             width: 300px !important;
             height: 500px !important;
             transition: .5s !important;
             opacity: 1 !important;
         }
 
-        .swiper-slide-active .sale-box {
+        .deal .swiper-slide-active .sale-box {
             transition: .5s;
             opacity: 1;
         }
@@ -77,46 +77,36 @@
             transition: .3s;
             transform: translate3d(0, 0, 0);
             z-index: 10;
-            margin-top: 25px;
+            position: relative !important;
         }
 
         .swiper-horizontal>.swiper-pagination-bullets,
         .swiper-pagination-bullets.swiper-pagination-horizontal,
         .swiper-pagination-custom,
         .swiper-pagination-fraction {
-            bottom: var(--swiper-pagination-bottom, 0);
+            bottom: var(--swiper-pagination-bottom, 40px);
             top: var(--swiper-pagination-top, auto);
-            left: 7px;
+            left: 10px;
             width: 100%;
         }
+
 
         /* SLANTED */
         .slanted {
             clip-path: polygon(10% 1%, 100% 0%, 100% 100%, 0% 100%);
         }
 
+        @media only screen and (max-width: 768px) {
+
+            .slanted {
+                clip-path: none;
+            }
+
+        }
+
         /* TESTI MONILS */
 
-        .swiper {
-            width: 100%;
-            height: 100%;
-        }
-
-        .swiper-slide {
-            text-align: center;
-            font-size: 18px;
-            background: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .swiper-slide img {
-            display: block;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+        
     </style>
 
 
@@ -124,9 +114,9 @@
 
 <body>
     <!-- NAVBAR -->
-    <div class="container">
-        <header class='flex py-4 font-Poppins min-h-[80px] tracking-wide relative z-50'>
-            <div class='flex flex-wrap items-center gap-5 w-full'>
+    <div class="lg:container lg:px-[5rem] xs:px-xs-1 md:px-md-2 ">
+        <header class='flex  py-4 font-Poppins min-h-[80px] tracking-wide relative z-50'>
+            <div class='flex  items-center gap-5 w-full'>
                 <a href="javascript:void(0)" class="text-[45px] font-Volk text-primary">FASCO</a>
 
                 <div id="collapseMenu"
@@ -166,10 +156,10 @@
 
                 <div class='flex items-center max-lg:ml-auto space-x-6'>
                     <button
-                        class='px-8 py-3 text-[15px] rounded-[10px] text-primary border-1 font-Poppins hover:bg-black transition-all ease-in-out duration-300 bg-transparent hover:text-white'><a
+                        class='md:hidden xs:hidden lg:block px-8 py-3 text-[15px] rounded-[10px] text-primary border-1 font-Poppins hover:bg-black transition-all ease-in-out duration-300 bg-transparent hover:text-white'><a
                             href="signin.html" target="_blank">Sign in</a></button>
                     <button
-                        class='px-8 py-3 text-[15px] rounded-[10px] text-white transition-all ease-in-out duration-300 bg-black hover:bg-primary shadow-2xl'><a
+                        class='md:hidden xs:hidden lg:block px-8 py-3 text-[15px] rounded-[10px] text-white transition-all ease-in-out duration-300 bg-black hover:bg-primary shadow-2xl'><a
                             href="signup.html" target="_blank">Sign
                             up</a></button>
 
@@ -185,24 +175,30 @@
         </header>
     </div>
 
+
     <!-- HERO SECTION -->
-    <section>
-        <div class="container flex justify-between  mt-16">
+    <section class="">
+        <div class="lg:container lg:px-[5rem] xs:px-xs-1 md:px-md-2 flex justify-between flex-col lg:flex-row  mt-16">
 
             <!-- left side image -->
-            <div class="flex justify-center items-end bg-hero-bg w-[330px] rounded-[10px]">
+            <div class="flex justify-center items-end bg-hero-bg lg:w-[330px] rounded-[10px]">
                 <img src="images/hero-1.png" class="w-[392px] h-auto">
             </div>
             <!-- CENTER -->
 
             <div>
-                <div class="bg-hero-bg rounded-[10px]">
+                <div class="bg-hero-bg rounded-[10px] xs:mt-5 lg:m-0 flex justify-center">
                     <img src="images/hero-3.png" alt="">
                 </div>
                 <!-- TEXT -->
                 <div>
-                    <h1 class="font-Poppins font-[500] text-[90px] text-primary">ULTIMATE</h1>
-                    <h2 class="font-Poppins text-[180px] font-bold outline-text leading-[0.8]">SALE</h2>
+                    <h1
+                        class="font-Poppins font-[500] lg:text-[90px] text-primary xs:text-[65px] md:text-[100px] text-center">
+                        ULTIMATE</h1>
+                    <h2
+                        class="font-Poppins lg:text-[180px] font-bold outline-text leading-[0.8] text-center xs:text-[125px] md:text-[190px]">
+                        SALE
+                    </h2>
                 </div>
                 <div class="text-center mt-4">
                     <p class="font-Poppins text-[18px] text-primary tracking-wide">NEW COLLECTION</p>
@@ -211,20 +207,20 @@
                             href="shop.html">SHOP
                             NOW</a></button>
                 </div>
-                <div class="mt-5">
+                <div class="mt-5 flex justify-center">
                     <img src="images/hero-4.png" alt="">
                 </div>
             </div>
 
             <!-- right side -->
-            <div class="flex justify-center items-end bg-hero-bg w-[330px] rounded-[10px]">
+            <div class="flex justify-center items-end bg-hero-bg lg:w-[330px] rounded-[10px] lg:mt-0 xs:mt-5">
                 <img src="images/hero-2.png" class="w-[220px]">
             </div>
         </div>
 
 
         <!-- Scroll Up Arrow Button (Bottom Left) -->
-        <div>
+        <div class="xs:hidden md:hidden lg:block">
             <button id="scrollUp"
                 class="fixed bottom-8 right-4 p-1 bg-white text-black rounded-full border border-black shadow-lg hover:bg-black hover:text-white transition duration-300">
                 <!-- FontAwesome up arrow icon -->
@@ -248,23 +244,26 @@
 
     <!-- LOGO SECTION -->
 
-    <section class="py-14 shadow-custom">
-        <div class="container flex justify-between  items-center">
-            <img src="images/chanel.png">
-            <img src="images/louis-viton.png">
-            <img src="images/parada.png">
-            <img src="images/calvin kelin.png">
-            <img src="images/denim.png">
+    <section class="lg:py-14 shadow-custom   xs:py-5">
+        <div
+            class="lg:container lg:px-[5rem] xs:px-xs-1 md:px-md-2 flex flex-wrap lg:justify-between md:justify-evenly items-center gap-6 md:gap-6">
+            <img src="images/chanel.png" class="w-[120px] md:w-auto h-auto">
+            <img src="images/louis-viton.png" class="w-[120px] md:w-auto h-auto">
+            <img src="images/parada.png" class="w-[120px] md:w-auto h-auto">
+            <img src="images/calvin kelin.png" class="w-[120px] md:w-auto h-auto">
+            <img src="images/denim.png" class="w-[120px] md:w-auto h-auto">
         </div>
     </section>
 
     <!-- DEAL OF THE MONTH -->
 
-    <section class="mt-20 py-20 bg-custom-gradient">
-        <div class="pl-28 flex justify-center">
-            <div class="mr-10">
-                <h1 class="font-Volk text-primary text-[45px]">Deals Of The Month</h1>
-                <p class="w-[440px] font-Poppins text-primary my-7">Lorem ipsum dolor sit amet, consectetur adipiscing
+    <section class="mt-20 bg-custom-gradient md:mt-5 lg:p-0 ">
+        <div
+            class="lg:container lg:px-[5rem] xs:px-xs-1 md:px-md-2 py-20 lg:pr-0 lg:mr-0  flex flex-col lg:flex-row lg:items-center lg:gap-10">
+            <div class="lg:pt-3 mb-10">
+                <h1 class="font-Volk text-primary lg:text-[45px] xs:text-[30px] md:text-[45px]">Deals Of The Month</h1>
+                <p class="lg:w-[440px] md:w-[447px] font-Poppins text-primary my-7">Lorem ipsum dolor sit amet,
+                    consectetur adipiscing
                     elit.
                     Scelerisque
                     duis ultrices sollicitudin aliquam sem. Scelerisque duis ultrices sollicitudin</p>
@@ -279,20 +278,20 @@
                 <div class="mt-4 font-Volk flex gap-7  items-center px-0">
                     <div
                         class="w-[76px] h-[76px] text-primary bg-white rounded-[10px] items-center flex flex-wrap justify-center flex-col drop-shadow-lg">
-                        <p class="text-[30px]">02</p>
+                        <p class="text-[30px] font-digital-number">02</p>
                     </div>
 
                     <div
                         class="w-[76px] h-[76px] text-primary bg-white rounded-[10px] items-center flex justify-center flex-col drop-shadow-lg">
-                        <p class="text-[30px]">06</p>
+                        <p class="text-[30px] font-digital-number">06</p>
                     </div>
                     <div
                         class="w-[76px] h-[76px] text-primary bg-white rounded-[10px] items-center flex justify-center flex-col drop-shadow-lg">
-                        <p class="text-[30px]">05</p>
+                        <p class="text-[30px] font-digital-number">05</p>
                     </div>
                     <div
                         class="w-[76px] h-[76px] text-primary bg-white rounded-[10px] items-center flex justify-center flex-col drop-shadow-lg">
-                        <p class="text-[30px]">30</p>
+                        <p class="text-[30px] font-digital-number">30</p>
                     </div>
                 </div>
                 <div class="mt-4 items-center text-primary flex gap-7 px-0">
@@ -310,7 +309,7 @@
                     </div>
                 </div>
 
-                <div class="flex justify-end space-x-4 w-[108%]">
+                <div class="flex lg:justify-end justify-center space-x-4 lg:w-[108%] xs:mt-5">
                     <!-- Left arrow button -->
                     <button id="prevBtn"
                         class="slider-btn flex items-center text-center justify-center w-10 h-10 rounded-full bg-white shadow-lg">
@@ -327,8 +326,8 @@
 
             </div>
             <!-- Swiper -->
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
+            <div class="swiper mySwiper ">
+                <div class="swiper-wrapper deal">
                     <div class="swiper-slide relative  !w-[300px] !h-[450px]
                     ">
                         <img src="images/swiper-1.png" alt="">
@@ -338,7 +337,7 @@
                             <p class="font-Poppins text-primary text-[25px]">30% OFF</p>
                         </div>
                     </div>
-                    <div class="swiper-slide  !w-[300px] !h-[450px]
+                    <div class="swiper-slide   !w-[300px] !h-[450px]
                     ">
                         <img src="images/swiper-2.png" alt="">
                         <div
@@ -347,7 +346,7 @@
                             <p class="font-Poppins text-primary text-[25px]">30% OFF</p>
                         </div>
                     </div>
-                    <div class="swiper-slide  !w-[300px] !h-[450px]
+                    <div class="swiper-slide !w-[300px] !h-[450px]
                     ">
                         <img src="images/swiper-3.jpeg" alt="">
                         <div
@@ -356,7 +355,7 @@
                             <p class="font-Poppins text-primary text-[25px]">30% OFF</p>
                         </div>
                     </div>
-                    <div class="swiper-slide  !w-[300px] !h-[450px]">
+                    <div class="swiper-slide   !w-[300px] !h-[450px]">
                         <img src="images/swiper-1.png" alt="">
                         <div
                             class="sale-box opacity-0 w-48 h-28 flex justify-center items-start flex-col text-justify bg-white absolute bottom-7 left-6 p-5">
@@ -364,7 +363,7 @@
                             <p class="font-Poppins text-primary text-[25px]">30% OFF</p>
                         </div>
                     </div>
-                    <div class="swiper-slide  !w-[300px] !h-[450px]">
+                    <div class="swiper-slide   !w-[300px] !h-[450px]">
                         <img src="images/swiper-2.png" alt="">
                         <div
                             class="sale-box opacity-0 w-48 h-28 flex justify-center items-start flex-col text-justify bg-white absolute bottom-7 left-6 p-5">
@@ -382,40 +381,40 @@
 
     <!-- TABS SECTION -->
     <section class="py-20">
-        <div class="container text-center font-Volk">
+        <div class="lg:container lg:px-[5rem] xs:px-xs-1 md:px-md-2 text-center font-Volk">
             <div>
-                <h1 class="text-primary text-[46px]">New Arrivals</h1>
-                <p class="w-[614px] mx-auto font-Poppins text-tabs">Lorem ipsum dolor sit amet, consectetur
+                <h1 class="text-primary lg:text-[46px] text-[40px]">New Arrivals</h1>
+                <p class="lg:w-[614px] mx-auto font-Poppins text-tabs">Lorem ipsum dolor sit amet, consectetur
                     adipiscing elit. Scelerisque duis ultrices sollicitudin aliquam sem. Scelerisque duis ultrices
                     sollicitudin </p>
             </div>
 
             <!-- Tab Container -->
             <div class="font-Poppins p-4 mt-8">
-                <ul class="flex justify-evenly space-x-4">
+                <ul class="flex flex-wrap lg:justify-evenly justify-center space-x-4 gap-2 md:gap-5">
                     <li id="homeTab"
-                        class="tab text-tabs bg-black   text-center text-sm py-3 px-6 rounded-[10px] cursor-pointer shadow-tab hover:ease-in-out duration-300">
+                        class="tab text-tabs bg-black   text-center text-xs sm:text-sm  py-2 md:py-3 px-4 md:px-6 rounded-[10px] cursor-pointer shadow-tab hover:ease-in-out duration-300">
                         Men’s Fashion</li>
                     <li id="settingTab"
-                        class="tab text-tabs  bg-tabs-bg text-center text-sm py-3 px-6 rounded-[10px] cursor-pointer shadow-tab hover:ease-in-out duration-300">
+                        class="tab text-tabs  bg-tabs-bg text-xs sm:text-sm py-2 md:py-3 px-4 md:px-6 rounded-[10px] cursor-pointer shadow-tab hover:ease-in-out duration-300">
                         Women’s Fashion</li>
                     <li id="profileTab"
-                        class="tab text-tabs  bg-tabs-bg text-center text-sm py-3 px-6 rounded-[10px] cursor-pointer shadow-tab hover:ease-in-out duration-300">
+                        class="tab text-tabs  bg-tabs-bg text-xs sm:text-sm  py-2 md:py-3 px-4 md:px-6 rounded-[10px] cursor-pointer shadow-tab hover:ease-in-out duration-300">
                         Women Accessories</li>
                     <li id="womenTab"
-                        class="tab text-tabs bg-tabs-bg text-center text-sm py-3 px-6 rounded-[10px] cursor-pointer shadow-tab hover:ease-in-out duration-300">
+                        class="tab text-tabs bg-tabs-bg text-xs sm:text-sm  py-2 md:py-3 px-4 md:px-6 rounded-[10px] cursor-pointer shadow-tab hover:ease-in-out duration-300">
                         Men Accessories</li>
                     <li id="menTab"
-                        class="tab text-tabs bg-tabs-bg text-center text-sm py-3 px-6 rounded-[10px] cursor-pointer shadow-tab hover:ease-in-out duration-300">
+                        class="tab text-tabs bg-tabs-bg text-xs sm:text-sm py-2 md:py-3 px-4 md:px-6 rounded-[10px] cursor-pointer shadow-tab hover:ease-in-out duration-300">
                         Discount Deals</li>
                 </ul>
             </div>
             <!-- MEN FASHION -->
             <div id="homeContent" class="tab-content block mt-8">
-                <div class="flex justify-between">
+                <div class="flex flex-wrap xs:gap-7 lg:gap-0 lg:justify-between justify-center">
                     <!-- cards section -->
                     <div class="bg-white rounded-[10px] shadow-card p-4 max-w-[355px]">
-                        <img src="images/card-1.png" alt="Shiny Dress" class="w-full rounded-lg">
+                        <img src="images/men.fashion.jpg" alt="Shiny Dress" class="w-full rounded-lg">
                         <div class="mt-4">
                             <div class="font-Poppins flex justify-between items-center">
                                 <h2 class="text-[20px] font-[500] text-primary">Shiny Dress</h2>
@@ -444,8 +443,8 @@
                         </div>
                     </div>
                     <!-- cards section -->
-                    <div class="bg-white rounded-[10px] shadow-card p-4 max-w-sm">
-                        <img src="images/card-2.png" alt="Shiny Dress" class="w-full rounded-lg">
+                    <div class="bg-white rounded-[10px] shadow-card p-4 max-w-[355px]">
+                        <img src="images/men-2.jpeg" alt="Shiny Dress" class="w-full rounded-lg">
                         <div class="mt-4">
                             <div class="font-Poppins flex justify-between items-center">
                                 <h2 class="text-[20px] font-[500] text-primary">Long Dress</h2>
@@ -475,7 +474,7 @@
                     </div>
                     <!-- cards section -->
                     <div class="bg-white rounded-[10px] shadow-card p-4 max-w-[355px]">
-                        <img src="images/card-3.png" alt="Shiny Dress" class="w-full rounded-lg">
+                        <img src="images/men-3.jpg" alt="Shiny Dress" class="w-full rounded-lg">
                         <div class="mt-4">
                             <div class="font-Poppins flex justify-between items-center">
                                 <h2 class="text-[20px] font-[500] text-primary">Full Sweater</h2>
@@ -504,10 +503,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex justify-between mt-16">
+                <div class="flex flex-wrap xs:gap-7 lg:gap-0 lg:justify-between justify-center mt-16">
                     <!-- cards section -->
                     <div class="bg-white rounded-[10px] shadow-card p-4 max-w-[355px]">
-                        <img src="images/card-4.png" alt="Shiny Dress" class="w-full rounded-lg">
+                        <img src="images/men-4.jpg" alt="Shiny Dress" class="w-full rounded-lg">
                         <div class="mt-4">
                             <div class="font-Poppins flex justify-between items-center">
                                 <h2 class="text-[20px] font-[500] text-primary">White Dress</h2>
@@ -536,8 +535,8 @@
                         </div>
                     </div>
                     <!-- cards section -->
-                    <div class="bg-white rounded-[10px] shadow-card p-4 max-w-sm">
-                        <img src="images/card-5.png" alt="Shiny Dress" class="w-full rounded-lg">
+                    <div class="bg-white rounded-[10px] shadow-card p-4 max-w-[355px]">
+                        <img src="images/men-6.jpg" alt="Shiny Dress" class="w-full rounded-lg">
                         <div class="mt-4">
                             <div class="font-Poppins flex justify-between items-center">
                                 <h2 class="text-[20px] font-[500] text-primary">Colorful Dress</h2>
@@ -567,7 +566,7 @@
                     </div>
                     <!-- cards section -->
                     <div class="bg-white rounded-[10px] shadow-card p-4 max-w-[355px]">
-                        <img src="images/card-6.png" alt="Shiny Dress" class="w-full rounded-lg">
+                        <img src="images/men-5.jpg" alt="Shiny Dress" class="w-full rounded-lg">
                         <div class="mt-4">
                             <div class="font-Poppins flex justify-between items-center">
                                 <h2 class="text-[20px] font-[500] text-primary">White Sweater</h2>
@@ -600,7 +599,7 @@
 
             <!-- WOMEN FASHION -->
             <div id="settingContent" class="tab-content hidden mt-8">
-                <div class="flex justify-between">
+                <div class="flex flex-wrap xs:gap-7 lg:gap-0 lg:justify-between justify-center">
                     <!-- cards section -->
                     <div class="bg-white rounded-[10px] shadow-card p-4 max-w-[355px]">
                         <img src="images/card-1.png" alt="Shiny Dress" class="w-full rounded-lg">
@@ -692,7 +691,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex justify-between mt-16">
+                <div class="flex flex-wrap xs:gap-7 lg:gap-0 lg:justify-between justify-center mt-16">
                     <!-- cards section -->
                     <div class="bg-white rounded-[10px] shadow-card p-4 max-w-[355px]">
                         <img src="images/card-4.png" alt="Shiny Dress" class="w-full rounded-lg">
@@ -785,9 +784,9 @@
                     </div>
                 </div>
             </div>
-            <!-- MEN ASSECCORIES -->
+            <!-- women ASSECCORIES -->
             <div id="profileContent" class="tab-content hidden mt-8">
-                <div class="flex justify-between">
+                <div class="flex flex-wrap xs:gap-7 lg:gap-0 lg:justify-between justify-center">
                     <!-- cards section -->
                     <div class="bg-white rounded-[10px] shadow-card p-4 max-w-[355px]">
                         <img src="images/card-1.png" alt="Shiny Dress" class="w-full rounded-lg">
@@ -879,7 +878,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex justify-between mt-16">
+                <div class="flex flex-wrap xs:gap-7 lg:gap-0 lg:justify-between justify-center mt-16">
                     <!-- cards section -->
                     <div class="bg-white rounded-[10px] shadow-card p-4 max-w-[355px]">
                         <img src="images/card-4.png" alt="Shiny Dress" class="w-full rounded-lg">
@@ -974,7 +973,7 @@
             </div>
             <!-- MEN ACCESSORIES -->
             <div id="womenContent" class="tab-content hidden mt-8">
-                <div class="flex justify-between">
+                <div class="flex flex-wrap xs:gap-7 lg:gap-0 lg:justify-between justify-center">
                     <!-- cards section -->
                     <div class="bg-white rounded-[10px] shadow-card p-4 max-w-[355px]">
                         <img src="images/card-1.png" alt="Shiny Dress" class="w-full rounded-lg">
@@ -1066,7 +1065,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex justify-between mt-16">
+                <div class="flex flex-wrap xs:gap-7 lg:gap-0 lg:justify-between justify-center mt-16">
                     <!-- cards section -->
                     <div class="bg-white rounded-[10px] shadow-card p-4 max-w-[355px]">
                         <img src="images/card-4.png" alt="Shiny Dress" class="w-full rounded-lg">
@@ -1161,7 +1160,7 @@
             </div>
             <!-- DISCOUNT -->
             <div id="menContent" class="tab-content hidden mt-8">
-                <div class="flex justify-between">
+                <div class="flex flex-wrap xs:gap-7 lg:gap-0 lg:justify-between justify-center">
                     <!-- cards section -->
                     <div class="bg-white rounded-[10px] shadow-card p-4 max-w-[355px]">
                         <img src="images/card-1.png" alt="Shiny Dress" class="w-full rounded-lg">
@@ -1253,7 +1252,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex justify-between mt-16">
+                <div class="flex flex-wrap xs:gap-7 lg:gap-0 lg:justify-between justify-center mt-16">
                     <!-- cards section -->
                     <div class="bg-white rounded-[10px] shadow-card p-4 max-w-[355px]">
                         <img src="images/card-4.png" alt="Shiny Dress" class="w-full rounded-lg">
@@ -1353,84 +1352,100 @@
     </section>
 
     <!-- PEAKY BLINDER -->
-
-    <div class="flex items-center justify-center">
-        <div class="flex w-full bg-peaky-bg">
+    <div class="flex items-center justify-center lg:pt-20">
+        <div class="flex flex-col lg:flex-row w-full bg-peaky-bg">
             <!-- Left Side: Image with Labels -->
-            <div class="relative w-1/2 flex  items-start justify-center">
-                <div class="">
-                    <!-- image -->
+            <div class="relative w-full lg:w-1/2 flex items-start justify-center">
+                <div>
                     <img src="images/peaky.png" alt="Peaky Blinders Outfit"
-                        class="w-full h-[525px] object-cover rounded-lg">
+                        class="w-full h-auto lg:h-[525px] object-cover rounded-lg">
                 </div>
             </div>
 
             <!-- Right Side: Product Details -->
-            <div class="border-2 border-black origin-center rotate-[7deg] relative left-[33px] "></div>
-            <div class="w-1/2 pr-20 pl-28 pt-16 bg-peaky font-Poppins clip slanted">
-                <p class="text-sm text-women-gray">Women Collection</p>
-                <h2 class="text-[45px] font-Volk text-primary mt-5 mb-4">Peaky Blinders</h2>
+            <div
+                class="border-2 border-black origin-center rotate-0 lg:rotate-[7deg] relative lg:left-[33px] lg:block hidden">
+            </div>
+
+            <div
+                class="w-full lg:w-1/2 px-6 lg:pr-20 lg:pl-28 pt-8 lg:pt-16 xs:pb-5 bg-peaky font-Poppins clip slanted">
+                <p class="text-xs md:text-sm text-women-gray">Women Collection</p>
+                <h2 class="text-2xl md:text-4xl lg:text-[45px] font-Volk text-primary mt-4 lg:mt-5 mb-3 lg:mb-4">Peaky
+                    Blinders</h2>
                 <h3 class="text-sm text-black underline underline-offset-1 mb-2">DESCRIPTION</h3>
-                <p class="text-women-gray mt-5 mb-6">
+                <p class="text-xs md:text-sm lg:text-base text-women-gray mt-4 lg:mt-5 mb-4 lg:mb-6">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque duis ultrices sollicitudin
-                    aliquam sem.
-                    Scelerisque duis ultrices sollicitudin. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Scelerisque duis.
+                    aliquam sem. Scelerisque duis ultrices sollicitudin. Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Scelerisque duis.
                 </p>
                 <div class="flex items-center mb-3">
-                    <span class="text-women-gray mr-2">Size:</span>
-                    <span class="px-4 py-1 bg-black text-white rounded-[10px]">M</span>
+                    <span class="text-xs md:text-sm text-women-gray mr-2">Size:</span>
+                    <span class="px-3 md:px-4 py-1 bg-black text-white rounded-[10px] text-xs md:text-sm">M</span>
                 </div>
-                <p class="text-[28px] font-[500] text-black mb-4">$100.00</p>
+                <p class="text-lg md:text-xl lg:text-[28px] font-[500] text-black mb-4">$100.00</p>
                 <button
-                    class='px-16  py-3 text-[15px] rounded-[10px] text-white transition-all ease-in-out duration-300 bg-black hover:bg-primary shadow-2xl font-Poppins'>Buy
-                    Now</button>
+                    class='w-full md:w-auto px-10 md:px-16 py-3 text-[15px] rounded-[10px] text-white transition-all ease-in-out duration-300 bg-black hover:bg-primary shadow-2xl font-Poppins'>
+                    Buy Now
+                </button>
             </div>
         </div>
     </div>
 
     <!-- LOGO SECTION -->
+    <section class="lg:py-5 shadow-custom">
+        <div
+            class="lg:container lg:px-[5rem] xs:px-4 py-10 mx-auto flex flex-col md:flex-row justify-between items-center gap-6 md:gap-4 font-Poppins">
 
-    <section class="py-14 shadow-custom">
-        <div class="container flex justify-between items-center font-Poppins">
-            <div class="flex justify-center items-end gap-3">
-                <img src="images/vecctor.png" alt="">
+            <!-- High Quality -->
+            <div
+                class="flex flex-col md:flex-row justify-center items-center md:items-start gap-3 text-center md:text-left">
+                <img src="images/vecctor.png" alt="" class="w-10 h-10 md:w-12 md:h-12 lg:w-auto lg:h-auto">
                 <div>
                     <p class="font-[500] text-primary">High Quality</p>
-                    <h1 class="text-[15px] text-primary">crafted from top materials</h1>
-                </div>
-            </div>
-            <div class="flex justify-center items-end gap-3">
-                <img src="images/vector-2.png" alt="">
-                <div>
-                    <p class="font-[500] text-primary">Warrany Protection</p>
-                    <h1 class="text-[15px] text-primary">Over 2 years</h1>
-                </div>
-            </div>
-            <div class="flex justify-center items-end gap-3">
-                <img src="images/vector-3.png" alt="">
-                <div>
-                    <p class="font-[500] text-primary">Free Shipping</p>
-                    <h1 class="text-[15px] text-primary">Order over 150 $</h1>
-                </div>
-            </div>
-            <div class="flex justify-center items-end gap-3">
-                <img src="images/vector-4.png" alt="">
-                <div>
-                    <p class="font-[500] text-primary">24 / 7 Support</p>
-                    <h1 class="text-[15px] text-primary">Dedicated support</h1>
+                    <h1 class="text-sm md:text-[14px] lg:text-[15px] text-primary">crafted from top materials</h1>
                 </div>
             </div>
 
+            <!-- Warranty Protection -->
+            <div
+                class="flex flex-col md:flex-row justify-center items-center md:items-start gap-3 text-center md:text-left">
+                <img src="images/vector-2.png" alt="" class="w-10 h-10 md:w-12 md:h-12 lg:w-auto lg:h-auto">
+                <div>
+                    <p class="font-[500] text-primary">Warranty Protection</p>
+                    <h1 class="text-sm md:text-[14px] lg:text-[15px] text-primary">Over 2 years</h1>
+                </div>
+            </div>
+
+            <!-- Free Shipping -->
+            <div
+                class="flex flex-col md:flex-row justify-center items-center md:items-start gap-3 text-center md:text-left">
+                <img src="images/vector-3.png" alt="" class="w-10 h-10 md:w-12 md:h-12 lg:w-auto lg:h-auto">
+                <div>
+                    <p class="font-[500] text-primary">Free Shipping</p>
+                    <h1 class="text-sm md:text-[14px] lg:text-[15px] text-primary">Order over $150</h1>
+                </div>
+            </div>
+
+            <!-- 24/7 Support -->
+            <div
+                class="flex flex-col md:flex-row justify-center items-center md:items-start gap-3 text-center md:text-left">
+                <img src="images/vector-4.png" alt="" class="w-10 h-10 md:w-12 md:h-12 lg:w-auto lg:h-auto">
+                <div>
+                    <p class="font-[500] text-primary">24 / 7 Support</p>
+                    <h1 class="text-sm md:text-[14px] lg:text-[15px] text-primary">Dedicated support</h1>
+                </div>
+            </div>
         </div>
     </section>
 
+
     <!-- FOLLOW US ON INSTAGRAM -->
-    <section class="py-14 shadow-custom">
-        <div class="container text-center font-Volk">
+    <section class="lg:py-14 shadow-custom">
+        <div class="lg:container text-center xs:px-xs-1 font-Volk">
             <div>
-                <h1 class="text-primary text-[46px]">Follow Us On Instagram</h1>
-                <p class="w-[614px] mx-auto font-Poppins text-tabs">Lorem ipsum dolor sit amet, consectetur
+                <h1 class="text-primary lg:text-[46px] xs:text-[30px]">Follow Us On Instagram</h1>
+                <p class="lg:w-[614px] md:w-[600px] mx-auto font-Poppins text-tabs">Lorem ipsum dolor sit amet,
+                    consectetur
                     adipiscing elit. Scelerisque duis ultrices sollicitudin aliquam sem. Scelerisque duis ultrices
                     sollicitudin </p>
             </div>
@@ -1464,70 +1479,163 @@
 
     <!-- TESTIMONIALS -->
     <section class="py-14 bg-tabs-bg">
-        <div class="container text-center">
+        <div class="lg:container lg:px-[5rem] xs:px-xs-1 md:px-md-2 text-center">
             <div>
-                <h1 class="text-primary text-[46px]">This Is What Our Customers Say</h1>
+                <h1 class="text-primary lg:text-[46px] xs:text-[30px]">This Is What Our Customers Say</h1>
                 <p class="mx-auto mt-3 font-Poppins text-tabs">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Scelerisque duis </p>
             </div>
-
             <!-- Swiper -->
-            <div class="swiper secondSwiper">
+            <div class="swiper mytesti">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div
-                            class="flex gap-10 w-[645px] px-7 py-10 bg-white rounded-[10px] items-center justify-center">
-                            <div>
-                                <img src="images/test.png" class="!w-[350px] !h-[175px]">
-                            </div>
-                            <div class="text-start">
-                                <p class="font-Poppins text-primary text-[15px]">"You won't regret it. I would like to
-                                    personally thank you for your outstanding product. Absolutely wonderful!"</p>
-                                <div class="text-star mt-5 text-[13px]">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
-                                <div class="w-40 h-[1px] bg-primary mt-4"></div>
+                    <div class="swiper-slide active">
+                        <div class="lg:container bg-tabs-bg text-center">
+                            <div class="flex justify-center">
+                                <div
+                                    class="flex flex-col lg:flex-row gap-10 lg:w-[645px] px-7 mt-10 py-10 bg-white rounded-[10px] items-center justify-center">
+                                    <div>
+                                        <img src="images/test.png" class="lg:!w-[350px] lg:!h-[175px]">
+                                    </div>
+                                    <div class="text-start">
+                                        <p class="font-Poppins text-primary text-[15px]">"You won't regret it. I would
+                                            like to
+                                            personally thank you for your outstanding product. Absolutely wonderful!"
+                                        </p>
+                                        <div class="text-star mt-5 text-[13px]">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                        <div class="w-40 h-[1px] bg-primary mt-4"></div>
 
-                                <div>
-                                    <h1 class="font-Volk mt-3 text-primary text-lg">James K.</h1>
-                                    <p class="font-Poppins text-primary text-sm">Traveler</p>
+                                        <div>
+                                            <h1 class="font-Volk mt-3 text-primary text-lg">James K.</h1>
+                                            <p class="font-Poppins text-primary text-sm">Traveler</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+
+                        </div>
+
+                    </div>
+                    <div class="swiper-slide active">
+                        <div class="lg:container bg-tabs-bg text-center">
+                            <div class="flex justify-center">
+                                <div
+                                    class="flex flex-col lg:flex-row gap-10 lg:w-[645px] px-7 mt-10 py-10 bg-white rounded-[10px] items-center justify-center">
+                                    <div>
+                                        <img src="images/testi-2.png" class="lg:!w-[350px] lg:!h-[175px]">
+                                    </div>
+                                    <div class="text-start">
+                                        <p class="font-Poppins text-primary text-[15px]">"You won't regret it. I would
+                                            like to
+                                            personally thank you for your outstanding product. Absolutely wonderful!"
+                                        </p>
+                                        <div class="text-star mt-5 text-[13px]">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                        <div class="w-40 h-[1px] bg-primary mt-4"></div>
+
+                                        <div>
+                                            <h1 class="font-Volk mt-3 text-primary text-lg">James K.</h1>
+                                            <p class="font-Poppins text-primary text-sm">Traveler</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
-                    <div class="swiper-slide">Slide 2</div>
-                    <div class="swiper-slide">Slide 3</div>
-                    <div class="swiper-slide">Slide 4</div>
-                    <div class="swiper-slide">Slide 5</div>
-                    <div class="swiper-slide">Slide 6</div>
-                    <div class="swiper-slide">Slide 7</div>
-                    <div class="swiper-slide">Slide 8</div>
-                    <div class="swiper-slide">Slide 9</div>
+                    <div class="swiper-slide active">
+                        <div class="lg:container bg-tabs-bg text-center">
+                            <div class="flex justify-center">
+                                <div
+                                    class="flex flex-col lg:flex-row gap-10 lg:w-[645px] px-7 mt-10 py-10 bg-white rounded-[10px] items-center justify-center">
+                                    <div>
+                                        <img src="images/test.png" class="lg:!w-[350px] lg:!h-[175px]">
+                                    </div>
+                                    <div class="text-start">
+                                        <p class="font-Poppins text-primary text-[15px]">"You won't regret it. I would
+                                            like to
+                                            personally thank you for your outstanding product. Absolutely wonderful!"
+                                        </p>
+                                        <div class="text-star mt-5 text-[13px]">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                        <div class="w-40 h-[1px] bg-primary mt-4"></div>
+
+                                        <div>
+                                            <h1 class="font-Volk mt-3 text-primary text-lg">James K.</h1>
+                                            <p class="font-Poppins text-primary text-sm">Traveler</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="swiper-slide active">
+                        <div class="lg:container bg-tabs-bg text-center">
+                            <div class="flex justify-center">
+                                <div
+                                    class="flex flex-col lg:flex-row gap-10 lg:w-[645px] px-7 mt-10 py-10 bg-white rounded-[10px] items-center justify-center">
+                                    <div>
+                                        <img src="images/test.png" class="lg:!w-[350px] lg:!h-[175px]">
+                                    </div>
+                                    <div class="text-start">
+                                        <p class="font-Poppins text-primary text-[15px]">"You won't regret it. I would
+                                            like to
+                                            personally thank you for your outstanding product. Absolutely wonderful!"
+                                        </p>
+                                        <div class="text-star mt-5 text-[13px]">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                        <div class="w-40 h-[1px] bg-primary mt-4"></div>
+
+                                        <div>
+                                            <h1 class="font-Volk mt-3 text-primary text-lg">James K.</h1>
+                                            <p class="font-Poppins text-primary text-sm">Traveler</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination !absolute !bottom-0"></div>
             </div>
-
-
 
         </div>
     </section>
 
 
     <!-- NEWSSETTLER SECTION -->
-    <section class="py-14">
-        <div class="container flex justify-between items-center">
+    <section class="lg:py-14">
+        <div
+            class="lg:container lg:px-[5rem] xs:px-xs-1 md:px-md-2 flex flex-col lg:flex-row justify-between  items-center">
             <!-- left image -->
             <div>
-                <img src="images/women.png" class="w-[300px] h-auto">
+                <img src="images/women.png" class="lg:w-[300px] xs:w-[150px] h-auto">
             </div>
             <!-- center text -->
-            <div class="flex flex-col items-center justify-center w-[580px]">
-                <h2 class="text-[40px] font-Volk text-primary">Subscribe To Our Newsletter</h2>
+            <div class="flex flex-col items-center justify-center lg:w-[580px] md:w-[600px]">
+                <h2 class="lg:text-[40px] xs:text-[30px] font-Volk text-primary">Subscribe To Our Newsletter</h2>
                 <p class="mt-2 text-center text-tabs">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque duis ultrices sollicitudin
                     aliquam sem. Scelerisque duis ultrices sollicitudin.
@@ -1543,25 +1651,27 @@
             </div>
 
             <!-- right side image -->
-            <div>
-                <img src="images/men.png" class="w-[300px] h-auto">
+            <div class="xs:mt-5 lg:m-0">
+                <img src="images/men.png" class="lg:w-[300px] xs:w-[150px] h-auto">
             </div>
         </div>
     </section>
     <hr class="text-footer-border">
 
-    <!-- FOOTER  -->
+
     <!-- Footer Section -->
-    <footer class=" text-primary py-8 font-Poppins">
-        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
+    <footer class="text-primary py-8 font-Poppins">
+        <div
+            class="lg:container lg:px-[5rem] xs:px-xs-1 md:px-md-2 mx-auto flex flex-col md:flex-row items-center justify-between">
 
             <!-- Left Section: Logo or Company Name -->
-            <div class="text-[30px] text-primary font-Volk">
+            <div class="text-2xl md:text-[30px] text-primary font-Volk">
                 FASCO
             </div>
 
             <!-- Center Section: Navigation Links -->
-            <div class="flex space-x-8 mt-4 md:mt-0">
+            <div
+                class="flex flex-wrap justify-center md:justify-start space-x-4 md:space-x-8 mt-4 md:mt-0 text-sm sm:text-base">
                 <a href="#" class="hover:text-black transition">Support Center</a>
                 <a href="#" class="hover:text-black transition">Invoicing</a>
                 <a href="#" class="hover:text-black transition">Contract</a>
@@ -1569,14 +1679,12 @@
                 <a href="#" class="hover:text-black transition">Blog</a>
                 <a href="#" class="hover:text-black transition">FAQs</a>
             </div>
-
-
         </div>
+
         <!-- Right Section: Copyright -->
-        <div class="text-center mt-12 text-sm">
+        <div class="text-center mt-8 md:mt-12 text-xs md:text-sm">
             Copyright © 2024 Abdullah. All Rights Reserved.
         </div>
-
     </footer>
 
 
@@ -1592,8 +1700,9 @@
 
 
 
+
     <!-- Swiper JS -->
-   
+
     <script src=" https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script src="script.js"></script>
@@ -1602,9 +1711,35 @@
         // SWIPER
 
         var swiper = new Swiper(".mySwiper", {
-            slidesPerView: '2.5',
+            slidesPerView: '2',
             spaceBetween: 10,
             loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 40,
+                },
+                1024: {
+                    slidesPerView: 2.5,
+                    spaceBetween: 10,
+                },
+            }
+
+        });
+    </script>
+    <script>
+        var swiper = new Swiper(".mytesti", {
+            slidesPerView: 1,
+            spaceBetween: 30,
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true,

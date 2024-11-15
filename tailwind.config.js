@@ -20,6 +20,7 @@ module.exports = {
       fontFamily: {
         'Volk': ['Volkhov'],
         'Poppins': ['Poppins'],
+        'digital-number': ['Digital Numbers'],
       },
       colors: {
         'hero-bg': '#E0E0E0',
@@ -50,6 +51,16 @@ module.exports = {
         'bg-overlay': 'rgba(120, 120, 120, 0.41)',
         'check-border': 'rgba(0, 0, 0, 0.39)',
       },
+      screens: {
+        'xs': '320px',
+        'sm-xs':'481px',  
+      },
+      padding: {
+        'xs-1': '10px',  // Add padding-x of 1rem for xs screen size
+        'md-2': '20px',  // Add padding-x of 2rem for
+        'xs-3': '25px',  // Add padding-x of 2rem for
+        'xs-4': '30px',  // Add padding-x of 2rem for
+      }
     },
   },
   plugins: [],

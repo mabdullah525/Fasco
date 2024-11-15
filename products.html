@@ -87,7 +87,7 @@
 
 <body>
     <!-- NAVBAR -->
-    <div class="container">
+    <div class="lg:container lg:px-[5rem] xs:px-xs-1 md:px-md-2">
         <header class='flex py-4 font-Poppins min-h-[80px] tracking-wide relative z-50'>
             <div class='flex flex-wrap items-center justify-between gap-4 w-full'>
                 <a href="javascript:void(0)" class="text-[45px] font-Volk text-primary">FASCO</a>
@@ -140,32 +140,33 @@
                     </ul>
                 </div>
 
-                <div class='flex gap-1 text-primary items-center max-lg:ml-auto space-x-5'>
+                <div
+                    class='flex gap-1 text-primary items-center max-lg:ml-auto space-x-5 md:hidden xs:hidden sm:hidden lg:block'>
                     <i class="fa-solid fa-magnifying-glass cursor-pointer hover:text-black"></i>
                     <i class="fa-regular fa-user cursor-pointer hover:text-black"></i>
                     <i class="fa-regular fa-star cursor-pointer hover:text-black"></i>
                     <i class="fa-solid fa-bag-shopping cursor-pointer hover:text-black"></i>
 
-
-                    <button id="toggleOpen" class='lg:hidden !ml-7'>
-                        <svg class="w-7 h-7" fill="#000" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                    </button>
                 </div>
+                <button id="toggleOpen" class='lg:hidden !ml-7'>
+                    <svg class="w-7 h-7" fill="#000" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+
             </div>
         </header>
     </div>
     <!-- PRODUCT LIST -->
-    <div class="container mt-20">
+    <div class="lg:container lg:px-[5rem] xs:px-xs-1 md:px-md-2 mt-20">
         <div class="font-Volk">
-            <div class="p-4">
+            <div class="lg:p-4">
                 <div class="grid items-start grid-cols-1 lg:grid-cols-2 gap-6 max-lg:gap-12">
 
                     <div class="w-full  top-0 sm:flex gap-2">
-                        <div class="sm:space-y-3 w-16 max-sm:w-12 max-sm:flex max-sm:mb-4 max-sm:gap-4">
+                        <div class="sm:space-y-3 w-16 max-sm:w-12 max-sm:flex max-sm:mb-4 max-sm:gap-[7px]">
                             <img src="images/product-1.png" alt="Product1" class="w-full cursor-pointer " />
                             <img src="images/product-2.png" alt="Product2"
                                 class="w-full cursor-pointer outline outline-offset-2 outline-1" />
@@ -288,51 +289,64 @@
                             </div>
                         </div>
                         <div class="mt-5">
+                            <h3 class="font-bold font-Volk text-black text-base md:text-lg">Quantity</h3>
+                            <div
+                                class="flex flex-col md:flex-row items-center md:justify-between mt-4 md:mt-5 gap-4 md:gap-0">
 
-                            <h3 class="font-bold font-Volk text-black text-[16px]">Quantity</h3>
-                            <div class="flex items-center justify-between mt-5">
-                                <div class="flex divide-x border w-28 rounded overflow-hidden">
-                                    <button type="button" class="w-12 h-10 font-semibold">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-[.6rem] fill-current inline"
-                                            viewBox="0 0 124 124">
+                                <!-- Quantity Selector -->
+                                <div class="flex divide-x border w-24 md:w-28 rounded overflow-hidden">
+                                    <button type="button" class="w-10 md:w-12 h-10 font-semibold">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            class="w-3 md:w-[0.6rem] fill-current inline" viewBox="0 0 124 124">
                                             <path
                                                 d="M112 50H12C5.4 50 0 55.4 0 62s5.4 12 12 12h100c6.6 0 12-5.4 12-12s-5.4-12-12-12z"
                                                 data-original="#000000"></path>
                                         </svg>
                                     </button>
                                     <button type="button"
-                                        class="bg-transparent w-12 h-10 font-semibold text-black text-lg">
+                                        class="bg-transparent w-10 md:w-12 h-10 font-semibold text-black text-lg">
                                         1
                                     </button>
-                                    <button type="button" class=" text-black w-12 h-10 font-semibold">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-[.6rem] fill-current inline"
-                                            viewBox="0 0 42 42">
+                                    <button type="button" class="text-black w-10 md:w-12 h-10 font-semibold">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            class="w-3 md:w-[0.6rem] fill-current inline" viewBox="0 0 42 42">
                                             <path
                                                 d="M37.059 16H26V4.941C26 2.224 23.718 0 21 0s-5 2.224-5 4.941V16H4.941C2.224 16 0 18.282 0 21s2.224 5 4.941 5H16v11.059C16 39.776 18.282 42 21 42s5-2.224 5-4.941V26h11.059C39.776 26 42 23.718 42 21s-2.224-5-4.941-5z"
                                                 data-original="#000000"></path>
                                         </svg>
                                     </button>
                                 </div>
+
+                                <!-- Add to Cart Button -->
                                 <button type="button"
-                                    class=" px-40 py-2 hover:bg-black hover:text-white text-black border-[1px] border-black text-[16px]  font-Volk rounded-md"><a href="addcart.html">Add
-                                        to cart</a></button>
+                                    class="px-8 py-2 md:px-10 lg:px-20 hover:bg-black hover:text-white text-black border border-black text-sm md:text-base lg:text-[16px] font-Volk rounded-md">
+                                    <a href="addcart.html">Add to cart</a>
+                                </button>
                             </div>
                         </div>
 
-                        <div class="flex mt-10 gap-10 font-Poppins border-b-[1px] py-4">
-                            <div class="flex items-center gap-2">
+
+                        <div
+                            class="flex flex-col md:flex-row items-center md:justify-between mt-6 md:mt-10 gap-4 md:gap-10 font-Poppins border-b border-gray-300 py-4">
+                            <!-- Compare Section -->
+                            <div class="flex items-center gap-2 text-sm md:text-base">
                                 <i class="fa-solid fa-code-compare"></i>
                                 <p>Compare</p>
                             </div>
-                            <div class="flex items-center gap-2">
+
+                            <!-- Ask a Question Section -->
+                            <div class="flex items-center gap-2 text-sm md:text-base">
                                 <i class="fa-regular fa-circle-question"></i>
                                 <p>Ask a question</p>
                             </div>
-                            <div class="flex items-center gap-2">
+
+                            <!-- Share Section -->
+                            <div class="flex items-center gap-2 text-sm md:text-base">
                                 <i class="fa-solid fa-share-nodes"></i>
                                 <p>Share</p>
                             </div>
                         </div>
+
 
                         <div class="mt-6">
                             <div class="flex items-center gap-2">
@@ -347,17 +361,24 @@
                             </div>
                         </div>
 
-                        <div class="flex flex-col items-center p-6 bg-peaky-bg rounded-[5px] mt-8">
-                            <div class="flex space-x-4 mb-4">
-                                <img src="images/visa-logo.jpg" alt="Visa" class="h-8">
-                                <img src="images/amex.png" alt="MasterCard" class="h-8">
-                                <img src="images/master-card.png" alt="Amex" class="h-8">
-                                <img src="images/masestro.webp" alt="Maestro" class="h-8">
-                                <img src="images/discover.png" alt="Discover" class="h-8">
-                                <img src="images/unionpay.png" alt="UnionPay" class="h-8">
+                        <div class="flex flex-col items-center p-4 md:p-6 bg-peaky-bg rounded-[5px] mt-6 md:mt-8">
+
+                            <!-- Payment Icons -->
+                            <div class="flex flex-wrap justify-center gap-4 mb-4">
+                                <img src="images/visa-logo.jpg" alt="Visa" class="h-6 md:h-8">
+                                <img src="images/amex.png" alt="Amex" class="h-6 md:h-8">
+                                <img src="images/master-card.png" alt="MasterCard" class="h-6 md:h-8">
+                                <img src="images/masestro.webp" alt="Maestro" class="h-6 md:h-8">
+                                <img src="images/discover.png" alt="Discover" class="h-6 md:h-8">
+                                <img src="images/unionpay.png" alt="UnionPay" class="h-6 md:h-8">
                             </div>
-                            <p class="text-center text-black font-Volk">Guarantee safe & secure checkout</p>
+
+                            <!-- Guarantee Text -->
+                            <p class="text-center text-black font-Volk text-sm md:text-base">Guarantee safe & secure
+                                checkout</p>
+
                         </div>
+
 
                     </div>
                 </div>
@@ -367,84 +388,104 @@
 
     <!-- PEAKY BLINDER -->
 
-    <div class="flex items-center justify-center">
-        <div class="flex w-full bg-peaky-bg">
+    <div class="flex items-center justify-center xs:pt-10 lg:pt-20">
+        <div class="flex flex-col lg:flex-row w-full bg-peaky-bg">
             <!-- Left Side: Image with Labels -->
-            <div class="relative w-1/2 flex  items-start justify-center">
-                <div class="">
-                    <!-- image -->
+            <div class="relative w-full lg:w-1/2 flex items-start justify-center">
+                <div>
                     <img src="images/peaky.png" alt="Peaky Blinders Outfit"
-                        class="w-full h-[525px] object-cover rounded-lg">
+                        class="w-full h-auto lg:h-[525px] object-cover rounded-lg">
                 </div>
             </div>
 
             <!-- Right Side: Product Details -->
-            <div class="border-2 border-black origin-center rotate-[7deg] relative left-[33px] "></div>
-            <div class="w-1/2 pr-20 pl-28 pt-16 bg-peaky font-Poppins clip slanted">
-                <p class="text-sm text-women-gray">Women Collection</p>
-                <h2 class="text-[45px] font-Volk text-primary mt-5 mb-4">Peaky Blinders</h2>
+            <div
+                class="border-2 border-black origin-center rotate-0 lg:rotate-[7deg] relative lg:left-[33px] lg:block hidden">
+            </div>
+
+            <div
+                class="w-full lg:w-1/2 px-6 lg:pr-20 lg:pl-28 pt-8 lg:pt-16 xs:pb-5 bg-peaky font-Poppins clip slanted">
+                <p class="text-xs md:text-sm text-women-gray">Women Collection</p>
+                <h2 class="text-2xl md:text-4xl lg:text-[45px] font-Volk text-primary mt-4 lg:mt-5 mb-3 lg:mb-4">Peaky
+                    Blinders</h2>
                 <h3 class="text-sm text-black underline underline-offset-1 mb-2">DESCRIPTION</h3>
-                <p class="text-women-gray mt-5 mb-6">
+                <p class="text-xs md:text-sm lg:text-base text-women-gray mt-4 lg:mt-5 mb-4 lg:mb-6">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque duis ultrices sollicitudin
-                    aliquam sem.
-                    Scelerisque duis ultrices sollicitudin. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Scelerisque duis.
+                    aliquam sem. Scelerisque duis ultrices sollicitudin. Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Scelerisque duis.
                 </p>
                 <div class="flex items-center mb-3">
-                    <span class="text-women-gray mr-2">Size:</span>
-                    <span class="px-4 py-1 bg-black text-white rounded-[10px]">M</span>
+                    <span class="text-xs md:text-sm text-women-gray mr-2">Size:</span>
+                    <span class="px-3 md:px-4 py-1 bg-black text-white rounded-[10px] text-xs md:text-sm">M</span>
                 </div>
-                <p class="text-[28px] font-[500] text-black mb-4">$100.00</p>
+                <p class="text-lg md:text-xl lg:text-[28px] font-[500] text-black mb-4">$100.00</p>
                 <button
-                    class='px-16  py-3 text-[15px] rounded-[10px] text-white transition-all ease-in-out duration-300 bg-black hover:bg-primary shadow-2xl font-Poppins'>Buy
-                    Now</button>
+                    class='w-full md:w-auto px-10 md:px-16 py-3 text-[15px] rounded-[10px] text-white transition-all ease-in-out duration-300 bg-black hover:bg-primary shadow-2xl font-Poppins'>
+                    Buy Now
+                </button>
             </div>
         </div>
     </div>
 
+
     <!-- LOGO SECTION -->
 
-    <section class="py-14 shadow-custom">
-        <div class="container flex justify-between items-center font-Poppins">
-            <div class="flex justify-center items-end gap-3">
-                <img src="images/vecctor.png" alt="">
+    <section class="lg:py-5 shadow-custom">
+        <div
+            class="lg:container lg:px-[5rem] xs:px-4 py-10 mx-auto flex flex-col md:flex-row justify-between items-center gap-6 md:gap-4 font-Poppins">
+
+            <!-- High Quality -->
+            <div
+                class="flex flex-col md:flex-row justify-center items-center md:items-start gap-3 text-center md:text-left">
+                <img src="images/vecctor.png" alt="" class="w-10 h-10 md:w-12 md:h-12 lg:w-auto lg:h-auto">
                 <div>
                     <p class="font-[500] text-primary">High Quality</p>
-                    <h1 class="text-[15px] text-primary">crafted from top materials</h1>
-                </div>
-            </div>
-            <div class="flex justify-center items-end gap-3">
-                <img src="images/vector-2.png" alt="">
-                <div>
-                    <p class="font-[500] text-primary">Warrany Protection</p>
-                    <h1 class="text-[15px] text-primary">Over 2 years</h1>
-                </div>
-            </div>
-            <div class="flex justify-center items-end gap-3">
-                <img src="images/vector-3.png" alt="">
-                <div>
-                    <p class="font-[500] text-primary">Free Shipping</p>
-                    <h1 class="text-[15px] text-primary">Order over 150 $</h1>
-                </div>
-            </div>
-            <div class="flex justify-center items-end gap-3">
-                <img src="images/vector-4.png" alt="">
-                <div>
-                    <p class="font-[500] text-primary">24 / 7 Support</p>
-                    <h1 class="text-[15px] text-primary">Dedicated support</h1>
+                    <h1 class="text-sm md:text-[14px] lg:text-[15px] text-primary">crafted from top materials</h1>
                 </div>
             </div>
 
+            <!-- Warranty Protection -->
+            <div
+                class="flex flex-col md:flex-row justify-center items-center md:items-start gap-3 text-center md:text-left">
+                <img src="images/vector-2.png" alt="" class="w-10 h-10 md:w-12 md:h-12 lg:w-auto lg:h-auto">
+                <div>
+                    <p class="font-[500] text-primary">Warranty Protection</p>
+                    <h1 class="text-sm md:text-[14px] lg:text-[15px] text-primary">Over 2 years</h1>
+                </div>
+            </div>
+
+            <!-- Free Shipping -->
+            <div
+                class="flex flex-col md:flex-row justify-center items-center md:items-start gap-3 text-center md:text-left">
+                <img src="images/vector-3.png" alt="" class="w-10 h-10 md:w-12 md:h-12 lg:w-auto lg:h-auto">
+                <div>
+                    <p class="font-[500] text-primary">Free Shipping</p>
+                    <h1 class="text-sm md:text-[14px] lg:text-[15px] text-primary">Order over $150</h1>
+                </div>
+            </div>
+
+            <!-- 24/7 Support -->
+            <div
+                class="flex flex-col md:flex-row justify-center items-center md:items-start gap-3 text-center md:text-left">
+                <img src="images/vector-4.png" alt="" class="w-10 h-10 md:w-12 md:h-12 lg:w-auto lg:h-auto">
+                <div>
+                    <p class="font-[500] text-primary">24 / 7 Support</p>
+                    <h1 class="text-sm md:text-[14px] lg:text-[15px] text-primary">Dedicated support</h1>
+                </div>
+            </div>
         </div>
     </section>
 
+
     <!-- DEAL OF THE MONTH -->
 
-    <section class="mt-20 py-20 bg-custom-gradient">
-        <div class="pl-28 flex justify-center">
-            <div class="mr-10">
-                <h1 class="font-Volk text-primary text-[45px]">Deals Of The Month</h1>
-                <p class="w-[440px] font-Poppins text-primary my-7">Lorem ipsum dolor sit amet, consectetur adipiscing
+    <section class="mt-20 bg-custom-gradient md:mt-5 lg:p-0 ">
+        <div
+            class="lg:container lg:px-[5rem] xs:px-xs-1 md:px-md-2 py-20 lg:pr-0 lg:mr-0  flex flex-col lg:flex-row lg:items-center lg:gap-10">
+            <div class="lg:pt-3 mb-10">
+                <h1 class="font-Volk text-primary lg:text-[45px] xs:text-[30px] md:text-[45px]">Deals Of The Month</h1>
+                <p class="lg:w-[440px] md:w-[447px] font-Poppins text-primary my-7">Lorem ipsum dolor sit amet,
+                    consectetur adipiscing
                     elit.
                     Scelerisque
                     duis ultrices sollicitudin aliquam sem. Scelerisque duis ultrices sollicitudin</p>
@@ -459,20 +500,20 @@
                 <div class="mt-4 font-Volk flex gap-7  items-center px-0">
                     <div
                         class="w-[76px] h-[76px] text-primary bg-white rounded-[10px] items-center flex flex-wrap justify-center flex-col drop-shadow-lg">
-                        <p class="text-[30px]">02</p>
+                        <p class="text-[30px] font-digital-number">02</p>
                     </div>
 
                     <div
                         class="w-[76px] h-[76px] text-primary bg-white rounded-[10px] items-center flex justify-center flex-col drop-shadow-lg">
-                        <p class="text-[30px]">06</p>
+                        <p class="text-[30px] font-digital-number">06</p>
                     </div>
                     <div
                         class="w-[76px] h-[76px] text-primary bg-white rounded-[10px] items-center flex justify-center flex-col drop-shadow-lg">
-                        <p class="text-[30px]">05</p>
+                        <p class="text-[30px] font-digital-number">05</p>
                     </div>
                     <div
                         class="w-[76px] h-[76px] text-primary bg-white rounded-[10px] items-center flex justify-center flex-col drop-shadow-lg">
-                        <p class="text-[30px]">30</p>
+                        <p class="text-[30px] font-digital-number">30</p>
                     </div>
                 </div>
                 <div class="mt-4 items-center text-primary flex gap-7 px-0">
@@ -490,7 +531,7 @@
                     </div>
                 </div>
 
-                <div class="flex justify-end space-x-4 w-[108%]">
+                <div class="flex lg:justify-end justify-center space-x-4 lg:w-[108%] xs:mt-5">
                     <!-- Left arrow button -->
                     <button id="prevBtn"
                         class="slider-btn flex items-center text-center justify-center w-10 h-10 rounded-full bg-white shadow-lg">
@@ -507,7 +548,7 @@
 
             </div>
             <!-- Swiper -->
-            <div class="swiper mySwiper">
+            <div class="swiper mySwiper ">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide relative  !w-[300px] !h-[450px]
                     ">
@@ -555,19 +596,22 @@
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
+
+
         </div>
     </section>
 
-     <!-- NEWSSETTLER SECTION -->
-     <section class="py-14">
-        <div class="container flex justify-between items-center">
+    <!-- NEWSSETTLER SECTION -->
+    <section class="lg:py-14">
+        <div
+            class="lg:container lg:px-[5rem] xs:px-xs-1 md:px-md-2 flex flex-col lg:flex-row justify-between  items-center">
             <!-- left image -->
             <div>
-                <img src="images/women.png" class="w-[300px] h-auto">
+                <img src="images/women.png" class="lg:w-[300px] xs:w-[150px] h-auto">
             </div>
             <!-- center text -->
-            <div class="flex flex-col items-center justify-center w-[580px]">
-                <h2 class="text-[40px] font-Volk text-primary">Subscribe To Our Newsletter</h2>
+            <div class="flex flex-col items-center justify-center lg:w-[580px] md:w-[600px]">
+                <h2 class="lg:text-[40px] xs:text-[30px] font-Volk text-primary">Subscribe To Our Newsletter</h2>
                 <p class="mt-2 text-center text-tabs">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque duis ultrices sollicitudin
                     aliquam sem. Scelerisque duis ultrices sollicitudin.
@@ -583,56 +627,42 @@
             </div>
 
             <!-- right side image -->
-            <div>
-                <img src="images/men.png" class="w-[300px] h-auto">
+            <div class="xs:mt-5 lg:m-0">
+                <img src="images/men.png" class="lg:w-[300px] xs:w-[150px] h-auto">
             </div>
         </div>
     </section>
     <hr class="text-footer-border">
     <!-- Footer Section -->
-    <footer class=" text-primary py-8 font-Poppins">
-        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
+    <footer class="text-primary py-8 font-Poppins">
+        <div
+            class="lg:container lg:px-[5rem] xs:px-xs-1 md:px-md-2 mx-auto flex flex-col md:flex-row items-center justify-between">
 
             <!-- Left Section: Logo or Company Name -->
-            <div class="text-[30px] text-primary font-Volk">
+            <div class="text-2xl md:text-[30px] text-primary font-Volk">
                 FASCO
             </div>
 
             <!-- Center Section: Navigation Links -->
-            <div class="flex space-x-8 mt-4 md:mt-0">
-                <a href="index.html" class="hover:text-black transition">Home</a>
-                <a href="#" class="hover:text-black transition">Shop</a>
-                <a href="#" class="hover:text-black transition">Products</a>
-                <!-- Dropdown Container -->
-                <li class="list-none relative px-3  border-b lg:border-0 max-lg:border-b max-lg:py-3">
-                    <!-- Trigger Button -->
-                    <button onclick="toggleDropdown()"
-                        class="flex gap-1 items-center relative after:block after:w-full after:h-0.5 after:bg-gray-300 after:mt-1 after:scale-x-0 hover:after:scale-x-100 transition-transform duration-300 text-primary text-[16px] font-Poppins">
-                        Pages
-                        <i class="fa-solid fa-caret-down"></i>
-                    </button>
-
-                    <!-- Dropdown Menu -->
-                    <ul id="dropdownMenu"
-                        class="absolute left-0 hidden mt-2 bg-white text-primary shadow-lg rounded w-40 z-10">
-                        <li class="px-4 py-2 hover:bg-gray-100"><a href="#">Sub Page 1</a></li>
-                        <li class="px-4 py-2 hover:bg-gray-100"><a href="#">Sub Page 2</a></li>
-                        <li class="px-4 py-2 hover:bg-gray-100"><a href="#">Sub Page 3</a></li>
-                    </ul>
-                </li>
+            <div
+                class="flex flex-wrap justify-center md:justify-start space-x-4 md:space-x-8 mt-4 md:mt-0 text-sm sm:text-base">
+                <a href="#" class="hover:text-black transition">Support Center</a>
+                <a href="#" class="hover:text-black transition">Invoicing</a>
+                <a href="#" class="hover:text-black transition">Contract</a>
+                <a href="#" class="hover:text-black transition">Careers</a>
+                <a href="#" class="hover:text-black transition">Blog</a>
+                <a href="#" class="hover:text-black transition">FAQs</a>
             </div>
-
-
         </div>
+
         <!-- Right Section: Copyright -->
-        <div class="text-center mt-12 text-sm">
+        <div class="text-center mt-8 md:mt-12 text-xs md:text-sm">
             Copyright © 2024 Abdullah. All Rights Reserved.
         </div>
-
     </footer>
 
 
-    
+
 
 
 

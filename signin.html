@@ -10,59 +10,65 @@
 
 <body>
     <section class="py-10">
-        <div class="container">
-
-            <div class="flex gap-20  border border-footer-border rounded-[10px]">
-                <!-- left side image -->
-                <div class="w-1/2">
-                    <img src="images/signin.png" class="w-[560px] h-[675px] object-cover">
+        <div class="lg:container px-4 mx-auto">
+            <div class="flex flex-col md:flex-row gap-10 md:gap-20 border border-footer-border rounded-[10px]">
+                <!-- Left side image -->
+                <div class="w-full md:w-1/2">
+                    <img src="images/signin.png" class="w-full h-auto md:w-[560px] md:h-[675px] object-cover">
                 </div>
-                <!-- right side content -->
-                <div class=" py-10">
-                    <h1 class="text-primary font-Volk text-5xl">FSCO</h1>
-                    <p class="text-[20px] text-black font-Volk mb-5 mt-10">Sign In To FASCO</p>
-                    <!-- Social Login Buttons -->
-                    <div class="flex space-x-4 mb-6 font-Poppins">
-                        <button
-                            class="flex items-center justify-center text-[15px]  px-4 py-2 text-black border border-google-border rounded-md shadow-sm hover:bg-gray-50">
-                            <img src="https://img.icons8.com/color/48/000000/google-logo.png" alt="Google Icon"
-                                class="w-5 h-5 mr-2">Sign up with Google
-                        </button>
-                        <button
-                            class="flex items-center justify-center text-[15px]  px-4 py-2 text-black border border-google-border rounded-md shadow-sm hover:bg-gray-50">
-                            <img src="https://img.icons8.com/color/48/000000/gmail.png" alt="Email Icon"
-                                class="w-5 h-5 mr-2">Sign up with Email
-                        </button>
+                <!-- Right side content -->
+                <div class="w-full md:w-1/2 py-5 md:py-10">
+                    <div class="w-[92%] xs:pl-3 sm-xs:pl-3 sm:pl-4 lg:px-0">
+                        <h1 class="text-primary font-Volk text-3xl sm:text-4xl md:text-5xl">FSCO</h1>
+                        <p class="text-[18px] sm:text-[20px] text-black font-Volk mb-5 mt-5 sm:mt-10">Sign In To FASCO
+                        </p>
+
+                        <!-- Social Login Buttons -->
+                        <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mb-6 font-Poppins">
+                            <button
+                                class="flex items-center justify-center text-[15px] px-7 py-2 text-black border border-google-border rounded-md shadow-sm hover:bg-gray-50">
+                                <img src="https://img.icons8.com/color/48/000000/google-logo.png" alt="Google Icon"
+                                    class="w-5 h-5 mr-2">Sign in with Google
+                            </button>
+                            <button
+                                class="flex items-center justify-center text-[15px] px-7 py-2 text-black border border-google-border rounded-md shadow-sm hover:bg-gray-50">
+                                <img src="https://img.icons8.com/color/48/000000/gmail.png" alt="Email Icon"
+                                    class="w-5 h-5 mr-2">Sign in with Email
+                            </button>
+                        </div>
+
+                        <!-- Divider -->
+                        <div class="flex items-center justify-center mb-6 mt-6">
+                            <hr class="w-[20px] border-signin-or border-2">
+                            <span class="px-2 text-signin-or text-[20px] md:text-[25px] font-[700]">OR</span>
+                            <hr class="w-[20px] border-signin-or border-2">
+                        </div>
+
+                        <!-- Email and Password Fields -->
+                        <form action="#" method="POST" class="flex flex-col space-y-4">
+                            <input type="email" placeholder="Email"
+                                class="px-4 py-2 text-input border-b-[1px] outline-none border-gray-300 focus:outline-none">
+                            <input type="password" placeholder="Password"
+                                class="px-4 py-2 text-input border-b-[1px] outline-none border-gray-300 focus:outline-none">
+                            <button type="submit"
+                                class="w-[80%] mx-auto mt-6 px-16 sm:px-20 py-3 font-semibold text-white bg-black rounded-[10px] hover:bg-primary shadow-tab">Sign
+                                In</button>
+                        </form>
+
+                        <!-- Additional Links -->
+                        <div class="flex justify-center mt-4 text-sm">
+                            <a href="#"
+                                class="w-[80%] mx-auto text-center px-4 sm:px-8 py-3 font-semibold text-google-border border border-google-border rounded-[10px] hover:bg-black hover:text-white hover:border-black">Register
+                                Now</a>
+                        </div>
+                        <div class="flex justify-center mt-3 text-[14px] font-[700] text-google-border">
+                            <a href="forgetpassword.html" target="_blank" class="hover:text-black">Forgot Password?</a>
+                        </div>
+                        <p class="mt-10 text-xs text-black text-center md:text-right text-[14px] sm:text-[16px]">FASCO
+                            Terms & Conditions</p>
                     </div>
-                    <!-- Divider -->
-                    <div class="flex items-center mb-6 ml-[180px] mt-10">
-                        <hr class="w-[20px]  border-signin-or border-2">
-                        <span class="px-2 text-signin-or text-[25px] font-[700]">OR</span>
-                        <hr class="w-[20px]  border-signin-or border-2">
-                    </div>
-                    <!-- Email and Password Fields -->
-                    <form action="#" method="POST" class="flex justify-center flex-col space-y-4">
-                        <input type="email" placeholder="Email"
-                            class=" px-4 py-2 text-input  border-b-[1px] outline-none border-gray-300 focus:outline-none">
-                        <input type="password" placeholder="Password"
-                            class="px-4 py-2 text-input  border-b-[1px] outline-none border-gray-300 focus:outline-none">
-                        <button type="submit"
-                            class="mx-auto mt-[25px] px-40 py-3 font-semibold text-white bg-black rounded-[10px] hover:bg-primary shadow-tab">Sign
-                            In</button>
-                    </form>
-                    <!-- Additional Links -->
-                    <div class="flex justify-between mt-4 text-sm text-google-border">
-                        <a href="#" class="mx-auto px-[138px] py-3 font-semibold text-google-border bg-transparent border-[1px] border-google-border rounded-[10px] hover:bg-black hover:text-white hover:border-black">Register Now</a>
-                    </div>
-                    <div class="flex justify-center items-center text-[14px] font-[700] text-google-border mt-3 ml-[230px]">
-                        <a href="forgetpassword.html" target="_blank" class="hover:text-black">Forgot Password?</a>
-                    </div>
-                    <p class="mt-10 text-xs text-black text-right text-[16px]">FASCO Terms & Conditions</p>
                 </div>
             </div>
-
-
-
         </div>
     </section>
 

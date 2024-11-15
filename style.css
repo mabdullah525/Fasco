@@ -4,6 +4,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Digital Numbers';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(font/DigitalNumbers-Regular.ttf) format('truetype');
+}
+
 
 .outline-text {
     -webkit-text-stroke: 1px black; /* The stroke width and color */

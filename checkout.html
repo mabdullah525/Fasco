@@ -14,7 +14,7 @@
 
 <body>
     <!-- NAVBAR -->
-    <div class="container">
+    <div class="lg:container lg:px-[5rem] xs:px-xs-1 md:px-md-2">
         <header class='flex py-4 font-Poppins min-h-[80px] tracking-wide relative z-50'>
             <div class='flex flex-wrap items-center justify-between gap-4 w-full'>
                 <a href="javascript:void(0)" class="text-[45px] font-Volk text-primary">FASCO</a>
@@ -67,7 +67,8 @@
                     </ul>
                 </div>
 
-                <div class='flex gap-1 text-primary items-center max-lg:ml-auto space-x-5'>
+                <div
+                    class='flex gap-1 text-primary items-center max-lg:ml-auto space-x-5 md:hidden xs:hidden sm:hidden lg:block'>
                     <i class="fa-solid fa-magnifying-glass cursor-pointer hover:text-black"></i>
                     <i class="fa-regular fa-user cursor-pointer hover:text-black"></i>
                     <i class="fa-regular fa-star cursor-pointer hover:text-black"></i>
@@ -77,22 +78,22 @@
                             class="absolute bottom-[10px] left-auto -ml-1 top-0 rounded-full bg-red-500 px-1 py-0 text-xs text-white">1</span>
                     </span>
 
-
-
-                    <button id="toggleOpen" class='lg:hidden !ml-7'>
-                        <svg class="w-7 h-7" fill="#000" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                    </button>
                 </div>
+
+                <button id="toggleOpen" class='lg:hidden !ml-7'>
+                    <svg class="w-7 h-7" fill="#000" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+
             </div>
         </header>
     </div>
 
     <!-- BRAEAD CURM -->
-    <div class="container text-center pt-10 pb-10">
+    <div class="lg:container lg:px-[5rem] xs:px-xs-1 md:px-md-2 text-center pt-10 pb-10">
         <h1 class="text-[45px] font-Volk">Shopping Cart</h1>
         <ul class="flex items-center justify-center font-[sans-serif] space-x-4 mt-4">
             <li class="text-black font-Poppins text-base cursor-pointer">
@@ -118,84 +119,82 @@
         </ul>
     </div>
     <!-- check out form -->
-    <div class="container pt-10 bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-20  pt-10 bg-white">
         <!-- Header Row -->
-        <div class="flex justify-between pb-4 border-b border-check-border font-Volk">
-            <h2 class="w-1/3 text-lg">Product</h2>
-            <h2 class="w-1/6 text-lg text-center">Price</h2>
-            <h2 class="w-1/6 text-lg text-center">Quantity</h2>
-            <h2 class="w-1/6 text-lg text-center">Total</h2>
+        <div class="flex flex-wrap justify-between pb-4 border-b border-check-border font-Volk">
+            <h2 class="w-1/2 sm:w-1/3 text-base sm:text-lg">Product</h2>
+            <h2 class="w-1/4 sm:w-1/6 text-base sm:text-lg text-center">Price</h2>
+            <h2 class="w-1/4 sm:w-1/6 text-base sm:text-lg text-center">Quantity</h2>
+            <h2 class="hidden sm:block sm:w-1/6 text-base sm:text-lg text-center">Total</h2>
         </div>
-
+    
         <!-- Product Row -->
-        <div class="flex justify-between py-4 border-b border-check-border">
+        <div class="flex flex-wrap justify-between py-4 border-b border-check-border">
             <!-- Product Info -->
-            <div class="flex w-1/3">
-                <img src="images/checkout-img.png" alt="Product Image" class="w-36 h-[13rem] object-cover mr-4">
+            <div class="flex w-full sm:w-1/2 lg:w-1/3 mb-4 sm:mb-0">
+                <img src="images/checkout-img.png" alt="Product Image" class="w-24 sm:w-36 h-32 sm:h-[13rem] object-cover mr-4">
                 <div>
-                    <h3 class="w-[165px] text-lg font-Volk">Mini Dress With Ruffled Straps</h3>
-                    <p class="text-[16px] mt-3 text-tabs font-Poppins">Color: Red</p>
-                    <button class="text-[16px] mt-5 text-tabs underline">Remove</button>
+                    <h3 class="text-base sm:text-lg font-Volk w-[165px]">Mini Dress With Ruffled Straps</h3>
+                    <p class="text-sm sm:text-[16px] mt-2 sm:mt-3 text-tabs font-Poppins">Color: Red</p>
+                    <button class="text-sm sm:text-[16px] mt-3 sm:mt-5 text-tabs underline">Remove</button>
                 </div>
             </div>
-
+    
             <!-- Price -->
-            <p class="w-1/6 text-center font-semibold">$14.90</p>
-
+            <p class="w-1/3 sm:w-1/6 text-center font-semibold">$14.90</p>
+    
             <!-- Quantity Selector -->
-            <div class="w-1/6 flex justify-center items-start">
-                <button class="px-2 border text-black rounded-l font-Poppins font-[500]">-</button>
+            <div class="w-1/3 sm:w-1/6 flex justify-center items-start">
+                <button class="px-2 border text-black rounded-l font-Poppins font-medium">-</button>
                 <input type="text" value="01" class="w-10 text-center border-t border-b outline-none">
-                <button class="px-2  border text-black rounded-r font-Poppins font-[500]">+</button>
+                <button class="px-2 border text-black rounded-r font-Poppins font-medium">+</button>
             </div>
-
+    
             <!-- Total -->
-            <p class="w-1/6 text-center font-semibold">$14.90</p>
+            <p class="hidden sm:block sm:w-1/6 text-center font-semibold">$14.90</p>
         </div>
-
+    
         <!-- Gift Wrap Option -->
         <div>
             <div class="flex items-center justify-end gap-2 py-4">
-                <div class="border-b border-check-border py-4 w-[30%]">
-                    <input type="checkbox" id="gift-wrap" class=" form-checkbox ring-2 ring-black ring-inset">
-                    <label for="gift-wrap" class="text-tabs">For <span class="font-semibold text-black">$10.00</span>
-                        Please Wrap
-                        The
-                        Product</label>
+                <div class="border-b border-check-border py-4 w-full sm:w-1/2 lg:w-[30%]">
+                    <input type="checkbox" id="gift-wrap" class="form-checkbox ring-2 ring-black ring-inset">
+                    <label for="gift-wrap" class="text-tabs">For <span class="font-semibold text-black">$10.00</span> Please Wrap The Product</label>
                 </div>
             </div>
+    
             <!-- Subtotal and Checkout -->
-            <div class="flex justify-end gap-[140px] items-center pt-4">
-                <div class="w-[30%] flex justify-between">
-                    <h4 class="text-lg font-Volk">Subtotal</h4>
+            <div class="flex justify-end gap-8 sm:gap-[140px] items-center pt-4">
+                <div class="w-full sm:w-1/2 lg:w-[30%] flex justify-between">
+                    <h4 class="text-base sm:text-lg font-Volk">Subtotal</h4>
                     <p class="text-black font-Volk">$100.00</p>
                 </div>
             </div>
+    
             <!-- View Cart -->
             <div class="flex justify-end items-center pt-4">
-                <div class="w-[30%]">
-                    <button
-                        class="bg-black text-white px-[133px] py-3 rounded-lg font-semibold shadow-tab"><a href="finalcheckout.html">Checkout</a></button>
+                <div class="w-full sm:w-1/2 lg:w-[30%]">
+                    <button class="w-full bg-black text-white px-4 sm:px-[133px] py-3 rounded-lg font-semibold shadow-tab">
+                        <a href="finalcheckout.html">Checkout</a>
+                    </button>
                     <div class="text-center mt-5">
                         <a href="#" class="text-black underline font-Volk">View Cart</a>
                     </div>
                 </div>
-
             </div>
         </div>
-
-
     </div>
-     <!-- NEWSSETTLER SECTION -->
-     <section class="py-14">
-        <div class="container flex justify-between items-center">
+    <!-- NEWSSETTLER SECTION -->
+    <section class="lg:py-14">
+        <div
+            class="lg:container lg:px-[5rem] xs:px-xs-1 md:px-md-2 flex flex-col lg:flex-row justify-between  items-center">
             <!-- left image -->
             <div>
-                <img src="images/women.png" class="w-[300px] h-auto">
+                <img src="images/women.png" class="lg:w-[300px] xs:w-[150px] h-auto">
             </div>
             <!-- center text -->
-            <div class="flex flex-col items-center justify-center w-[580px]">
-                <h2 class="text-[40px] font-Volk text-primary">Subscribe To Our Newsletter</h2>
+            <div class="flex flex-col items-center justify-center lg:w-[580px] md:w-[600px]">
+                <h2 class="lg:text-[40px] xs:text-[30px] font-Volk text-primary">Subscribe To Our Newsletter</h2>
                 <p class="mt-2 text-center text-tabs">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque duis ultrices sollicitudin
                     aliquam sem. Scelerisque duis ultrices sollicitudin.
@@ -211,54 +210,39 @@
             </div>
 
             <!-- right side image -->
-            <div>
-                <img src="images/men.png" class="w-[300px] h-auto">
+            <div class="xs:mt-5 lg:m-0">
+                <img src="images/men.png" class="lg:w-[300px] xs:w-[150px] h-auto">
             </div>
         </div>
     </section>
     <hr class="text-footer-border">
     <!-- Footer Section -->
-    <footer class=" text-primary py-8 font-Poppins">
-        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
+    <footer class="text-primary py-8 font-Poppins">
+        <div
+            class="lg:container lg:px-[5rem] xs:px-xs-1 md:px-md-2 mx-auto flex flex-col md:flex-row items-center justify-between">
 
             <!-- Left Section: Logo or Company Name -->
-            <div class="text-[30px] text-primary font-Volk">
+            <div class="text-2xl md:text-[30px] text-primary font-Volk">
                 FASCO
             </div>
 
             <!-- Center Section: Navigation Links -->
-            <div class="flex space-x-8 mt-4 md:mt-0">
-                <a href="index.html" class="hover:text-black transition">Home</a>
-                <a href="#" class="hover:text-black transition">Shop</a>
-                <a href="#" class="hover:text-black transition">Products</a>
-                <!-- Dropdown Container -->
-                <li class="list-none relative px-3  border-b lg:border-0 max-lg:border-b max-lg:py-3">
-                    <!-- Trigger Button -->
-                    <button onclick="toggleDropdown()"
-                        class="flex gap-1 items-center relative after:block after:w-full after:h-0.5 after:bg-gray-300 after:mt-1 after:scale-x-0 hover:after:scale-x-100 transition-transform duration-300 text-primary text-[16px] font-Poppins">
-                        Pages
-                        <i class="fa-solid fa-caret-down"></i>
-                    </button>
-
-                    <!-- Dropdown Menu -->
-                    <ul id="dropdownMenu"
-                        class="absolute left-0 hidden mt-2 bg-white text-primary shadow-lg rounded w-40 z-10">
-                        <li class="px-4 py-2 hover:bg-gray-100"><a href="#">Sub Page 1</a></li>
-                        <li class="px-4 py-2 hover:bg-gray-100"><a href="#">Sub Page 2</a></li>
-                        <li class="px-4 py-2 hover:bg-gray-100"><a href="#">Sub Page 3</a></li>
-                    </ul>
-                </li>
+            <div
+                class="flex flex-wrap justify-center md:justify-start space-x-4 md:space-x-8 mt-4 md:mt-0 text-sm sm:text-base">
+                <a href="#" class="hover:text-black transition">Support Center</a>
+                <a href="#" class="hover:text-black transition">Invoicing</a>
+                <a href="#" class="hover:text-black transition">Contract</a>
+                <a href="#" class="hover:text-black transition">Careers</a>
+                <a href="#" class="hover:text-black transition">Blog</a>
+                <a href="#" class="hover:text-black transition">FAQs</a>
             </div>
-
-
         </div>
+
         <!-- Right Section: Copyright -->
-        <div class="text-center mt-12 text-sm">
+        <div class="text-center mt-8 md:mt-12 text-xs md:text-sm">
             Copyright © 2024 Abdullah. All Rights Reserved.
         </div>
-
     </footer>
-
 
 
     <script src="script.js"></script>
