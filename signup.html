@@ -15,26 +15,26 @@
 
             <div class="flex flex-col md:flex-row gap-10 md:gap-20 border border-footer-border rounded-[10px]">
                 <!-- left side image -->
-                <div class="md:w-1/2">
-                    <img src="images/sign-up.png" class="w-full h-auto md:w-[560px] md:h-[675px] object-cover">
+                <div class="w-full md:w-1/2">
+                    <img src="images/sign-up.png" class="w-full h-auto md:w-full md:h-[675px] object-cover">
                 </div>
                 <!-- right side content -->
-                <div class="md:w-1/2 py-5 md:py-10">
-                    <div class="w-[92%] xs:pl-3 sm-xs:pl-3 sm:pl-4 lg:px-0">
-                        <h1 class="text-primary font-Volk text-3xl sm:text-4xl md:text-5xl">FSCO</h1>
+                <div class="w-full md:w-1/2 py-5 md:py-10 relative">
+                    <div class="w-[90%] h-full relative xs:pl-3 sm-xs:pl-3 sm:pl-4 lg:px-0">
+                        <h1 class="text-primary font-Volk text-3xl sm:text-4xl md:text-5xl">FASCO</h1>
                         <p class="text-[18px] sm:text-[20px] text-black font-Volk mb-5 mt-5 sm:mt-10">Create Account</p>
 
                         <!-- Social Login Buttons -->
-                        <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mb-6 font-Poppins">
+                        <div class="flex flex-col  sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mb-6 font-Poppins">
                             <button
-                                class="flex items-center justify-center text-[15px]  px-7 py-2 text-black border border-google-border rounded-md shadow-sm hover:bg-gray-50">
+                                class="flex w-full items-center text-[15px] px-6 py-2 text-black border border-google-border rounded-md shadow-sm hover:bg-gray-50">
                                 <img src="https://img.icons8.com/color/48/000000/google-logo.png" alt="Google Icon"
-                                    class="w-5 h-5 mr-2">Sign up with Google
+                                    class="w-5 h-5 mr-2">Sign in with Google
                             </button>
                             <button
-                                class="flex items-center justify-center text-[15px] px-7 py-2 text-black border border-google-border rounded-md shadow-sm hover:bg-gray-50">
+                                class="flex w-full items-center text-[15px] px-6 py-2 text-black border border-google-border rounded-md shadow-sm hover:bg-gray-50">
                                 <img src="https://img.icons8.com/color/48/000000/gmail.png" alt="Email Icon"
-                                    class="w-5 h-5 mr-2">Sign up with Email
+                                    class="w-5 h-5 mr-2">Sign in with Email
                             </button>
                         </div>
 
@@ -72,9 +72,10 @@
 
                         <!-- Additional Links -->
                         <div class="flex justify-center items-center text-[14px] font-Poppins text-black mt-5">Already
-                            have an account? <span class="text-google-border cursor-pointer ml-1">Login</span></div>
-                        <p class="mt-10 text-xs text-black text-center md:text-right text-[14px] sm:text-[16px]">FASCO
-                            Terms & Conditions</p>
+                            have an account? <span class="text-google-border cursor-pointer ml-1"><a href="index.html">Login</a></span></div>
+                            <p
+                            class="mt-10 text-[14px] text-black text-center md:text-right sm:text-[16px] lg:absolute lg:bottom-[-20px]  lg:right-[-1.7rem]">
+                            FASCO Terms & Conditions</p>
                     </div>
                 </div>
             </div>
