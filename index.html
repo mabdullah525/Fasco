@@ -105,8 +105,6 @@
         }
 
         /* TESTI MONILS */
-
-        
     </style>
 
 
@@ -181,7 +179,7 @@
         <div class="lg:container lg:px-[5rem] xs:px-xs-1 md:px-md-2 flex justify-between flex-col lg:flex-row  mt-16">
 
             <!-- left side image -->
-            <div class="flex justify-center items-end bg-hero-bg lg:w-[330px] rounded-[10px]">
+            <div class="flex justify-center items-end bg-hero-bg lg:w-[330px] xl:w-[29%] rounded-[10px]">
                 <img src="images/hero-1.png" class="w-[392px] h-auto">
             </div>
             <!-- CENTER -->
@@ -213,7 +211,8 @@
             </div>
 
             <!-- right side -->
-            <div class="flex justify-center items-end bg-hero-bg lg:w-[330px] rounded-[10px] lg:mt-0 xs:mt-5">
+            <div
+                class="flex justify-center items-end bg-hero-bg lg:w-[330px] xl:w-[29%] rounded-[10px] lg:mt-0 xs:mt-5">
                 <img src="images/hero-2.png" class="w-[220px]">
             </div>
         </div>
@@ -222,7 +221,7 @@
         <!-- Scroll Up Arrow Button (Bottom Left) -->
         <div class="xs:hidden md:hidden lg:block">
             <button id="scrollUp"
-                class="fixed bottom-8 right-4 p-1 bg-white text-black rounded-full border border-black shadow-lg hover:bg-black hover:text-white transition duration-300">
+                class="fixed w-[35px] h-[35px] bottom-8 right-4 p-1 bg-white text-black rounded-full border border-black shadow-lg hover:bg-black hover:text-white transition duration-300">
                 <!-- FontAwesome up arrow icon -->
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor" stroke-width="2">
@@ -231,12 +230,18 @@
             </button>
 
             <button id="scrollUp"
-                class="fixed bottom-8 right-16 p-1 bg-black text-white rounded-[10px] border border-black shadow-lg hover:bg-white hover:text-black transition duration-300">
+                class="fixed flex justify-center items-center w-[35px] h-[35px] bottom-8 right-16 p-1 bg-black text-white  rounded-[10px] border border-black shadow-lg  transition duration-300">
                 <!-- Shopping Cart Icon -->
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M3 3h2l1 5h13l1.34-5H5.24M7 13h12M7 13L5 6m0 0l1.24 5m0 0h12.52M7 16a2 2 0 11-4 0 2 2 0 014 0m10 0a2 2 0 11-4 0 2 2 0 014 0" />
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 23" fill="none">
+                    <path
+                        d="M20.5555 17.3333H7.33331L3.44442 1H1.11108M4.2222 4.11111H22.8889L20.5555 14.2222H6.55553L4.2222 4.11111Z"
+                        stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                        d="M19 22C19.8591 22 20.5556 21.3036 20.5556 20.4445C20.5556 19.5854 19.8591 18.8889 19 18.8889C18.1409 18.8889 17.4445 19.5854 17.4445 20.4445C17.4445 21.3036 18.1409 22 19 22Z"
+                        stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                        d="M8.88881 22C9.74792 22 10.4444 21.3036 10.4444 20.4445C10.4444 19.5854 9.74792 18.8889 8.88881 18.8889C8.0297 18.8889 7.33325 19.5854 7.33325 20.4445C7.33325 21.3036 8.0297 22 8.88881 22Z"
+                        stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
             </button>
         </div>
@@ -411,9 +416,9 @@
             </div>
             <!-- MEN FASHION -->
             <div id="homeContent" class="tab-content block mt-8">
-                <div class="flex flex-wrap xs:gap-7 lg:gap-0 lg:justify-between justify-center">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 ">
                     <!-- cards section -->
-                    <div class="bg-white rounded-[10px] shadow-card p-4 max-w-[355px]">
+                    <div class="bg-white rounded-[10px] shadow-card p-4">
                         <img src="images/men.fashion.jpg" alt="Shiny Dress" class="w-full rounded-lg">
                         <div class="mt-4">
                             <div class="font-Poppins flex justify-between items-center">
@@ -443,7 +448,7 @@
                         </div>
                     </div>
                     <!-- cards section -->
-                    <div class="bg-white rounded-[10px] shadow-card p-4 max-w-[355px]">
+                    <div class="bg-white rounded-[10px] shadow-card p-4">
                         <img src="images/men-2.jpeg" alt="Shiny Dress" class="w-full rounded-lg">
                         <div class="mt-4">
                             <div class="font-Poppins flex justify-between items-center">
@@ -473,7 +478,7 @@
                         </div>
                     </div>
                     <!-- cards section -->
-                    <div class="bg-white rounded-[10px] shadow-card p-4 max-w-[355px]">
+                    <div class="bg-white rounded-[10px] shadow-card p-4">
                         <img src="images/men-3.jpg" alt="Shiny Dress" class="w-full rounded-lg">
                         <div class="mt-4">
                             <div class="font-Poppins flex justify-between items-center">
@@ -503,9 +508,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex flex-wrap xs:gap-7 lg:gap-0 lg:justify-between justify-center mt-16">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
                     <!-- cards section -->
-                    <div class="bg-white rounded-[10px] shadow-card p-4 max-w-[355px]">
+                    <div class="bg-white rounded-[10px] shadow-card p-4 ">
                         <img src="images/men-4.jpg" alt="Shiny Dress" class="w-full rounded-lg">
                         <div class="mt-4">
                             <div class="font-Poppins flex justify-between items-center">
@@ -535,7 +540,7 @@
                         </div>
                     </div>
                     <!-- cards section -->
-                    <div class="bg-white rounded-[10px] shadow-card p-4 max-w-[355px]">
+                    <div class="bg-white rounded-[10px] shadow-card p-4">
                         <img src="images/men-6.jpg" alt="Shiny Dress" class="w-full rounded-lg">
                         <div class="mt-4">
                             <div class="font-Poppins flex justify-between items-center">
@@ -565,7 +570,7 @@
                         </div>
                     </div>
                     <!-- cards section -->
-                    <div class="bg-white rounded-[10px] shadow-card p-4 max-w-[355px]">
+                    <div class="bg-white rounded-[10px] shadow-card p-4">
                         <img src="images/men-5.jpg" alt="Shiny Dress" class="w-full rounded-lg">
                         <div class="mt-4">
                             <div class="font-Poppins flex justify-between items-center">
@@ -599,9 +604,9 @@
 
             <!-- WOMEN FASHION -->
             <div id="settingContent" class="tab-content hidden mt-8">
-                <div class="flex flex-wrap xs:gap-7 lg:gap-0 lg:justify-between justify-center">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     <!-- cards section -->
-                    <div class="bg-white rounded-[10px] shadow-card p-4 max-w-[355px]">
+                    <div class="bg-white rounded-[10px] shadow-card p-4">
                         <img src="images/card-1.png" alt="Shiny Dress" class="w-full rounded-lg">
                         <div class="mt-4">
                             <div class="font-Poppins flex justify-between items-center">
@@ -631,7 +636,7 @@
                         </div>
                     </div>
                     <!-- cards section -->
-                    <div class="bg-white rounded-[10px] shadow-card p-4 max-w-sm">
+                    <div class="bg-white rounded-[10px] shadow-card p-4 ">
                         <img src="images/card-2.png" alt="Shiny Dress" class="w-full rounded-lg">
                         <div class="mt-4">
                             <div class="font-Poppins flex justify-between items-center">
@@ -661,7 +666,7 @@
                         </div>
                     </div>
                     <!-- cards section -->
-                    <div class="bg-white rounded-[10px] shadow-card p-4 max-w-[355px]">
+                    <div class="bg-white rounded-[10px] shadow-card p-4">
                         <img src="images/card-3.png" alt="Shiny Dress" class="w-full rounded-lg">
                         <div class="mt-4">
                             <div class="font-Poppins flex justify-between items-center">
@@ -691,9 +696,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex flex-wrap xs:gap-7 lg:gap-0 lg:justify-between justify-center mt-16">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
                     <!-- cards section -->
-                    <div class="bg-white rounded-[10px] shadow-card p-4 max-w-[355px]">
+                    <div class="bg-white rounded-[10px] shadow-card p-4">
                         <img src="images/card-4.png" alt="Shiny Dress" class="w-full rounded-lg">
                         <div class="mt-4">
                             <div class="font-Poppins flex justify-between items-center">
@@ -723,7 +728,7 @@
                         </div>
                     </div>
                     <!-- cards section -->
-                    <div class="bg-white rounded-[10px] shadow-card p-4 max-w-sm">
+                    <div class="bg-white rounded-[10px] shadow-card p-4 ">
                         <img src="images/card-5.png" alt="Shiny Dress" class="w-full rounded-lg">
                         <div class="mt-4">
                             <div class="font-Poppins flex justify-between items-center">
@@ -753,7 +758,7 @@
                         </div>
                     </div>
                     <!-- cards section -->
-                    <div class="bg-white rounded-[10px] shadow-card p-4 max-w-[355px]">
+                    <div class="bg-white rounded-[10px] shadow-card p-4">
                         <img src="images/card-6.png" alt="Shiny Dress" class="w-full rounded-lg">
                         <div class="mt-4">
                             <div class="font-Poppins flex justify-between items-center">
@@ -786,9 +791,9 @@
             </div>
             <!-- women ASSECCORIES -->
             <div id="profileContent" class="tab-content hidden mt-8">
-                <div class="flex flex-wrap xs:gap-7 lg:gap-0 lg:justify-between justify-center">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     <!-- cards section -->
-                    <div class="bg-white rounded-[10px] shadow-card p-4 max-w-[355px]">
+                    <div class="bg-white rounded-[10px] shadow-card p-4 ">
                         <img src="images/card-1.png" alt="Shiny Dress" class="w-full rounded-lg">
                         <div class="mt-4">
                             <div class="font-Poppins flex justify-between items-center">
@@ -818,7 +823,7 @@
                         </div>
                     </div>
                     <!-- cards section -->
-                    <div class="bg-white rounded-[10px] shadow-card p-4 max-w-sm">
+                    <div class="bg-white rounded-[10px] shadow-card p-4">
                         <img src="images/card-2.png" alt="Shiny Dress" class="w-full rounded-lg">
                         <div class="mt-4">
                             <div class="font-Poppins flex justify-between items-center">
@@ -848,7 +853,7 @@
                         </div>
                     </div>
                     <!-- cards section -->
-                    <div class="bg-white rounded-[10px] shadow-card p-4 max-w-[355px]">
+                    <div class="bg-white rounded-[10px] shadow-card p-4">
                         <img src="images/card-3.png" alt="Shiny Dress" class="w-full rounded-lg">
                         <div class="mt-4">
                             <div class="font-Poppins flex justify-between items-center">
@@ -878,9 +883,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex flex-wrap xs:gap-7 lg:gap-0 lg:justify-between justify-center mt-16">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
                     <!-- cards section -->
-                    <div class="bg-white rounded-[10px] shadow-card p-4 max-w-[355px]">
+                    <div class="bg-white rounded-[10px] shadow-card p-4 ">
                         <img src="images/card-4.png" alt="Shiny Dress" class="w-full rounded-lg">
                         <div class="mt-4">
                             <div class="font-Poppins flex justify-between items-center">
@@ -910,7 +915,7 @@
                         </div>
                     </div>
                     <!-- cards section -->
-                    <div class="bg-white rounded-[10px] shadow-card p-4 max-w-sm">
+                    <div class="bg-white rounded-[10px] shadow-card p-4">
                         <img src="images/card-5.png" alt="Shiny Dress" class="w-full rounded-lg">
                         <div class="mt-4">
                             <div class="font-Poppins flex justify-between items-center">
@@ -940,7 +945,7 @@
                         </div>
                     </div>
                     <!-- cards section -->
-                    <div class="bg-white rounded-[10px] shadow-card p-4 max-w-[355px]">
+                    <div class="bg-white rounded-[10px] shadow-card p-4">
                         <img src="images/card-6.png" alt="Shiny Dress" class="w-full rounded-lg">
                         <div class="mt-4">
                             <div class="font-Poppins flex justify-between items-center">
@@ -973,9 +978,9 @@
             </div>
             <!-- MEN ACCESSORIES -->
             <div id="womenContent" class="tab-content hidden mt-8">
-                <div class="flex flex-wrap xs:gap-7 lg:gap-0 lg:justify-between justify-center">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     <!-- cards section -->
-                    <div class="bg-white rounded-[10px] shadow-card p-4 max-w-[355px]">
+                    <div class="bg-white rounded-[10px] shadow-card p-4 ">
                         <img src="images/card-1.png" alt="Shiny Dress" class="w-full rounded-lg">
                         <div class="mt-4">
                             <div class="font-Poppins flex justify-between items-center">
@@ -1005,7 +1010,7 @@
                         </div>
                     </div>
                     <!-- cards section -->
-                    <div class="bg-white rounded-[10px] shadow-card p-4 max-w-sm">
+                    <div class="bg-white rounded-[10px] shadow-card p-4">
                         <img src="images/card-2.png" alt="Shiny Dress" class="w-full rounded-lg">
                         <div class="mt-4">
                             <div class="font-Poppins flex justify-between items-center">
@@ -1035,7 +1040,7 @@
                         </div>
                     </div>
                     <!-- cards section -->
-                    <div class="bg-white rounded-[10px] shadow-card p-4 max-w-[355px]">
+                    <div class="bg-white rounded-[10px] shadow-card p-4">
                         <img src="images/card-3.png" alt="Shiny Dress" class="w-full rounded-lg">
                         <div class="mt-4">
                             <div class="font-Poppins flex justify-between items-center">
@@ -1065,9 +1070,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex flex-wrap xs:gap-7 lg:gap-0 lg:justify-between justify-center mt-16">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
                     <!-- cards section -->
-                    <div class="bg-white rounded-[10px] shadow-card p-4 max-w-[355px]">
+                    <div class="bg-white rounded-[10px] shadow-card p-4 ">
                         <img src="images/card-4.png" alt="Shiny Dress" class="w-full rounded-lg">
                         <div class="mt-4">
                             <div class="font-Poppins flex justify-between items-center">
@@ -1097,7 +1102,7 @@
                         </div>
                     </div>
                     <!-- cards section -->
-                    <div class="bg-white rounded-[10px] shadow-card p-4 max-w-sm">
+                    <div class="bg-white rounded-[10px] shadow-card p-4 ">
                         <img src="images/card-5.png" alt="Shiny Dress" class="w-full rounded-lg">
                         <div class="mt-4">
                             <div class="font-Poppins flex justify-between items-center">
@@ -1127,7 +1132,7 @@
                         </div>
                     </div>
                     <!-- cards section -->
-                    <div class="bg-white rounded-[10px] shadow-card p-4 max-w-[355px]">
+                    <div class="bg-white rounded-[10px] shadow-card p-4">
                         <img src="images/card-6.png" alt="Shiny Dress" class="w-full rounded-lg">
                         <div class="mt-4">
                             <div class="font-Poppins flex justify-between items-center">
@@ -1160,9 +1165,9 @@
             </div>
             <!-- DISCOUNT -->
             <div id="menContent" class="tab-content hidden mt-8">
-                <div class="flex flex-wrap xs:gap-7 lg:gap-0 lg:justify-between justify-center">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     <!-- cards section -->
-                    <div class="bg-white rounded-[10px] shadow-card p-4 max-w-[355px]">
+                    <div class="bg-white rounded-[10px] shadow-card p-4 ">
                         <img src="images/card-1.png" alt="Shiny Dress" class="w-full rounded-lg">
                         <div class="mt-4">
                             <div class="font-Poppins flex justify-between items-center">
@@ -1192,7 +1197,7 @@
                         </div>
                     </div>
                     <!-- cards section -->
-                    <div class="bg-white rounded-[10px] shadow-card p-4 max-w-sm">
+                    <div class="bg-white rounded-[10px] shadow-card p-4">
                         <img src="images/card-2.png" alt="Shiny Dress" class="w-full rounded-lg">
                         <div class="mt-4">
                             <div class="font-Poppins flex justify-between items-center">
@@ -1222,7 +1227,7 @@
                         </div>
                     </div>
                     <!-- cards section -->
-                    <div class="bg-white rounded-[10px] shadow-card p-4 max-w-[355px]">
+                    <div class="bg-white rounded-[10px] shadow-card p-4">
                         <img src="images/card-3.png" alt="Shiny Dress" class="w-full rounded-lg">
                         <div class="mt-4">
                             <div class="font-Poppins flex justify-between items-center">
@@ -1252,9 +1257,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex flex-wrap xs:gap-7 lg:gap-0 lg:justify-between justify-center mt-16">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
                     <!-- cards section -->
-                    <div class="bg-white rounded-[10px] shadow-card p-4 max-w-[355px]">
+                    <div class="bg-white rounded-[10px] shadow-card p-4 ">
                         <img src="images/card-4.png" alt="Shiny Dress" class="w-full rounded-lg">
                         <div class="mt-4">
                             <div class="font-Poppins flex justify-between items-center">
@@ -1284,7 +1289,7 @@
                         </div>
                     </div>
                     <!-- cards section -->
-                    <div class="bg-white rounded-[10px] shadow-card p-4 max-w-sm">
+                    <div class="bg-white rounded-[10px] shadow-card p-4">
                         <img src="images/card-5.png" alt="Shiny Dress" class="w-full rounded-lg">
                         <div class="mt-4">
                             <div class="font-Poppins flex justify-between items-center">
@@ -1314,7 +1319,7 @@
                         </div>
                     </div>
                     <!-- cards section -->
-                    <div class="bg-white rounded-[10px] shadow-card p-4 max-w-[355px]">
+                    <div class="bg-white rounded-[10px] shadow-card p-4">
                         <img src="images/card-6.png" alt="Shiny Dress" class="w-full rounded-lg">
                         <div class="mt-4">
                             <div class="font-Poppins flex justify-between items-center">

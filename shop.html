@@ -15,6 +15,14 @@
         .slanted {
             clip-path: polygon(10% 1%, 100% 0%, 100% 100%, 0% 100%);
         }
+
+        @media only screen and (max-width: 768px) {
+
+            .slanted {
+                clip-path: none;
+            }
+
+        }
     </style>
 </head>
 
@@ -57,9 +65,14 @@
                         <li class="relative px-3  border-b lg:border-0 max-lg:border-b max-lg:py-3">
                             <!-- Trigger Button -->
                             <button onclick="toggleDropdown()"
-                                class="flex gap-1 items-center relative after:block after:w-full after:h-0.5 after:bg-gray-300 after:mt-1 after:scale-x-0 hover:after:scale-x-100 transition-transform duration-300 text-primary text-[16px] font-Poppins">
+                                class="flex gap-1 items-center after:scale-x-0 hover:after:scale-x-100 transition-transform duration-300 text-primary text-[16px] font-Poppins">
                                 Pages
-                                <i class="fa-solid fa-caret-down"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-2 fill-black inline ml-1 mt-1"
+                                    viewBox="0 0 24 24">
+                                    <path fill-rule="evenodd"
+                                        d="M11.99997 18.1669a2.38 2.38 0 0 1-1.68266-.69733l-9.52-9.52a2.38 2.38 0 1 1 3.36532-3.36532l7.83734 7.83734 7.83734-7.83734a2.38 2.38 0 1 1 3.36532 3.36532l-9.52 9.52a2.38 2.38 0 0 1-1.68266.69734z"
+                                        clip-rule="evenodd" data-original="#000000" />
+                                </svg>
                             </button>
 
                             <!-- Dropdown Menu -->
@@ -102,7 +115,7 @@
                     Home
                 </li>
                 <li>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="fill-black w-[10px] -rotate-90" viewBox="0 0 24 24">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="fill-black w-[8px] -rotate-90" viewBox="0 0 24 24">
                         <path fill-rule="evenodd"
                             d="M11.99997 18.1669a2.38 2.38 0 0 1-1.68266-.69733l-9.52-9.52a2.38 2.38 0 1 1 3.36532-3.36532l7.83734 7.83734 7.83734-7.83734a2.38 2.38 0 1 1 3.36532 3.36532l-9.52 9.52a2.38 2.38 0 0 1-1.68266.69734z"
                             clip-rule="evenodd" data-original="#000000"></path>
@@ -110,13 +123,6 @@
                 </li>
                 <li class="text-black text-[17px] cursor-pointer">
                     Profile
-                </li>
-                <li>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="fill-black w-[10px] -rotate-90" viewBox="0 0 24 24">
-                        <path fill-rule="evenodd"
-                            d="M11.99997 18.1669a2.38 2.38 0 0 1-1.68266-.69733l-9.52-9.52a2.38 2.38 0 1 1 3.36532-3.36532l7.83734 7.83734 7.83734-7.83734a2.38 2.38 0 1 1 3.36532 3.36532l-9.52 9.52a2.38 2.38 0 0 1-1.68266.69734z"
-                            clip-rule="evenodd" data-original="#000000"></path>
-                    </svg>
                 </li>
             </ul>
         </div>
@@ -135,13 +141,13 @@
                         <h3 class="font-Volk text-lg">Size</h3>
                         <div class="flex flex-wrap gap-2">
                             <button
-                                class="border-[2px] border-tabs text-tabs rounded-[5px] w-10 h-10 flex items-center justify-center text-sm font-medium">S</button>
+                                class="border-[1px] border-tabs text-tabs rounded-[5px] w-10 h-10 flex items-center justify-center text-sm font-medium">S</button>
                             <button
-                                class="border-[2px] border-tabs text-tabs rounded-[5px] w-10 h-10 flex items-center justify-center text-sm font-medium">M</button>
+                                class="border-[1px] border-tabs text-tabs rounded-[5px] w-10 h-10 flex items-center justify-center text-sm font-medium">M</button>
                             <button
-                                class="border-[2px] border-tabs text-tabs rounded-[5px] w-10 h-10 flex items-center justify-center text-sm font-medium">L</button>
+                                class="border-[1px] border-tabs text-tabs rounded-[5px] w-10 h-10 flex items-center justify-center text-sm font-medium">L</button>
                             <button
-                                class="border-[2px] border-tabs text-tabs rounded-[5px] w-10 h-10 flex items-center justify-center text-sm font-medium">XL</button>
+                                class="border-[1px] border-tabs text-tabs rounded-[5px] w-10 h-10 flex items-center justify-center text-sm font-medium">XL</button>
                         </div>
                     </div>
 
@@ -166,9 +172,9 @@
                     </div>
 
                     <!-- Price Filter -->
-                    <div class="space-y-2">
+                    <div class="space-y-3">
                         <h3 class="font-Volk  text-lg">Prices</h3>
-                        <ul class="space-y-1 text-tabs font-Poppins text-sm">
+                        <ul class="space-y-3 text-tabs font-Poppins text-sm">
                             <li><a href="#" class="hover:underline">$0-$50</a></li>
                             <li><a href="#" class="hover:underline">$50-$100</a></li>
                             <li><a href="#" class="hover:underline">$100-$150</a></li>
@@ -189,7 +195,7 @@
                                     Brands
                                 </span>
                             </span>
-                            <svg class="w-5 h-5 text-black transition group-open:rotate-90"
+                            <svg class="w-3 h-3 text-black transition group-open:rotate-90"
                                 xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 viewBox="0 0 16 16">
                                 <path fill-rule="evenodd"
@@ -222,7 +228,7 @@
                                     Collection
                                 </span>
                             </span>
-                            <svg class="w-5 h-5 text-black transition group-open:rotate-90"
+                            <svg class="w-3 h-3 text-black transition group-open:rotate-90"
                                 xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 viewBox="0 0 16 16">
                                 <path fill-rule="evenodd"
@@ -270,7 +276,7 @@
                         <button type="button" id="dropdownToggle"
                             class="py-3 md:py-6 text-black text-base md:text-[17px] font-Volk">
                             Best Selling
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-3 md:w-4 fill-black inline ml-2 md:ml-3"
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-2 fill-black inline ml-2"
                                 viewBox="0 0 24 24">
                                 <path fill-rule="evenodd"
                                     d="M11.99997 18.1669a2.38 2.38 0 0 1-1.68266-.69733l-9.52-9.52a2.38 2.38 0 1 1 3.36532-3.36532l7.83734 7.83734 7.83734-7.83734a2.38 2.38 0 1 1 3.36532 3.36532l-9.52 9.52a2.38 2.38 0 0 1-1.68266.69734z"
@@ -332,7 +338,7 @@
 
                     <!-- Product 1 -->
                     <div class="w-full md:w-1/3 flex flex-col justify-center">
-                        <img src="images/img-1.png" class="md:h-[360px] object-cover">
+                        <img src="images/img-1.png" class="h-auto object-cover">
                         <div class="font-Volk mt-4">
                             <h1 class="text-base md:text-lg">Rounded Red Hat</h1>
                             <p class="font-Poppins mt-2 md:mt-3 text-sm md:text-base">$8.00</p>
@@ -347,12 +353,15 @@
                     </div>
 
                     <!-- Product 2 with Sold Out Badge -->
-                    <div class="relative w-full md:w-1/3 flex flex-col justify-center">
-                        <img src="images/img-2.png" class=" md:h-[360px] object-cover">
-                        <div
-                            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex justify-center items-center rounded-full w-10 h-10 md:w-12 md:h-12 bg-sold-out font-Poppins text-white text-[10px] md:text-[11px] font-[900]">
-                            Sold<br>Out
+                    <div class=" w-full md:w-1/3 flex flex-col justify-center">
+                        <div class="relative">
+                            <img src="images/img-2.png" class="w-full h-auto object-cover">
+                            <div
+                                class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex justify-center items-center rounded-full w-10 h-10 md:w-12 md:h-12 bg-sold-out font-Poppins text-white text-[10px] md:text-[11px] font-[900]">
+                                Sold<br>Out
+                            </div>
                         </div>
+
                         <div class="font-Volk mt-4">
                             <h1 class="text-base md:text-lg">Linen-blend Shirt</h1>
                             <p class="font-Poppins mt-2 md:mt-3 text-sm md:text-base">$17.00</p>
@@ -368,7 +377,7 @@
 
                     <!-- Product 3 -->
                     <div class="w-full md:w-1/3 flex flex-col justify-center">
-                        <img src="images/img-3.png" class=" md:h-[360px] object-cover">
+                        <img src="images/img-3.png" class="h-auto object-cover">
                         <div class="font-Volk mt-4">
                             <h1 class="text-base md:text-lg">Long-sleeve Coat</h1>
                             <p class="font-Poppins mt-2 md:mt-3 text-sm md:text-base">$106.00</p>
@@ -389,7 +398,7 @@
 
                     <!-- Product 1 -->
                     <div class="w-full md:w-1/3 flex flex-col justify-center">
-                        <img src="images/img-1.png" class=" md:h-[360px] object-cover">
+                        <img src="images/img-4.png" class=" md:h-[360px] object-cover">
                         <div class="font-Volk mt-4">
                             <h1 class="text-base md:text-lg">Rounded Red Hat</h1>
                             <p class="font-Poppins mt-2 md:mt-3 text-sm md:text-base">$8.00</p>
@@ -404,12 +413,8 @@
                     </div>
 
                     <!-- Product 2 with Sold Out Badge -->
-                    <div class="relative w-full md:w-1/3 flex flex-col justify-center">
-                        <img src="images/img-2.png" class=" md:h-[360px] object-cover">
-                        <div
-                            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex justify-center items-center rounded-full w-10 h-10 md:w-12 md:h-12 bg-sold-out font-Poppins text-white text-[10px] md:text-[11px] font-[900]">
-                            Sold<br>Out
-                        </div>
+                    <div class="w-full md:w-1/3 flex flex-col justify-center">
+                        <img src="images/img-5.png" class=" md:h-[360px] object-cover">
                         <div class="font-Volk mt-4">
                             <h1 class="text-base md:text-lg">Linen-blend Shirt</h1>
                             <p class="font-Poppins mt-2 md:mt-3 text-sm md:text-base">$17.00</p>
@@ -425,7 +430,7 @@
 
                     <!-- Product 3 -->
                     <div class="w-full md:w-1/3 flex flex-col justify-center">
-                        <img src="images/img-3.png" class="md:h-[360px] object-cover">
+                        <img src="images/img-6.png" class="md:h-[360px] object-cover">
                         <div class="font-Volk mt-4">
                             <h1 class="text-base md:text-lg">Long-sleeve Coat</h1>
                             <p class="font-Poppins mt-2 md:mt-3 text-sm md:text-base">$106.00</p>
@@ -446,7 +451,7 @@
 
                     <!-- Product 1 -->
                     <div class="w-full md:w-1/3 flex flex-col justify-center">
-                        <img src="images/img-1.png" class=" md:h-[360px] object-cover">
+                        <img src="images/img-7.png" class="h-auto object-cover">
                         <div class="font-Volk mt-4">
                             <h1 class="text-base md:text-lg">Rounded Red Hat</h1>
                             <p class="font-Poppins mt-2 md:mt-3 text-sm md:text-base">$8.00</p>
@@ -462,11 +467,7 @@
 
                     <!-- Product 2 with Sold Out Badge -->
                     <div class="relative w-full md:w-1/3 flex flex-col justify-center">
-                        <img src="images/img-2.png" class=" md:h-[360px] object-cover">
-                        <div
-                            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex justify-center items-center rounded-full w-10 h-10 md:w-12 md:h-12 bg-sold-out font-Poppins text-white text-[10px] md:text-[11px] font-[900]">
-                            Sold<br>Out
-                        </div>
+                        <img src="images/img-8.png" class="h-auto object-cover">
                         <div class="font-Volk mt-4">
                             <h1 class="text-base md:text-lg">Linen-blend Shirt</h1>
                             <p class="font-Poppins mt-2 md:mt-3 text-sm md:text-base">$17.00</p>
@@ -482,7 +483,7 @@
 
                     <!-- Product 3 -->
                     <div class="w-full md:w-1/3 flex flex-col justify-center">
-                        <img src="images/img-3.png" class="md:h-[360px] object-cover">
+                        <img src="images/img-9.png" class="h-auto object-cover">
                         <div class="font-Volk mt-4">
                             <h1 class="text-base md:text-lg">Long-sleeve Coat</h1>
                             <p class="font-Poppins mt-2 md:mt-3 text-sm md:text-base">$106.00</p>
@@ -497,10 +498,7 @@
                     </div>
 
                 </div>
-
-
                 <!-- PAGINATION -->
-
                 <div class="flex justify-center mt-20 space-x-1 font-Poppins">
                     <button
                         class="min-w-9 rounded-full py-2 px-3.5 text-center text-[16px] transition-all text-black hover:text-black hover:bg-pagination focus:text-black focus:bg-pagination focus:border-slate-800 active:border-slate-800 active:text-black active:bg-pagination">
@@ -515,7 +513,11 @@
                         3
                     </button>
                     <button>
-                        <i class="fa-solid fa-angles-right text-sm"></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="7" height="8" viewBox="0 0 7 8" fill="none">
+                            <path
+                                d="M2.85179 3.81408L0.451787 0.710078L1.25179 -0.00992203L4.29179 3.75008L1.25179 7.51008L0.451787 6.79008L2.85179 3.81408ZM5.41179 3.81408L3.01179 0.710078L3.81179 -0.00992203L6.85179 3.75008L3.81179 7.51008L3.01179 6.79008L5.41179 3.81408Z"
+                                fill="black" />
+                        </svg>
                     </button>
                 </div>
             </div>
@@ -697,12 +699,17 @@
                 <a href="#" class="hover:text-black transition">Shop</a>
                 <a href="#" class="hover:text-black transition">Products</a>
                 <!-- Dropdown Container -->
-                <li class="list-none relative px-3  border-b lg:border-0 max-lg:border-b max-lg:py-3">
+                <li class="list-none relative px-3">
                     <!-- Trigger Button -->
                     <button onclick="toggleDropdown()"
-                        class="flex gap-1 items-center relative after:block after:w-full after:h-0.5 after:bg-gray-300 after:mt-1 after:scale-x-0 hover:after:scale-x-100 transition-transform duration-300 text-primary text-[16px] font-Poppins">
+                        class="flex gap-1 items-center after:scale-x-0 hover:after:scale-x-100 transition-transform duration-300 text-primary text-[16px] font-Poppins">
                         Pages
-                        <i class="fa-solid fa-caret-down"></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-2 fill-black inline lg:ml-1 lg:mt-1"
+                            viewBox="0 0 24 24">
+                            <path fill-rule="evenodd"
+                                d="M11.99997 18.1669a2.38 2.38 0 0 1-1.68266-.69733l-9.52-9.52a2.38 2.38 0 1 1 3.36532-3.36532l7.83734 7.83734 7.83734-7.83734a2.38 2.38 0 1 1 3.36532 3.36532l-9.52 9.52a2.38 2.38 0 0 1-1.68266.69734z"
+                                clip-rule="evenodd" data-original="#000000" />
+                        </svg>
                     </button>
 
                     <!-- Dropdown Menu -->
