@@ -18,6 +18,14 @@
             clip-path: polygon(10% 1%, 100% 0%, 100% 100%, 0% 100%);
         }
 
+        @media only screen and (max-width: 768px) {
+
+            .slanted {
+                clip-path: none;
+            }
+
+        }
+
         /* SWIPER */
         .swiper {
             width: 100%;
@@ -45,14 +53,14 @@
             margin-right: auto;
         }
 
-        .swiper-slide-active {
+        .deal .swiper-slide-active {
             width: 300px !important;
             height: 500px !important;
             transition: .5s !important;
             opacity: 1 !important;
         }
 
-        .swiper-slide-active .sale-box {
+        .deal .swiper-slide-active .sale-box {
             transition: .5s;
             opacity: 1;
         }
@@ -70,16 +78,16 @@
             transition: .3s;
             transform: translate3d(0, 0, 0);
             z-index: 10;
-            margin-top: 25px;
+            position: relative !important;
         }
 
         .swiper-horizontal>.swiper-pagination-bullets,
         .swiper-pagination-bullets.swiper-pagination-horizontal,
         .swiper-pagination-custom,
         .swiper-pagination-fraction {
-            bottom: var(--swiper-pagination-bottom, 0);
+            bottom: var(--swiper-pagination-bottom, 40px);
             top: var(--swiper-pagination-top, auto);
-            left: 7px;
+            left: 10px;
             width: 100%;
         }
     </style>
@@ -124,9 +132,14 @@
                         <li class="relative px-3  border-b lg:border-0 max-lg:border-b max-lg:py-3">
                             <!-- Trigger Button -->
                             <button onclick="toggleDropdown()"
-                                class="flex gap-1 items-center relative after:block after:w-full after:h-0.5 after:bg-gray-300 after:mt-1 after:scale-x-0 hover:after:scale-x-100 transition-transform duration-300 text-primary text-[16px] font-Poppins">
+                                class="flex gap-1 items-center after:scale-x-0 hover:after:scale-x-100 transition-transform duration-300 text-primary text-[16px] font-Poppins">
                                 Pages
-                                <i class="fa-solid fa-caret-down"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-2 fill-black inline ml-1 mt-1"
+                                    viewBox="0 0 24 24">
+                                    <path fill-rule="evenodd"
+                                        d="M11.99997 18.1669a2.38 2.38 0 0 1-1.68266-.69733l-9.52-9.52a2.38 2.38 0 1 1 3.36532-3.36532l7.83734 7.83734 7.83734-7.83734a2.38 2.38 0 1 1 3.36532 3.36532l-9.52 9.52a2.38 2.38 0 0 1-1.68266.69734z"
+                                        clip-rule="evenodd" data-original="#000000" />
+                                </svg>
                             </button>
 
                             <!-- Dropdown Menu -->
@@ -223,16 +236,18 @@
                             <p class="font-Poppins">(3)</p>
 
                         </div>
-                        <div class="flex flex-wrap items-center gap-4 mt-4">
+                        <div class="flex flex-wrap items-center gap-4 mt-4 font-Poppins">
                             <p class="text-black text-[24px]">$39.00</p>
-                            <p class="text-cut-word text-xl"><strike>$59.00</strike></p>
+                            <p class="text-cut-word text-[18px]"><strike>$59.00</strike></p>
                             <span
                                 class="flex justify-center items-center  bg-save text-white text-xs font-Poppins px-2 py-0.5 rounded-full">
-                                SAVE 33%
+                                SAVE <span class="ml-2">33%</span>
                             </span>
+
+                        </div>
+                        <div class="mt-5">
                             <p class="font-Poppins text-tabs"><i class="fa-solid fa-eye text-black"></i> 24 people are
                                 viewing this right now</p>
-
                         </div>
                         <div
                             class="flex items-center justify-between mt-5 bg-hurry-up text-hurry font-semibold py-2 px-4 rounded-[4px] shadow-sm">
@@ -319,7 +334,7 @@
 
                                 <!-- Add to Cart Button -->
                                 <button type="button"
-                                    class="px-8 py-2 md:px-10 lg:px-20 hover:bg-black hover:text-white text-black border border-black text-sm md:text-base lg:text-[16px] font-Volk rounded-md">
+                                    class="w-[70%] px-8 py-2 md:px-10 lg:px-20 hover:bg-black hover:text-white text-black border border-black text-sm md:text-base lg:text-[16px] font-Volk rounded-md">
                                     <a href="addcart.html">Add to cart</a>
                                 </button>
                             </div>
@@ -330,19 +345,50 @@
                             class="flex flex-col md:flex-row items-center md:justify-between mt-6 md:mt-10 gap-4 md:gap-10 font-Poppins border-b border-gray-300 py-4">
                             <!-- Compare Section -->
                             <div class="flex items-center gap-2 text-sm md:text-base">
-                                <i class="fa-solid fa-code-compare"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="19" viewBox="0 0 14 19"
+                                    fill="none">
+                                    <path
+                                        d="M5.90601 14.5H4.18726V1.375C4.18726 1.20924 4.12141 1.05027 4.0042 0.933058C3.88699 0.815848 3.72802 0.75 3.56226 0.75H2.93726C2.7715 0.75 2.61253 0.815848 2.49532 0.933058C2.37811 1.05027 2.31226 1.20924 2.31226 1.375V14.5H0.593509C0.501916 14.5 0.412315 14.5267 0.335777 14.5771C0.25924 14.6274 0.199119 14.699 0.162843 14.7831C0.126567 14.8672 0.115726 14.9601 0.131658 15.0503C0.147591 15.1405 0.1896 15.224 0.252494 15.2906L2.90874 18.1031C2.95255 18.1495 3.00536 18.1864 3.06393 18.2116C3.1225 18.2368 3.1856 18.2498 3.24937 18.2498C3.31314 18.2498 3.37624 18.2368 3.43481 18.2116C3.49338 18.1864 3.54618 18.1495 3.58999 18.1031L6.24624 15.2906C6.30909 15.2241 6.35109 15.1406 6.36704 15.0505C6.383 14.9604 6.37223 14.8675 6.33605 14.7835C6.29987 14.6994 6.23987 14.6277 6.16345 14.5774C6.08703 14.527 5.99754 14.5001 5.90601 14.5ZM13.7466 3.70938L11.0904 0.896875C11.0466 0.850534 10.9938 0.813621 10.9352 0.788392C10.8766 0.763164 10.8135 0.750152 10.7498 0.750152C10.686 0.750152 10.6229 0.763164 10.5643 0.788392C10.5057 0.813621 10.4529 0.850534 10.4091 0.896875L7.75288 3.70938C7.69001 3.77594 7.64801 3.85945 7.63207 3.94962C7.61612 4.03978 7.62693 4.13263 7.66316 4.21672C7.69938 4.30081 7.75944 4.37245 7.83592 4.42279C7.9124 4.47313 8.00195 4.49997 8.09351 4.5H9.81226V17.625C9.81226 17.7908 9.87811 17.9497 9.99532 18.0669C10.1125 18.1842 10.2715 18.25 10.4373 18.25H11.0623C11.228 18.25 11.387 18.1842 11.5042 18.0669C11.6214 17.9497 11.6873 17.7908 11.6873 17.625V4.5H13.406C13.4976 4.49997 13.5871 4.47313 13.6636 4.42279C13.7401 4.37245 13.8001 4.30081 13.8364 4.21672C13.8726 4.13263 13.8834 4.03978 13.8675 3.94962C13.8515 3.85945 13.8095 3.77594 13.7466 3.70938Z"
+                                        fill="black" />
+                                </svg>
                                 <p>Compare</p>
                             </div>
 
                             <!-- Ask a Question Section -->
                             <div class="flex items-center gap-2 text-sm md:text-base">
-                                <i class="fa-regular fa-circle-question"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_6_139)">
+                                        <path
+                                            d="M10.48 13.7812C9.87592 13.7812 9.38623 14.2709 9.38623 14.875C9.38623 15.4791 9.87592 15.9688 10.48 15.9688C11.084 15.9688 11.5737 15.4791 11.5737 14.875C11.5737 14.2709 11.084 13.7812 10.48 13.7812ZM10.7796 12.8438H10.1546C9.89572 12.8438 9.68584 12.6339 9.68584 12.375V12.3601C9.68584 9.61234 12.7108 9.875 12.7108 8.16449C12.7108 7.38262 12.0171 6.59375 10.4671 6.59375C9.32865 6.59375 8.73799 6.97066 8.15416 7.71453C8.0015 7.90906 7.72236 7.94871 7.51947 7.80734L7.00643 7.44992C6.7867 7.29684 6.73846 6.99012 6.90311 6.77894C7.73225 5.71539 8.716 5.03125 10.4671 5.03125C12.5108 5.03125 14.2733 6.1934 14.2733 8.16449C14.2733 10.7979 11.2483 10.6586 11.2483 12.3601V12.375C11.2483 12.6339 11.0385 12.8438 10.7796 12.8438ZM10.48 2.0625C15.1136 2.0625 18.9175 5.81543 18.9175 10.5C18.9175 15.1598 15.1437 18.9375 10.48 18.9375C5.82201 18.9375 2.04248 15.1655 2.04248 10.5C2.04248 5.84363 5.816 2.0625 10.48 2.0625ZM10.48 0.8125C5.1301 0.8125 0.79248 5.15168 0.79248 10.5C0.79248 15.8514 5.1301 20.1875 10.48 20.1875C15.8299 20.1875 20.1675 15.8514 20.1675 10.5C20.1675 5.15168 15.8299 0.8125 10.48 0.8125Z"
+                                            fill="black" stroke="black" stroke-width="0.0390625" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_6_139">
+                                            <rect width="20" height="20" fill="white"
+                                                transform="translate(0.47998 0.5)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
                                 <p>Ask a question</p>
                             </div>
 
                             <!-- Share Section -->
                             <div class="flex items-center gap-2 text-sm md:text-base">
-                                <i class="fa-solid fa-share-nodes"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_6_144)">
+                                        <path
+                                            d="M15.1802 13C16.2218 13 17.1073 13.3646 17.8364 14.0938C18.5655 14.8229 18.9302 15.7084 18.9302 16.75C18.9302 17.7916 18.5655 18.6771 17.8364 19.4062C17.1073 20.1354 16.2218 20.5 15.1802 20.5C14.1386 20.5 13.2531 20.1354 12.5239 19.4062C11.7948 18.6771 11.4302 17.7916 11.4302 16.75C11.4302 16.3594 11.4823 15.9817 11.5864 15.6172L7.7583 13.2344C7.02914 13.9115 6.16976 14.25 5.18018 14.25C4.13851 14.25 3.25309 13.8854 2.52393 13.1562C1.79476 12.4271 1.43018 11.5417 1.43018 10.5C1.43018 9.45834 1.79476 8.57291 2.52393 7.84375C3.25309 7.11459 4.13851 6.75 5.18018 6.75C6.16976 6.75 7.02914 7.08854 7.7583 7.76562L11.5864 5.38281C11.4823 5.01823 11.4302 4.64062 11.4302 4.25C11.4302 3.20834 11.7948 2.32291 12.5239 1.59375C13.2531 0.864584 14.1386 0.5 15.1802 0.5C16.2218 0.5 17.1073 0.864584 17.8364 1.59375C18.5655 2.32291 18.9302 3.20834 18.9302 4.25C18.9302 5.29166 18.5655 6.17709 17.8364 6.90625C17.1073 7.63541 16.2218 8 15.1802 8C14.1906 8 13.3312 7.66146 12.6021 6.98438L8.77393 9.36719C9.0083 10.1224 9.0083 10.8776 8.77393 11.6328L12.6021 14.0156C13.3312 13.3385 14.1906 13 15.1802 13ZM16.5083 2.92188C16.1437 2.55729 15.7011 2.375 15.1802 2.375C14.6593 2.375 14.2167 2.55729 13.8521 2.92188C13.4875 3.28646 13.3052 3.72916 13.3052 4.25C13.3052 4.77084 13.4875 5.21354 13.8521 5.57812C14.2167 5.94271 14.6593 6.125 15.1802 6.125C15.7011 6.125 16.1437 5.94271 16.5083 5.57812C16.8729 5.21354 17.0552 4.77084 17.0552 4.25C17.0552 3.72916 16.8729 3.28646 16.5083 2.92188ZM3.85205 11.8281C4.21664 12.1927 4.65934 12.375 5.18018 12.375C5.70101 12.375 6.14371 12.1927 6.5083 11.8281C6.87289 11.4635 7.05518 11.0208 7.05518 10.5C7.05518 9.97916 6.87289 9.53646 6.5083 9.17188C6.14371 8.80729 5.70101 8.625 5.18018 8.625C4.65934 8.625 4.21664 8.80729 3.85205 9.17188C3.48746 9.53646 3.30518 9.97916 3.30518 10.5C3.30518 11.0208 3.48746 11.4635 3.85205 11.8281ZM13.8521 18.0781C14.2167 18.4428 14.6593 18.625 15.1802 18.625C15.7011 18.625 16.1437 18.4428 16.5083 18.0781C16.8729 17.7135 17.0552 17.2709 17.0552 16.75C17.0552 16.2291 16.8729 15.7865 16.5083 15.4219C16.1437 15.0573 15.7011 14.875 15.1802 14.875C14.6593 14.875 14.2167 15.0573 13.8521 15.4219C13.4875 15.7865 13.3052 16.2291 13.3052 16.75C13.3052 17.2709 13.4875 17.7135 13.8521 18.0781Z"
+                                            fill="black" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_6_144">
+                                            <rect width="20" height="20" fill="white"
+                                                transform="translate(0.180176 0.5)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
                                 <p>Share</p>
                             </div>
                         </div>
@@ -354,8 +400,20 @@
                                 <p class="font-Volk font-[700]">Estimated Delivery: <span
                                         class="font-Poppins font-normal">Jul 30 - Aug 03</span></p>
                             </div>
-                            <div class="flex items-center gap-2">
-                                <i class="fa-solid fa-cart-flatbed"></i>
+                            <div class="flex items-center gap-2 mt-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_6_156)">
+                                        <path
+                                            d="M17.9219 6.26875L16.3406 1.525C16.1375 0.9125 15.5656 0.5 14.9187 0.5H5.08125C4.43437 0.5 3.8625 0.9125 3.65937 1.525L2.07812 6.26875C2.02812 6.42188 2 6.58125 2 6.74375V15C2 15.8281 2.67188 16.5 3.5 16.5H16.5C17.3281 16.5 18 15.8281 18 15V6.74375C18 6.58125 17.975 6.42188 17.9219 6.26875ZM3 6.74375C3 6.69063 3.00937 6.6375 3.025 6.58437L4.60625 1.84063C4.675 1.6375 4.86562 1.5 5.08125 1.5H9.5V6.75H3V6.74375ZM17 15C17 15.275 16.775 15.5 16.5 15.5H3.5C3.225 15.5 3 15.275 3 15V7.75H17V15ZM17 6.75H10.5V1.5H14.9187C15.1344 1.5 15.325 1.6375 15.3938 1.84063L16.975 6.58437C16.9906 6.63438 17 6.6875 17 6.74375V6.75Z"
+                                            fill="black" stroke="black" stroke-width="0.03125" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_6_156">
+                                            <rect width="20" height="16" fill="white" transform="translate(0 0.5)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
                                 <p class="font-Volk font-[700]">Free Shipping & Returns: <span
                                         class="font-Poppins font-normal">On all orders over $75</span></p>
                             </div>
@@ -549,7 +607,7 @@
             </div>
             <!-- Swiper -->
             <div class="swiper mySwiper ">
-                <div class="swiper-wrapper">
+                <div class="swiper-wrapper deal">
                     <div class="swiper-slide relative  !w-[300px] !h-[450px]
                     ">
                         <img src="images/swiper-1.png" alt="">

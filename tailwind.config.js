@@ -44,6 +44,7 @@ module.exports = {
         'save': '#DA3F3F',
         'cut-word': '#666666',
         'hurry-up': '#FDEFEE',
+        'circle-red': '#FF0606',
         'hurry': '#FF706B',
         'bar': '#EF2D2D',
         'input-bg': '#F5F5F5',

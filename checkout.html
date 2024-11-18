@@ -51,9 +51,14 @@
                         <li class="relative px-3  border-b lg:border-0 max-lg:border-b max-lg:py-3">
                             <!-- Trigger Button -->
                             <button onclick="toggleDropdown()"
-                                class="flex gap-1 items-center relative after:block after:w-full after:h-0.5 after:bg-gray-300 after:mt-1 after:scale-x-0 hover:after:scale-x-100 transition-transform duration-300 text-primary text-[16px] font-Poppins">
+                                class="flex gap-1 items-center after:scale-x-0 hover:after:scale-x-100 transition-transform duration-300 text-primary text-[16px] font-Poppins">
                                 Pages
-                                <i class="fa-solid fa-caret-down"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-2 fill-black inline ml-1 mt-1"
+                                    viewBox="0 0 24 24">
+                                    <path fill-rule="evenodd"
+                                        d="M11.99997 18.1669a2.38 2.38 0 0 1-1.68266-.69733l-9.52-9.52a2.38 2.38 0 1 1 3.36532-3.36532l7.83734 7.83734 7.83734-7.83734a2.38 2.38 0 1 1 3.36532 3.36532l-9.52 9.52a2.38 2.38 0 0 1-1.68266.69734z"
+                                        clip-rule="evenodd" data-original="#000000" />
+                                </svg>
                             </button>
 
                             <!-- Dropdown Menu -->
@@ -75,7 +80,7 @@
                     <span class="relative">
                         <i class="fa-solid fa-bag-shopping cursor-pointer hover:text-black"></i>
                         <span
-                            class="absolute bottom-[10px] left-auto -ml-1 top-0 rounded-full bg-red-500 px-1 py-0 text-xs text-white">1</span>
+                            class="absolute bottom-[10px] left-auto -ml-1 top-0 rounded-full bg-circle-red px-1 py-0 text-xs text-white">1</span>
                     </span>
 
                 </div>
@@ -100,7 +105,7 @@
                 Home
             </li>
             <li>
-                <svg xmlns="http://www.w3.org/2000/svg" class="fill-black w-3 -rotate-90" viewBox="0 0 24 24">
+                <svg xmlns="http://www.w3.org/2000/svg" class="fill-black w-[8px] -rotate-90" viewBox="0 0 24 24">
                     <path fill-rule="evenodd"
                         d="M11.99997 18.1669a2.38 2.38 0 0 1-1.68266-.69733l-9.52-9.52a2.38 2.38 0 1 1 3.36532-3.36532l7.83734 7.83734 7.83734-7.83734a2.38 2.38 0 1 1 3.36532 3.36532l-9.52 9.52a2.38 2.38 0 0 1-1.68266.69734z"
                         clip-rule="evenodd" data-original="#000000"></path>
@@ -108,13 +113,6 @@
             </li>
             <li class="text-black font-Poppins text-base cursor-pointer">
                 Your Shopping Cart
-            </li>
-            <li>
-                <svg xmlns="http://www.w3.org/2000/svg" class="fill-black w-3 -rotate-90" viewBox="0 0 24 24">
-                    <path fill-rule="evenodd"
-                        d="M11.99997 18.1669a2.38 2.38 0 0 1-1.68266-.69733l-9.52-9.52a2.38 2.38 0 1 1 3.36532-3.36532l7.83734 7.83734 7.83734-7.83734a2.38 2.38 0 1 1 3.36532 3.36532l-9.52 9.52a2.38 2.38 0 0 1-1.68266.69734z"
-                        clip-rule="evenodd" data-original="#000000"></path>
-                </svg>
             </li>
         </ul>
     </div>
@@ -127,42 +125,44 @@
             <h2 class="w-1/4 sm:w-1/6 text-base sm:text-lg text-center">Quantity</h2>
             <h2 class="hidden sm:block sm:w-1/6 text-base sm:text-lg text-center">Total</h2>
         </div>
-    
+
         <!-- Product Row -->
         <div class="flex flex-wrap justify-between py-4 border-b border-check-border">
             <!-- Product Info -->
             <div class="flex w-full sm:w-1/2 lg:w-1/3 mb-4 sm:mb-0">
-                <img src="images/checkout-img.png" alt="Product Image" class="w-24 sm:w-36 h-32 sm:h-[13rem] object-cover mr-4">
+                <img src="images/checkout-img.png" alt="Product Image"
+                    class="w-24 sm:w-36 h-32 sm:h-[13rem] object-cover mr-4">
                 <div>
                     <h3 class="text-base sm:text-lg font-Volk w-[165px]">Mini Dress With Ruffled Straps</h3>
                     <p class="text-sm sm:text-[16px] mt-2 sm:mt-3 text-tabs font-Poppins">Color: Red</p>
                     <button class="text-sm sm:text-[16px] mt-3 sm:mt-5 text-tabs underline">Remove</button>
                 </div>
             </div>
-    
+
             <!-- Price -->
             <p class="w-1/3 sm:w-1/6 text-center font-semibold">$14.90</p>
-    
+
             <!-- Quantity Selector -->
             <div class="w-1/3 sm:w-1/6 flex justify-center items-start">
                 <button class="px-2 border text-black rounded-l font-Poppins font-medium">-</button>
                 <input type="text" value="01" class="w-10 text-center border-t border-b outline-none">
                 <button class="px-2 border text-black rounded-r font-Poppins font-medium">+</button>
             </div>
-    
+
             <!-- Total -->
             <p class="hidden sm:block sm:w-1/6 text-center font-semibold">$14.90</p>
         </div>
-    
+
         <!-- Gift Wrap Option -->
         <div>
             <div class="flex items-center justify-end gap-2 py-4">
-                <div class="border-b border-check-border py-4 w-full sm:w-1/2 lg:w-[30%]">
-                    <input type="checkbox" id="gift-wrap" class="form-checkbox ring-2 ring-black ring-inset">
-                    <label for="gift-wrap" class="text-tabs">For <span class="font-semibold text-black">$10.00</span> Please Wrap The Product</label>
+                <div class="flex items-center gap-3 border-b border-check-border py-4 w-full sm:w-1/2 lg:w-[30%]">
+                    <input type="checkbox" id="gift-wrap" class="form-checkbox w-5 h-5 ring-2 ring-black ring-inset">
+                    <label for="gift-wrap" class="text-tabs">For <span class="font-semibold text-black">$10.00</span>
+                        Please Wrap The Product</label>
                 </div>
             </div>
-    
+
             <!-- Subtotal and Checkout -->
             <div class="flex justify-end gap-8 sm:gap-[140px] items-center pt-4">
                 <div class="w-full sm:w-1/2 lg:w-[30%] flex justify-between">
@@ -170,11 +170,12 @@
                     <p class="text-black font-Volk">$100.00</p>
                 </div>
             </div>
-    
+
             <!-- View Cart -->
             <div class="flex justify-end items-center pt-4">
                 <div class="w-full sm:w-1/2 lg:w-[30%]">
-                    <button class="w-full bg-black text-white px-4 sm:px-[133px] py-3 rounded-lg font-semibold shadow-tab">
+                    <button
+                        class="w-full bg-black text-white px-4 sm:px-[133px] py-3 rounded-lg font-semibold shadow-tab">
                         <a href="finalcheckout.html">Checkout</a>
                     </button>
                     <div class="text-center mt-5">
