@@ -15,10 +15,10 @@
     <style>
         /* SLANTED */
         .slanted {
-            clip-path: polygon(10% 1%, 100% 0%, 100% 100%, 0% 100%);
+            clip-path: polygon(65px 1%, 100% 0%, 100% 100%, 0% 100%);
         }
 
-        @media only screen and (max-width: 768px) {
+        @media only screen and (max-width: 990px) {
 
             .slanted {
                 clip-path: none;
@@ -56,7 +56,6 @@
         .deal .swiper-slide-active {
             width: 300px !important;
             height: 500px !important;
-            transition: .5s !important;
             opacity: 1 !important;
         }
 
@@ -333,10 +332,11 @@
                                 </div>
 
                                 <!-- Add to Cart Button -->
-                                <button type="button"
-                                    class="w-[76%] px-8 py-2 md:px-10 lg:px-20 hover:bg-black hover:text-white text-black border border-black text-sm md:text-base lg:text-[16px] font-Volk rounded-md">
-                                    <a href="addcart.html">Add to cart</a>
-                                </button>
+                                <a href="addcart.html" class="w-[76%] text-center px-8 py-2 md:px-10 lg:px-20 hover:bg-black hover:text-white text-black border border-black text-sm md:text-base lg:text-[16px] font-Volk rounded-md">
+                                    <button>
+                                        Add to cart
+                                    </button>
+                                </a>
                             </div>
                         </div>
 
@@ -458,7 +458,7 @@
 
             <!-- Right Side: Product Details -->
             <div
-                class="border-2 border-black origin-center rotate-0 lg:rotate-[7deg] relative lg:left-[33px] lg:block hidden">
+                class="border-2 border-black origin-center rotate-0 lg:rotate-[7deg]  relative lg:left-[33px] lg:block hidden">
             </div>
 
             <div
@@ -539,7 +539,7 @@
 
     <section class="mt-20 bg-custom-gradient md:mt-5 lg:p-0 ">
         <div
-            class="lg:container lg:px-[5rem] xs:px-xs-1 md:px-md-2 py-20 lg:pr-0 lg:mr-0  flex flex-col lg:flex-row lg:items-center lg:gap-10">
+            class="lg:container lg:px-[5rem] xs:px-xs-1 md:px-md-2 py-20 lg:pr-0   flex flex-col lg:flex-row lg:items-center lg:gap-10">
             <div class="lg:pt-3 mb-10">
                 <h1 class="font-Volk text-primary lg:text-[45px] xs:text-[30px] md:text-[45px]">Deals Of The Month</h1>
                 <p class="lg:w-[440px] md:w-[447px] font-Poppins text-primary my-7">Lorem ipsum dolor sit amet,
