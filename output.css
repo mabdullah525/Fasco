@@ -951,6 +951,10 @@ video {
   height: 100%;
 }
 
+.h-screen{
+  height: 100vh;
+}
+
 .min-h-\[80px\]{
   min-height: 80px;
 }
@@ -2880,8 +2884,8 @@ video {
     height: 360px;
   }
 
-  .md\:h-\[675px\]{
-    height: 675px;
+  .md\:h-full{
+    height: 100%;
   }
 
   .md\:w-1\/2{
@@ -2930,10 +2934,6 @@ video {
 
   .md\:w-\[600px\]{
     width: 600px;
-  }
-
-  .md\:w-\[643px\]{
-    width: 643px;
   }
 
   .md\:w-auto{
@@ -3168,10 +3168,6 @@ video {
     margin-left: auto;
   }
 
-  .lg\:mr-0{
-    margin-right: 0px;
-  }
-
   .lg\:mr-\[53px\]{
     margin-right: 53px;
   }
@@ -3354,6 +3350,11 @@ video {
     padding-right: 0px;
   }
 
+  .lg\:px-10{
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
   .lg\:px-20{
     padding-left: 5rem;
     padding-right: 5rem;
@@ -3458,27 +3459,7 @@ video {
 }
 
 @media (min-width: 1280px){
-  .xl\:left-\[34px\]{
-    left: 34px;
-  }
-
   .xl\:w-\[29\%\]{
     width: 29%;
-  }
-
-  .xl\:rotate-\[7deg\]{
-    --tw-rotate: 7deg;
-    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  }
-}
-
-@media (min-width: 1536px){
-  .\32xl\:left-\[38px\]{
-    left: 38px;
-  }
-
-  .\32xl\:rotate-\[9deg\]{
-    --tw-rotate: 9deg;
-    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 }
