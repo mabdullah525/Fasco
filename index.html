@@ -54,8 +54,7 @@
 
         .deal .swiper-slide-active {
             width: 300px !important;
-            height: 500px !important;
-            transition: .5s !important;
+            height: 520px !important;
             opacity: 1 !important;
         }
 
@@ -93,10 +92,10 @@
 
         /* SLANTED */
         .slanted {
-            clip-path: polygon(10% 1%, 100% 0%, 100% 100%, 0% 100%);
+            clip-path: polygon(65px 1%, 100% 0%, 100% 100%, 0% 100%);
         }
 
-        @media only screen and (max-width: 768px) {
+        @media only screen and (max-width: 990px) {
 
             .slanted {
                 clip-path: none;
@@ -153,13 +152,14 @@
                 </div>
 
                 <div class='flex items-center max-lg:ml-auto space-x-6'>
-                    <button
-                        class='md:hidden xs:hidden lg:block px-8 py-3 text-[15px] rounded-[10px] text-primary border-1 font-Poppins hover:bg-black transition-all ease-in-out duration-300 bg-transparent hover:text-white'><a
-                            href="signin.html" target="_blank">Sign in</a></button>
-                    <button
-                        class='md:hidden xs:hidden lg:block px-8 py-3 text-[15px] rounded-[10px] text-white transition-all ease-in-out duration-300 bg-black hover:bg-primary shadow-2xl'><a
-                            href="signup.html" target="_blank">Sign
-                            up</a></button>
+                    <a href="signin.html"
+                        class="md:hidden xs:hidden lg:block px-8 py-3 text-[15px] rounded-[10px] text-primary border-1 font-Poppins hover:bg-black transition-all ease-in-out duration-300 bg-transparent hover:text-white">Sign
+                        in
+                    </a>
+                    <a href="signup.html"
+                        class="md:hidden xs:hidden lg:block px-8 py-3 text-[15px] rounded-[10px] text-white transition-all ease-in-out duration-300 bg-black hover:bg-primary shadow-2xl">
+                        Sign up
+                    </a>
 
                     <button id="toggleOpen" class='lg:hidden'>
                         <svg class="w-7 h-7" fill="#333" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -200,10 +200,12 @@
                 </div>
                 <div class="text-center mt-4">
                     <p class="font-Poppins text-[18px] text-primary tracking-wide">NEW COLLECTION</p>
-                    <button
-                        class='mt-3 px-10  py-3 text-[15px] rounded-[10px] text-white transition-all ease-in-out duration-300 bg-black hover:bg-primary shadow-2xl font-Poppins'><a
-                            href="shop.html">SHOP
-                            NOW</a></button>
+                    <a href="shop.html"
+                        class="inline-block mt-3 px-10  py-3 text-[15px] rounded-[10px] text-white transition-all ease-in-out duration-300 bg-black hover:bg-primary shadow-2xl font-Poppins">
+                        <button>
+                            SHOP NOW
+                        </button>
+                    </a>
                 </div>
                 <div class="mt-5 flex justify-center">
                     <img src="images/hero-4.png" alt="">
@@ -263,9 +265,10 @@
     <!-- DEAL OF THE MONTH -->
 
     <section class="mt-20 bg-custom-gradient md:mt-5 lg:p-0 ">
+        <!-- Left side -->
         <div
-            class="lg:container lg:px-[5rem] xs:px-xs-1 md:px-md-2 py-20 lg:pr-0 lg:mr-0  flex flex-col lg:flex-row lg:items-center lg:gap-10">
-            <div class="lg:pt-3 mb-10">
+            class="lg:container lg:px-[5rem] xs:px-xs-1 md:px-md-2 py-20 lg:pr-0   flex flex-col lg:flex-row lg:items-center">
+            <div class="">
                 <h1 class="font-Volk text-primary lg:text-[45px] xs:text-[30px] md:text-[45px]">Deals Of The Month</h1>
                 <p class="lg:w-[440px] md:w-[447px] font-Poppins text-primary my-7">Lorem ipsum dolor sit amet,
                     consectetur adipiscing
@@ -314,7 +317,7 @@
                     </div>
                 </div>
 
-                <div class="flex lg:justify-end justify-center space-x-4 lg:w-[108%] xs:mt-5">
+                <div class="flex lg:justify-end justify-center space-x-4 lg:w-[95%] xs:mt-1">
                     <!-- Left arrow button -->
                     <button id="prevBtn"
                         class="slider-btn flex items-center text-center justify-center w-10 h-10 rounded-full bg-white shadow-lg">
@@ -1369,7 +1372,7 @@
 
             <!-- Right Side: Product Details -->
             <div
-                class="border-2 border-black origin-center rotate-0 lg:rotate-[7deg] relative lg:left-[33px] lg:block hidden">
+                class="border-2 border-black origin-center rotate-0 lg:rotate-[7deg]  relative lg:left-[33px] lg:block hidden">
             </div>
 
             <div
@@ -1387,7 +1390,8 @@
                     <span class="text-xs md:text-sm text-women-gray mr-2">Size:</span>
                     <span class="px-3 md:px-4 py-1 bg-black text-white rounded-[10px] text-xs md:text-sm">M</span>
                 </div>
-                <p class="text-lg md:text-xl lg:text-[28px] font-[500] text-black mb-4">$100.<span class="text-[23px]">00</span> </p>
+                <p class="text-lg md:text-xl lg:text-[28px] font-[500] text-black mb-4">$100.<span
+                        class="text-[23px]">00</span> </p>
                 <button
                     class='w-full md:w-auto px-10 md:px-16 py-3 text-[15px] rounded-[10px] text-white transition-all ease-in-out duration-300 bg-black hover:bg-primary shadow-2xl font-Poppins'>
                     Buy Now
@@ -1716,7 +1720,7 @@
         // SWIPER
 
         var swiper = new Swiper(".mySwiper", {
-            slidesPerView: '2',
+            slidesPerView: '2.5',
             spaceBetween: 10,
             loop: true,
             pagination: {
