@@ -735,11 +735,13 @@
     <script src=" https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script src="script.js"></script>
+
+
     <!-- // SWIPER -->
     <script>
         var swiper = new Swiper(".mySwiper", {
             slidesPerView: '2.5',
-            spaceBetween: 10,
+            spaceBetween: 15,
             loop: true,
             pagination: {
                 el: ".swiper-pagination",
@@ -749,6 +751,22 @@
                 nextEl: '.swiper-button-nextt',
                 prevEl: '.swiper-button-previous',
             },
+
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 40,
+                },
+                1024: {
+                    slidesPerView: 2.5,
+                    spaceBetween: 15,
+                },
+            }
+
         });
     </script>
 

@@ -38,9 +38,10 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            
+
         }
-        .deal .swiper-slide{
+
+        .deal .swiper-slide {
 
             height: 470px !important;
         }
@@ -389,8 +390,8 @@
                     </div>
                 </div>
                 <div class="swiper-pagination"></div>
-                
-                
+
+
             </div>
 
 
@@ -1715,9 +1716,9 @@
 
     <script src="script.js"></script>
 
-    <script>
-        // SWIPER
 
+    <!-- // SWIPER -->
+    <script>
         var swiper = new Swiper(".mySwiper", {
             slidesPerView: '2.5',
             spaceBetween: 15,
@@ -1746,6 +1747,18 @@
                 },
             }
 
+        });
+    </script>
+
+    <script>
+        // SWIPER
+        var swiper = new Swiper(".mytesti", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
         });
     </script>
 
