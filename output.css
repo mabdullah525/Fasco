@@ -879,6 +879,10 @@ video {
   height: 450px !important;
 }
 
+.\!h-full{
+  height: 100% !important;
+}
+
 .h-10{
   height: 2.5rem;
 }
@@ -1152,12 +1156,21 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.rotate-90{
+  --tw-rotate: 90deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .transform{
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .cursor-pointer{
   cursor: pointer;
+}
+
+.scroll-pb-5{
+  scroll-padding-bottom: 1.25rem;
 }
 
 .list-none{
@@ -1317,6 +1330,14 @@ video {
 
 .overflow-y-auto{
   overflow-y: auto;
+}
+
+.overflow-x-scroll{
+  overflow-x: scroll;
+}
+
+.overflow-y-scroll{
+  overflow-y: scroll;
 }
 
 .rounded{
@@ -2452,8 +2473,8 @@ video {
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
-.group[open] .group-open\:rotate-90{
-  --tw-rotate: 90deg;
+.group[open] .group-open\:rotate-\[270deg\]{
+  --tw-rotate: 270deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -3183,8 +3204,16 @@ video {
     margin-top: 6rem;
   }
 
+  .lg\:mt-4{
+    margin-top: 1rem;
+  }
+
   .lg\:mt-5{
     margin-top: 1.25rem;
+  }
+
+  .lg\:mt-12{
+    margin-top: 3rem;
   }
 
   .lg\:\!block{
@@ -3243,6 +3272,10 @@ video {
     width: 8rem;
   }
 
+  .lg\:w-\[100\%\]{
+    width: 100%;
+  }
+
   .lg\:w-\[108\%\]{
     width: 108%;
   }
@@ -3279,10 +3312,6 @@ video {
     width: 645px;
   }
 
-  .lg\:w-\[95\%\]{
-    width: 95%;
-  }
-
   .lg\:w-auto{
     width: auto;
   }
@@ -3306,6 +3335,10 @@ video {
 
   .lg\:flex-nowrap{
     flex-wrap: nowrap;
+  }
+
+  .lg\:items-start{
+    align-items: flex-start;
   }
 
   .lg\:items-center{

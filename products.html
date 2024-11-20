@@ -41,6 +41,11 @@
             align-items: center;
         }
 
+        .deal .swiper-slide {
+
+            height: 470px !important;
+        }
+
         .swiper-slide img {
             display: block;
             width: 100%;
@@ -54,8 +59,8 @@
         }
 
         .deal .swiper-slide-active {
-            width: 300px !important;
-            height: 500px !important;
+            height: 550px !important;
+
             opacity: 1 !important;
         }
 
@@ -84,9 +89,9 @@
         .swiper-pagination-bullets.swiper-pagination-horizontal,
         .swiper-pagination-custom,
         .swiper-pagination-fraction {
-            bottom: var(--swiper-pagination-bottom, 40px);
+            bottom: var(--swiper-pagination-bottom, 65px);
             top: var(--swiper-pagination-top, auto);
-            left: 10px;
+            left: -24px;
             width: 100%;
         }
     </style>
@@ -270,7 +275,8 @@
                             </div>
                         </div>
                         <div class="mt-5">
-                            <p class="text-fasco font-Poppins">Only <span class="font-[700]">9</span> item(s) left in stock!</p>
+                            <p class="text-fasco font-Poppins">Only <span class="font-[700]">9</span> item(s) left in
+                                stock!</p>
                             <div class="bg-bar-bg rounded-md w-full h-2 mt-3">
                                 <div class="w-[6%] h-full rounded-md bg-bar"></div>
                             </div>
@@ -332,7 +338,8 @@
                                 </div>
 
                                 <!-- Add to Cart Button -->
-                                <a href="addcart.html" class="w-[76%] text-center px-8 py-2 md:px-10 lg:px-20 hover:bg-black hover:text-white text-black border border-black text-sm md:text-base lg:text-[16px] font-Volk rounded-md">
+                                <a href="addcart.html"
+                                    class="w-[76%] text-center px-8 py-2 md:px-10 lg:px-20 hover:bg-black hover:text-white text-black border border-black text-sm md:text-base lg:text-[16px] font-Volk rounded-md">
                                     <button>
                                         Add to cart
                                     </button>
@@ -539,7 +546,7 @@
 
     <section class="mt-20 bg-custom-gradient md:mt-5 lg:p-0 ">
         <div
-            class="lg:container lg:px-[5rem] xs:px-xs-1 md:px-md-2 py-20 lg:pr-0   flex flex-col lg:flex-row lg:items-center lg:gap-10">
+            class="lg:container lg:px-[5rem] xs:px-xs-1 md:px-md-2 py-20 lg:pr-0   flex flex-col lg:flex-row lg:items-start lg:gap-10">
             <div class="lg:pt-3 mb-10">
                 <h1 class="font-Volk text-primary lg:text-[45px] xs:text-[30px] md:text-[45px]">Deals Of The Month</h1>
                 <p class="lg:w-[440px] md:w-[447px] font-Poppins text-primary my-7">Lorem ipsum dolor sit amet,
@@ -589,62 +596,62 @@
                     </div>
                 </div>
 
-                <div class="flex lg:justify-end justify-center space-x-4 lg:w-[108%] xs:mt-5">
+                <div class="flex lg:justify-end justify-center space-x-4 lg:w-[100%] xs:mt-1 lg:mt-12 relative">
                     <!-- Left arrow button -->
                     <button id="prevBtn"
-                        class="slider-btn flex items-center text-center justify-center w-10 h-10 rounded-full bg-white shadow-lg">
-                        <span class="text-slider text-2xl">&lt;</span>
+                        class="swiper-button-nextt flex items-center text-center justify-center w-10 h-10 rounded-full bg-white shadow-lg">
+                        <span class="text-black text-2xl">&lt;</span>
                     </button>
                     <!-- Right arrow button -->
                     <button id="nextBtn"
-                        class="slider-btn flex items-center text-center justify-center w-10 h-10 rounded-full bg-white shadow-lg">
+                        class="swiper-button-previous flex items-center text-center justify-center w-10 h-10 rounded-full bg-white shadow-lg">
                         <span class="text-black text-2xl">&gt;</span>
                     </button>
                 </div>
-
 
 
             </div>
             <!-- Swiper -->
             <div class="swiper mySwiper ">
                 <div class="swiper-wrapper deal">
-                    <div class="swiper-slide relative  !w-[300px] !h-[450px]
+                    <div class="swiper-slide relative  
                     ">
-                        <img src="images/swiper-1.png" alt="">
+                        <div class="!w-full !h-full "><img src="images/swiper-1.png" class="object-cover"></div>
                         <div
                             class="sale-box opacity-0 w-48 h-28 flex justify-center items-start flex-col text-justify bg-white absolute bottom-7 left-6 p-5">
                             <h1 class="text-primary font-Poppins">01 - Spring Sale</h1>
                             <p class="font-Poppins text-primary text-[25px]">30% OFF</p>
                         </div>
                     </div>
-                    <div class="swiper-slide  !w-[300px] !h-[450px]
+                    <div class="swiper-slide 
                     ">
-                        <img src="images/swiper-2.png" alt="">
+                        <div class="!w-full !h-full"><img src="images/swiper-2.png" class="object-cover"></div>
                         <div
                             class="sale-box opacity-0 w-48 h-28 flex justify-center items-start flex-col text-justify bg-white absolute bottom-7 left-6 p-5">
                             <h1 class="text-primary font-Poppins">01 - Spring Sale</h1>
                             <p class="font-Poppins text-primary text-[25px]">30% OFF</p>
                         </div>
                     </div>
-                    <div class="swiper-slide  !w-[300px] !h-[450px]
+                    <div class="swiper-slide
                     ">
-                        <img src="images/swiper-3.jpeg" alt="">
+                        <div class="!w-full !h-full"><img src="images/swiper-3.jpeg" class="object-cover"></div>
                         <div
                             class="sale-box opacity-0 w-48 h-28 flex justify-center items-start flex-col text-justify bg-white absolute bottom-7 left-6 p-5">
                             <h1 class="text-primary font-Poppins">01 - Spring Sale</h1>
                             <p class="font-Poppins text-primary text-[25px]">30% OFF</p>
                         </div>
                     </div>
-                    <div class="swiper-slide  !w-[300px] !h-[450px]">
-                        <img src="images/swiper-1.png" alt="">
+                    <div class="swiper-slide">
+                        <div class="!w-full !h-full"><img src="images/swiper-1.png" class="object-cover"></div>
                         <div
                             class="sale-box opacity-0 w-48 h-28 flex justify-center items-start flex-col text-justify bg-white absolute bottom-7 left-6 p-5">
                             <h1 class="text-primary font-Poppins">01 - Spring Sale</h1>
                             <p class="font-Poppins text-primary text-[25px]">30% OFF</p>
                         </div>
                     </div>
-                    <div class="swiper-slide  !w-[300px] !h-[450px]">
-                        <img src="images/swiper-2.png" alt="">
+                    <div class="swiper-slide">
+                        <div class="!w-full !h-full"><img src="images/swiper-2.png" class="object-cover"></div>
+
                         <div
                             class="sale-box opacity-0 w-48 h-28 flex justify-center items-start flex-col text-justify bg-white absolute bottom-7 left-6 p-5">
                             <h1 class="text-primary font-Poppins">01 - Spring Sale</h1>
@@ -723,15 +730,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
     <!-- Swiper JS -->
 
     <script src=" https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -746,6 +744,10 @@
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-nextt',
+                prevEl: '.swiper-button-previous',
             },
         });
     </script>

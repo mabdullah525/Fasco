@@ -66,6 +66,19 @@ function handleClick() {
 toggleOpen.addEventListener('click', handleClick);
 toggleClose.addEventListener('click', handleClick);
 
+
+// SWIPER
+var swiper = new Swiper(".mytesti", {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
+
+
+
 // // NAVBAR DROP DOWN MENU
 // function toggleDropdown() {
 //   const dropdown = document.getElementById('dropdownMenu');

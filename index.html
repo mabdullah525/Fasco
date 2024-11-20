@@ -38,6 +38,11 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            
+        }
+        .deal .swiper-slide{
+
+            height: 470px !important;
         }
 
         .swiper-slide img {
@@ -53,8 +58,8 @@
         }
 
         .deal .swiper-slide-active {
-            
-            
+            height: 550px !important;
+
             opacity: 1 !important;
         }
 
@@ -83,7 +88,7 @@
         .swiper-pagination-bullets.swiper-pagination-horizontal,
         .swiper-pagination-custom,
         .swiper-pagination-fraction {
-            bottom: var(--swiper-pagination-bottom, 0px);
+            bottom: var(--swiper-pagination-bottom, 65px);
             top: var(--swiper-pagination-top, auto);
             left: -24px;
             width: 100%;
@@ -234,19 +239,19 @@
             <button id="scrollUp"
                 class="fixed flex justify-center items-center w-[35px] h-[35px] bottom-8 right-16 p-1 bg-black text-white  rounded-[10px] border border-black shadow-lg  transition duration-300">
                 <!-- Shopping Cart Icon -->
-                 <a href="addcart.html">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 23" fill="none">
-                    <path
-                        d="M20.5555 17.3333H7.33331L3.44442 1H1.11108M4.2222 4.11111H22.8889L20.5555 14.2222H6.55553L4.2222 4.11111Z"
-                        stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                    <path
-                        d="M19 22C19.8591 22 20.5556 21.3036 20.5556 20.4445C20.5556 19.5854 19.8591 18.8889 19 18.8889C18.1409 18.8889 17.4445 19.5854 17.4445 20.4445C17.4445 21.3036 18.1409 22 19 22Z"
-                        stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                    <path
-                        d="M8.88881 22C9.74792 22 10.4444 21.3036 10.4444 20.4445C10.4444 19.5854 9.74792 18.8889 8.88881 18.8889C8.0297 18.8889 7.33325 19.5854 7.33325 20.4445C7.33325 21.3036 8.0297 22 8.88881 22Z"
-                        stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-            </a>
+                <a href="addcart.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 23" fill="none">
+                        <path
+                            d="M20.5555 17.3333H7.33331L3.44442 1H1.11108M4.2222 4.11111H22.8889L20.5555 14.2222H6.55553L4.2222 4.11111Z"
+                            stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M19 22C19.8591 22 20.5556 21.3036 20.5556 20.4445C20.5556 19.5854 19.8591 18.8889 19 18.8889C18.1409 18.8889 17.4445 19.5854 17.4445 20.4445C17.4445 21.3036 18.1409 22 19 22Z"
+                            stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M8.88881 22C9.74792 22 10.4444 21.3036 10.4444 20.4445C10.4444 19.5854 9.74792 18.8889 8.88881 18.8889C8.0297 18.8889 7.33325 19.5854 7.33325 20.4445C7.33325 21.3036 8.0297 22 8.88881 22Z"
+                            stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </a>
             </button>
         </div>
     </section>
@@ -269,7 +274,7 @@
     <section class="mt-20 bg-custom-gradient md:mt-5 lg:p-0 " id="deal">
         <!-- Left side -->
         <div
-            class="lg:container gap-10 lg:px-[5rem] xs:px-xs-1 md:px-md-2 py-20 lg:pr-0   flex flex-col lg:flex-row lg:items-center">
+            class="lg:container gap-10 lg:px-[5rem] xs:px-xs-1 md:px-md-2 py-20 lg:pr-0   flex flex-col lg:flex-row lg:items-start">
             <div class="">
                 <h1 class="font-Volk text-primary lg:text-[45px] xs:text-[30px] md:text-[45px]">Deals Of The Month</h1>
                 <p class="lg:w-[440px] md:w-[447px] font-Poppins text-primary my-7">Lorem ipsum dolor sit amet,
@@ -319,15 +324,15 @@
                     </div>
                 </div>
 
-                <div class="flex lg:justify-end justify-center space-x-4 lg:w-[95%] xs:mt-1">
+                <div class="flex lg:justify-end justify-center space-x-4 lg:w-[100%] xs:mt-1 lg:mt-12 relative">
                     <!-- Left arrow button -->
                     <button id="prevBtn"
-                        class="slider-btn flex items-center text-center justify-center w-10 h-10 rounded-full bg-white shadow-lg">
-                        <span class="text-slider text-2xl">&lt;</span>
+                        class="swiper-button-nextt flex items-center text-center justify-center w-10 h-10 rounded-full bg-white shadow-lg">
+                        <span class="text-black text-2xl">&lt;</span>
                     </button>
                     <!-- Right arrow button -->
                     <button id="nextBtn"
-                        class="slider-btn flex items-center text-center justify-center w-10 h-10 rounded-full bg-white shadow-lg">
+                        class="swiper-button-previous flex items-center text-center justify-center w-10 h-10 rounded-full bg-white shadow-lg">
                         <span class="text-black text-2xl">&gt;</span>
                     </button>
                 </div>
@@ -340,7 +345,7 @@
                 <div class="swiper-wrapper deal">
                     <div class="swiper-slide relative  
                     ">
-                    <div class="!w-full !h-[450px]"><img src="images/swiper-1.png" class="object-cover"></div>
+                        <div class="!w-full !h-full "><img src="images/swiper-1.png" class="object-cover"></div>
                         <div
                             class="sale-box opacity-0 w-48 h-28 flex justify-center items-start flex-col text-justify bg-white absolute bottom-7 left-6 p-5">
                             <h1 class="text-primary font-Poppins">01 - Spring Sale</h1>
@@ -349,7 +354,7 @@
                     </div>
                     <div class="swiper-slide 
                     ">
-                    <div class="!w-full !h-[450px]"><img src="images/swiper-2.png" class="object-cover"></div>
+                        <div class="!w-full !h-full"><img src="images/swiper-2.png" class="object-cover"></div>
                         <div
                             class="sale-box opacity-0 w-48 h-28 flex justify-center items-start flex-col text-justify bg-white absolute bottom-7 left-6 p-5">
                             <h1 class="text-primary font-Poppins">01 - Spring Sale</h1>
@@ -358,7 +363,7 @@
                     </div>
                     <div class="swiper-slide
                     ">
-                        <div class="!w-full !h-[450px]"><img src="images/swiper-3.jpeg" class="object-cover"></div>
+                        <div class="!w-full !h-full"><img src="images/swiper-3.jpeg" class="object-cover"></div>
                         <div
                             class="sale-box opacity-0 w-48 h-28 flex justify-center items-start flex-col text-justify bg-white absolute bottom-7 left-6 p-5">
                             <h1 class="text-primary font-Poppins">01 - Spring Sale</h1>
@@ -366,7 +371,7 @@
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="!w-full !h-[450px]"><img src="images/swiper-1.png" class="object-cover"></div>
+                        <div class="!w-full !h-full"><img src="images/swiper-1.png" class="object-cover"></div>
                         <div
                             class="sale-box opacity-0 w-48 h-28 flex justify-center items-start flex-col text-justify bg-white absolute bottom-7 left-6 p-5">
                             <h1 class="text-primary font-Poppins">01 - Spring Sale</h1>
@@ -374,8 +379,8 @@
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="!w-full !h-[450px]"><img src="images/swiper-2.png" class="object-cover"></div>
-                        
+                        <div class="!w-full !h-full"><img src="images/swiper-2.png" class="object-cover"></div>
+
                         <div
                             class="sale-box opacity-0 w-48 h-28 flex justify-center items-start flex-col text-justify bg-white absolute bottom-7 left-6 p-5">
                             <h1 class="text-primary font-Poppins">01 - Spring Sale</h1>
@@ -384,6 +389,8 @@
                     </div>
                 </div>
                 <div class="swiper-pagination"></div>
+                
+                
             </div>
 
 
@@ -1357,9 +1364,9 @@
                 </div>
             </div>
             <a href="shop.html">
-            <button
-                class='mt-10 px-10  py-3 text-[15px] rounded-[10px] text-white transition-all ease-in-out duration-300 bg-black hover:bg-primary shadow-2xl font-Poppins'>View
-                More</button></a>
+                <button
+                    class='mt-10 px-10  py-3 text-[15px] rounded-[10px] text-white transition-all ease-in-out duration-300 bg-black hover:bg-primary shadow-2xl font-Poppins'>View
+                    More</button></a>
         </div>
     </section>
 
@@ -1394,8 +1401,7 @@
                     <span class="text-xs md:text-sm text-women-gray mr-2">Size:</span>
                     <span class="px-3 md:px-4 py-1 bg-black text-white rounded-[10px] text-xs md:text-sm">M</span>
                 </div>
-                <p class="text-[28px] font-[500] text-black mb-4">$100.<span
-                        class="text-[23px]">00</span> </p>
+                <p class="text-[28px] font-[500] text-black mb-4">$100.<span class="text-[23px]">00</span> </p>
                 <button
                     class='w-full md:w-auto px-10 md:px-16 py-3 text-[15px] rounded-[10px] text-white transition-all ease-in-out duration-300 bg-black hover:bg-primary shadow-2xl font-Poppins'>
                     Buy Now
@@ -1720,6 +1726,10 @@
                 el: ".swiper-pagination",
                 clickable: true,
             },
+            navigation: {
+                nextEl: '.swiper-button-nextt',
+                prevEl: '.swiper-button-previous',
+            },
 
             breakpoints: {
                 320: {
@@ -1736,17 +1746,6 @@
                 },
             }
 
-        });
-    </script>
-
-    <script>
-        var swiper = new Swiper(".mytesti", {
-            slidesPerView: 1,
-            spaceBetween: 30,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
         });
     </script>
 
