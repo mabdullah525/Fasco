@@ -67,19 +67,19 @@ toggleOpen.addEventListener('click', handleClick);
 toggleClose.addEventListener('click', handleClick);
 
 
-// // NAVBAR DROP DOWN MENU
-// function toggleDropdown() {
-//   const dropdown = document.getElementById('dropdownMenu');
-//   dropdown.classList.toggle('hidden');
-// }
+// NAVBAR DROP DOWN MENU
+function toggleDropdown() {
+  const dropdown = document.getElementById('dropdownMenu');
+  dropdown.classList.toggle('hidden');
+}
 
-// // Close dropdown if clicked outside
-// window.addEventListener('click', function (event) {
-//   const dropdown = document.getElementById('dropdownMenu');
-//   if (!event.target.closest('button')) {
-//     dropdown.classList.add('hidden');
-//   }
-// });
+// Close dropdown if clicked outside
+window.addEventListener('click', function (event) {
+  const dropdown = document.getElementById('dropdownMenu');
+  if (!event.target.closest('button')) {
+    dropdown.classList.add('hidden');
+  }
+});
 
 
 
