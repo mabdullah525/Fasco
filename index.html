@@ -258,10 +258,9 @@
     </section>
 
     <!-- LOGO SECTION -->
-
     <section class="lg:py-14 shadow-custom   xs:py-5">
         <div
-            class="lg:container lg:px-[5rem] xs:px-xs-1 md:px-md-2 flex flex-wrap lg:justify-between md:justify-evenly items-center gap-6 md:gap-6">
+            class="lg:container lg:px-[5rem] xs:px-xs-1 md:px-md-2 flex flex-wrap lg:justify-between justify-center md:justify-evenly items-center gap-6 md:gap-6">
             <img src="images/chanel.png" class="w-[120px] md:w-auto h-auto">
             <img src="images/louis-viton.png" class="w-[120px] md:w-auto h-auto">
             <img src="images/parada.png" class="w-[120px] md:w-auto h-auto">
@@ -271,8 +270,7 @@
     </section>
 
     <!-- DEAL OF THE MONTH -->
-
-    <section class="mt-20 bg-custom-gradient md:mt-5 lg:p-0 " id="deal">
+    <section class="lg:mt-20 bg-custom-gradient md:mt-5 lg:p-0 relative " id="deal">
         <!-- Left side -->
         <div
             class="lg:container gap-10 lg:px-[5rem] xs:px-xs-1 md:px-md-2 py-20 lg:pr-0   flex flex-col lg:flex-row lg:items-start">
@@ -325,7 +323,8 @@
                     </div>
                 </div>
 
-                <div class="flex lg:justify-end justify-center space-x-4 lg:w-[100%] xs:mt-1 lg:mt-12 relative">
+                <div
+                    class="flex lg:justify-end justify-center space-x-4 lg:w-[100%] xs:mt-1 lg:mt-12 xs:absolute xs:bottom-4 xs:left-[140px] lg:static">
                     <!-- Left arrow button -->
                     <button id=" nextBtn"
                         class="swiper-button-previous flex items-center text-center justify-center w-10 h-10 rounded-full bg-white shadow-lg">
@@ -407,7 +406,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="swiper-pagination"></div>
+                <div class="swiper-pagination xs:hidden lg:block"></div>
 
 
             </div>
@@ -1406,7 +1405,7 @@
             </div>
 
             <div
-                class="w-full lg:w-1/2 px-6 lg:pr-20 lg:pl-28 pt-8 lg:pt-16 xs:pb-5 bg-peaky font-Poppins clip slanted">
+                class="w-full lg:w-1/2 px-6 lg:pr-20 lg:pl-28 pt-8 lg:pt-16 xs:pb-11 bg-peaky font-Poppins clip slanted">
                 <p class="text-xs md:text-sm text-women-gray">Women Collection</p>
                 <h2 class="text-2xl md:text-4xl lg:text-[45px] font-Volk text-primary mt-4 lg:mt-5 mb-3 lg:mb-4">Peaky
                     Blinders</h2>
@@ -1478,7 +1477,7 @@
 
 
     <!-- FOLLOW US ON INSTAGRAM -->
-    <section class="lg:py-14 shadow-custom">
+    <section class="py-14  shadow-custom">
         <div class="lg:container text-center xs:px-xs-1 font-Volk">
             <div>
                 <h1 class="text-primary lg:text-[46px] xs:text-[30px]">Follow Us On Instagram</h1>
@@ -1490,25 +1489,25 @@
         </div>
         <!-- images  -->
         <div class="flex items-center mt-12">
-            <div class="w-1/6">
+            <div class="lg:w-1/6">
                 <img src="images/image (1).png" class="w-full">
             </div>
-            <div class="w-1/6">
+            <div class="lg:w-1/6">
                 <img src="images/image (2).png" class="w-full">
             </div>
-            <div class="w-1/6">
+            <div class="lg:w-1/6">
                 <img src="images/image (3).png" class="w-full">
             </div>
-            <div class="w-1/6">
+            <div class="lg:w-1/6">
                 <img src="images/image (4).png" class="w-full">
             </div>
-            <div class="w-1/6">
+            <div class="w-1/6 xs:hidden lg:block">
                 <img src="images/image (5).png" class="w-full">
             </div>
-            <div class="w-1/6">
+            <div class="w-1/6 xs:hidden lg:block">
                 <img src="images/image (6).png" class="w-full">
             </div>
-            <div class="w-1/6">
+            <div class="w-1/6 xs:hidden lg:block">
                 <img src="images/image (7).png" class="w-full">
             </div>
 
@@ -1559,6 +1558,7 @@
                         </div>
 
                     </div>
+
                     <div class="swiper-slide active">
                         <div class="lg:container bg-tabs-bg text-center">
                             <div class="flex justify-center">
@@ -1590,7 +1590,9 @@
                             </div>
 
                         </div>
+
                     </div>
+
                     <div class="swiper-slide active">
                         <div class="lg:container bg-tabs-bg text-center">
                             <div class="flex justify-center">
@@ -1664,7 +1666,7 @@
 
 
     <!-- NEWSSETTLER SECTION -->
-    <section class="lg:py-14">
+    <section class="py-14">
         <div
             class="lg:container lg:px-[5rem] xs:px-xs-1 md:px-md-2 flex flex-col lg:flex-row justify-between  items-center">
             <!-- left image -->
@@ -1673,7 +1675,7 @@
             </div>
             <!-- center text -->
             <div class="flex flex-col items-center justify-center lg:w-[580px] md:w-[600px]">
-                <h2 class="lg:text-[40px] xs:text-[30px] font-Volk text-primary">Subscribe To Our Newsletter</h2>
+                <h2 class="lg:text-[40px] text-center xs:text-[30px] font-Volk text-primary">Subscribe To Our Newsletter</h2>
                 <p class="mt-2 text-center text-tabs">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque duis ultrices sollicitudin
                     aliquam sem. Scelerisque duis ultrices sollicitudin.
@@ -1690,7 +1692,7 @@
 
             <!-- right side image -->
             <div class="xs:mt-5 lg:m-0">
-                <img src="images/men.png" class="lg:w-[300px] xs:w-[150px] h-auto">
+                <img src="images/men.png" class="lg:w-[300px] xs:hidden lg:block h-auto ">
             </div>
         </div>
     </section>
