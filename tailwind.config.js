@@ -57,7 +57,7 @@ module.exports = {
         'sm-xs':'481px',  
       },
       padding: {
-        'xs-1': '10px',  // Add padding-x of 1rem for xs screen size
+        'xs-1': '13px',  // Add padding-x of 1rem for xs screen size
         'md-2': '20px',  // Add padding-x of 2rem for
         'xs-3': '25px',  // Add padding-x of 2rem for
         'xs-4': '30px',  // Add padding-x of 2rem for

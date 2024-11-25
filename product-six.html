@@ -103,7 +103,7 @@
     <div class="lg:container lg:px-[5rem] xs:px-xs-1 md:px-md-2">
         <header class='flex py-4 font-Poppins min-h-[80px] tracking-wide relative z-50'>
             <div class='flex flex-wrap items-center justify-between gap-4 w-full'>
-                <a href="index.html" class="text-[45px] font-Volk text-primary">FASCO</a>
+                <a href="index.html" class="lg:text-[45px] xs:text-[38px] font-Volk text-primary">FASCO</a>
 
                 <div id="collapseMenu"
                     class='max-lg:hidden lg:!block max-lg:before:fixed max-lg:before:bg-black max-lg:before:opacity-50 max-lg:before:inset-0 max-lg:before:z-50'>
@@ -428,7 +428,7 @@
         </div>
     </div>
      <!-- PEAKY BLINDER -->
-     <div class="flex items-center justify-center xs:pt-10 lg:pt-20">
+     <div class="flex items-center justify-center lg:pt-20 xs:pt-10" id="package">
         <div class="flex flex-col lg:flex-row w-full bg-peaky-bg">
             <!-- Left Side: Image with Labels -->
             <div class="relative w-full lg:w-1/2 flex items-start justify-center">
@@ -444,7 +444,7 @@
             </div>
 
             <div
-                class="w-full lg:w-1/2 px-6 lg:pr-20 lg:pl-28 pt-8 lg:pt-16 xs:pb-5 bg-peaky font-Poppins clip slanted">
+                class="w-full lg:w-1/2 px-6 lg:pr-20 lg:pl-28 pt-8 lg:pt-16 xs:pb-11 bg-peaky font-Poppins clip slanted">
                 <p class="text-xs md:text-sm text-women-gray">Women Collection</p>
                 <h2 class="text-2xl md:text-4xl lg:text-[45px] font-Volk text-primary mt-4 lg:mt-5 mb-3 lg:mb-4">Peaky
                     Blinders</h2>
@@ -458,10 +458,9 @@
                     <span class="text-xs md:text-sm text-women-gray mr-2">Size:</span>
                     <span class="px-3 md:px-4 py-1 bg-black text-white rounded-[10px] text-xs md:text-sm">M</span>
                 </div>
-                <p class="text-lg md:text-xl lg:text-[28px] font-[500] text-black mb-4">$100.<span
-                        class="text-[23px]">00</span></p>
+                <p class="text-[28px] font-[500] text-black mb-4">$100.<span class="text-[23px]">00</span> </p>
                 <a href="shop.html"
-                    class='w-full inline-block md:w-auto px-10 md:px-16 py-3 text-[15px] rounded-[10px] text-white transition-all ease-in-out duration-300 bg-black hover:bg-primary shadow-2xl font-Poppins'><button>
+                    class='w-full md:w-auto px-10 md:px-16 py-3 text-[15px] rounded-[10px] text-white transition-all ease-in-out duration-300 bg-black hover:bg-primary shadow-2xl font-Poppins'><button>
                         Buy Now
                     </button></a>
             </div>
@@ -514,10 +513,11 @@
         </div>
     </section>
     <!-- DEAL OF THE MONTH -->
-    <section class="lg:mt-20 bg-custom-gradient md:mt-5 lg:p-0 ">
+    <section class="lg:mt-20 bg-custom-gradient md:mt-5 lg:p-0 relative " id="deal">
+        <!-- Left side -->
         <div
-            class="lg:container lg:px-[5rem] xs:px-xs-1 md:px-md-2 py-20 lg:pr-0   flex flex-col lg:flex-row lg:items-start lg:gap-10">
-            <div class="lg:pt-3 mb-10">
+            class="lg:container gap-10 lg:px-[5rem] xs:px-xs-1 md:px-md-2 py-20 lg:pr-0   flex flex-col lg:flex-row lg:items-start">
+            <div class="">
                 <h1 class="font-Volk text-primary lg:text-[45px] xs:text-[30px] md:text-[45px]">Deals Of The Month</h1>
                 <p class="lg:w-[440px] md:w-[447px] font-Poppins text-primary my-7">Lorem ipsum dolor sit amet,
                     consectetur adipiscing
@@ -566,7 +566,8 @@
                     </div>
                 </div>
 
-                <div class="flex lg:justify-end justify-center space-x-4 lg:w-[100%] xs:mt-1 lg:mt-12 relative">
+                <div
+                    class="flex lg:justify-end justify-center space-x-4 lg:w-[100%] xs:mt-1 lg:mt-12 xs:absolute xs:bottom-4 xs:left-[140px] lg:static">
                     <!-- Left arrow button -->
                     <button id=" nextBtn"
                         class="swiper-button-previous flex items-center text-center justify-center w-10 h-10 rounded-full bg-white shadow-lg">
@@ -578,6 +579,7 @@
                         <span class="text-black text-2xl">&gt;</span>
                     </button>
                 </div>
+
 
 
             </div>
@@ -647,14 +649,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="swiper-pagination"></div>
+                <div class="swiper-pagination xs:hidden lg:block"></div>
+
+
             </div>
-
-
         </div>
     </section>
      <!-- NEWSSETTLER SECTION -->
-     <section class="lg:py-14">
+     <section class="py-14">
         <div
             class="lg:container lg:px-[5rem] xs:px-xs-1 md:px-md-2 flex flex-col lg:flex-row justify-between  items-center">
             <!-- left image -->
@@ -663,7 +665,8 @@
             </div>
             <!-- center text -->
             <div class="flex flex-col items-center justify-center lg:w-[580px] md:w-[600px]">
-                <h2 class="lg:text-[40px] xs:text-[30px] font-Volk text-primary">Subscribe To Our Newsletter</h2>
+                <h2 class="lg:text-[40px] text-center xs:text-[30px] font-Volk text-primary">Subscribe To Our Newsletter
+                </h2>
                 <p class="mt-2 text-center text-tabs">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque duis ultrices sollicitudin
                     aliquam sem. Scelerisque duis ultrices sollicitudin.
@@ -680,7 +683,7 @@
 
             <!-- right side image -->
             <div class="xs:mt-5 lg:m-0">
-                <img src="images/men.png" class="lg:w-[300px] xs:w-[150px] h-auto">
+                <img src="images/men.png" class="lg:w-[300px] xs:hidden lg:block h-auto ">
             </div>
         </div>
     </section>
